@@ -1,0 +1,33 @@
+path.slice{
+    stroke-width:2px;
+}
+polyline{
+    opacity: .3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+}
+svg{
+    background-color: #ffffff;
+    text-shadow: none;
+}
+
+svg text.percent{
+    fill:white;
+    text-anchor:middle;
+}
+
+svg .text-anchor{
+    fill: black;
+    text-anchor:middle;
+    font-weight: 600;
+}
+
+svg .label{
+    fill: black;
+    font-weight: 600;
+}
+svg .value{
+    fill: black;
+    font-weight: 600;
+}

@@ -1,0 +1,9 @@
+{
+  "name": "hornet-themes-default",
+  "version": "5.0.0",
+  "description": "Theme default",
+  "appDependencies": {
+    "hornet-themes-commun": "5.0.0"
+  },
+  "author": "MAEDI"
+}

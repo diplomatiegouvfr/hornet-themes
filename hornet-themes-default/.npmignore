@@ -1,0 +1,9 @@
+test
+istanbul
+.gitignore
+.svn
+*.txt
+target
+node_modules
+work*
+*.zip
