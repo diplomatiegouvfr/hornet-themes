@@ -2,56 +2,38 @@
 # Hornet-themes
 
 Hornet-themes est le projet qui permet de construire les thèmes du framework Hornet. 
-Pour cela, il met à disposition un thème par défaut : `intranet`
+Pour cela, il met à disposition un thème par défaut : `default`
 
 Il est basé sur le framework `purecss` qui est référencé dans le sous projet hornet-themes-commun.
 
 ## Pré-requis
 
-- nodejs 4.X
-- hornet-js-builder 5.X
+- `nodejs` 4.X
+- `hornet-js-builder` 1.X installé en global
 
 ## Installation
 
 - Récupérer le projet hornet-themes
-- Lancer la commande `hb install` sur le sous-répertoire `hornet-themes-commun`
-- Lancer la commande `hb install` sur le sous-répertoire `hornet-themes-intranet`
-
-
-Dans le cas où l'accès à npm n'est pas possible, deux possiblités sont offertes : 
-
-- Publier `hornet-themes-commun` dans un repository local, ex sinopia
-```shell
-$ npm publish 
-```
-- ou bien copier le répertoire `hornet-themes-commun` dans le `node_modules\app` du theme `hornet-themes-intranet` 
-
-
-## Exécution en mode console
 
 ```shell
-$ node C:\Users\{userName}\AppData\Roaming\npm\node_modules\hornet-js-builder\src\server-themes.js {CHEMIN_WORKSPACE}\hornet-themes\hornet-themes-intranet\bin
+$ hb install
 ```
 
-## Exécution sous Webstorm
+## Exécution
 
-- Sous WebStorm, Cliquer sur le menu `Run > Edit Configurations`
-- Se positionner sur `Defaults > node.js` puis cliquer sur `Ajouter`
-
-Champs à valoriser:
-- name: server themes
-- Node Interpreter: par défaut, `C:\Program Files\nodejs\node.exe`
-- Working Directory: chemin du workspace {CHEMIN_WORKSPACE}
-- Javascript File: `C:\Users\{userName}\AppData\Roaming\npm\node_modules\hornet-js-builder\src\server-themes.js`
-- Application parameter: `{CHEMIN_WORKSPACE}\hornet-themes\hornet-themes-intranet\bin`
-
-Lancer le serveur de themes.
+```shell
+$ hb start
+```
 
 ## Vérification
 
-Accès aux ressources du CDN via un navigateur web : `[PROTOCOLE]://[URL]:[PORT]/hornet/5.0.0/intranet/css/theme.css` 
+Accès aux ressources du CDN via un navigateur web :
 
-Par défaut : `http://localhost:7777/5.0.0/intranet/`
+`[PROTOCOLE]://[URL]:[PORT]/hornet/5.0.X/default/css/theme.css`
+
+Par défaut :
+
+`http://localhost:7777/5.0.X/default/css/theme.css`
 
 Le fichier ainsi affiché doit commencer par ceci :
 
@@ -70,9 +52,11 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 $ hb package
 ```
 
-Récupérer le livrable dans le répertoire : `hornet-themes\hornet-themes-intranet\bin\hornet-themes-intranet-5.0.0.zip`
+Le livrable est disponible dans le répertoire :
 
-## Déploiement Apache
+`target\hornet-themes-default-5.0.X.zip`
+
+## Déploiement sur Apache
 
 ### Pré-requis
 
@@ -98,13 +82,12 @@ L'arborescence obtenue doit ressembler à ceci :
 ```
 [DocumentRoot ou Alias]
 	/hornet
-		/5.0.0
-			/intranet
+		/5.0.X
+			/default
 ```
-
 
 ## Licence
 
-applitutoriel-service est sous [licence cecill 2.1](./LICENCE.md).
+`hornet-themes` est sous [licence cecill 2.1](./LICENSE.md).
 
-Site web : [![http://www.cecill.info](http://www.cecill.info/licences/Licence_CeCILL_V2.1-en.html)](http://www.cecill.info/licences/Licence_CeCILL_V2.1-en.html)
+Site web : [http://www.cecill.info](http://www.cecill.info/licences/Licence_CeCILL_V2.1-en.html)

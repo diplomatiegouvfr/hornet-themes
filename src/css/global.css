@@ -1,0 +1,75 @@
+/*!
+MAEDI
+*/
+@font-face {
+    font-family: "lato";
+    font-style: normal;
+    font-weight: 200;
+    src: url("../fonts/lato-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-light-webfont.woff") format("woff"), url("../fonts/lato-light-webfont.ttf") format("truetype"), url("../fonts/lato-light-webfont.svg#latolight") format("svg");
+}
+@font-face {
+    font-family: "lato";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-regular-webfont.woff") format("woff"), url("../fonts/lato-regular-webfont.ttf") format("truetype"), url("../fonts/lato-regular-webfont.svg#latoregular") format("svg");
+}
+@font-face {
+    font-family: "lato";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/lato-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-bold.woff") format("woff"), url("../fonts/lato-bold.ttf") format("truetype"), url("../fonts/lato-bold.svg#LatoBold") format("svg");
+}
+@font-face {
+    font-family: "lato";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/lato-black-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-black-webfont.woff") format("woff"), url("../fonts/lato-black-webfont.ttf") format("truetype"), url("../fonts/lato-black-webfont.svg#latoblack") format("svg");
+}
+@font-face {
+    font-family: "lato";
+    font-style: italic;
+    font-weight: 200;
+    src: url("../fonts/lato-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-lightitalic-webfont.woff") format("woff"), url("../fonts/lato-lightitalic-webfont.ttf") format("truetype"), url("../fonts/lato-lightitalic-webfont.svg#latolight_italic") format("svg");
+}
+@font-face {
+    font-family: "lato";
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/lato-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-italic-webfont.woff") format("woff"), url("../fonts/lato-italic-webfont.ttf") format("truetype"), url("../fonts/lato-italic-webfont.svg#latoitalic") format("svg");
+}
+@font-face {
+    font-family: "lato";
+    font-style: italic;
+    font-weight: 600;
+    src: url("../fonts/lato-bolditalic.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-bolditalic.woff") format("woff"), url("../fonts/lato-bolditalic.ttf") format("truetype"), url("../fonts/lato-bolditalic.svg#LatoBoldItalic") format("svg");
+}
+@font-face {
+    font-family: "exo_2";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/exo2-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2-semibold-webfont.woff") format("woff"), url("../fonts/exo2-semibold-webfont.ttf") format("truetype"), url("../fonts/exo2-semibold-webfont.svg#exo_2semi_bold") format("svg");
+}
+@font-face {
+    font-family: "exo_2";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/exo2-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2-medium-webfont.woff") format("woff"), url("../fonts/exo2-medium-webfont.ttf") format("truetype"), url("../fonts/exo2-medium-webfont.svg#exo_2medium") format("svg");
+}
+@font-face {
+    font-family: "exo_2";
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/exo2-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2-thin-webfont.woff") format("woff"), url("../fonts/exo2-thin-webfont.ttf") format("truetype"), url("../fonts/exo2-thin-webfont.svg#exo_2thin") format("svg");
+}
+@font-face {
+    font-family: "exo_2";
+    font-style: normal;
+    font-weight: 200;
+    src: url("../fonts/exo2-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2-light-webfont.woff") format("woff"), url("../fonts/exo2-light-webfont.ttf") format("truetype"), url("../fonts/exo2-light-webfont.svg#exo_2light") format("svg");
+}
+@font-face {
+    font-family: "exo_2";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/exo2-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2-regular-webfont.woff") format("woff"), url("../fonts/exo2-regular-webfont.ttf") format("truetype"), url("../fonts/exo2-regular-webfont.svg#exo_2regular") format("svg");
+}

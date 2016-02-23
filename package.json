@@ -1,8 +1,31 @@
 {
-  "name": "hornet-themes",
-  "version": "5.0.0",
-  "description": "Projet permettant de builder les modules de hornet-themes",
-  "devDependencies": {
+  "name": "hornet-themes-default",
+  "version": "5.0.1",
+  "license": "CECILL-2.1",
+  "description": "Theme default",
+  "bugs": {
+    "url": "https://github.com/diplomatiegouvfr/hornet-themes/issues"
   },
-  "author": "MAEDI"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diplomatiegouvfr/hornet-themes.git"
+  },
+  "appDependencies": {
+    "purecss": "0.5.0"
+  },
+  "author": "MAEDI",
+
+
+
+
+
+  "____HORNET-BUILDER____DO_NOT_MODIFY_THIS_OBJECT____": {
+    "current": "7eb0ac48420ea13a1ca82def7cf608e49c3b57ee",
+    "history": {
+      "7eb0ac48420ea13a1ca82def7cf608e49c3b57ee": {
+        "date": "2016-01-27T07:27:01.721Z",
+        "deps": {}
+      }
+    }
+  }
 }

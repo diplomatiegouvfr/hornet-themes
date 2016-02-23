@@ -1,9 +1,8 @@
+# Hornet-themes 5.0.1
 
-# Hornet-themes 5.0.0-rc3
-- 53270 - Focus sur tri d'une colonne d'un tableau : pas de style sur le thème internet
-- 53329 - Logo Diplonet : Balise alt vide et pas de lien
 
-# Hornet-themes 5.0.0-rc1
+
+# Hornet-themes 5.0.0
 
 - 51715  -  EXP_INF_IAT  -  En tant que Exploitant je peux installer l'applitutoriel
 - 51716  -  INT_PIC_CAT  -  En tant que Intégrateur je peux construire l'applitutoriel
@@ -72,7 +71,7 @@
 - 51791  -  DEV_APT_HAN  -  En tant que Developpeur je peux utiliser React pour le template de page
 - 51792  -  DEV_DEV_DTS  -  En tant que Developpeur je peux mettre des point d'arret dans les TS 
 - 51793  -  DEV_DEV_SCO  -  En tant que Developpeur je peux Lancer les application sans ligne de commande
-- 51794  -  DEV_TEM_TJS  -  En tant que Developpeur je peux Constuire une application Node JS basée sur yeoman (thème Intranet)
+- 51794  -  DEV_TEM_TJS  -  En tant que Developpeur je peux Constuire une application Node JS basée sur yeoman (thème default)
 - 51795  -  DEV_TEM_TJA  -  En tant que Developpeur je peux Constuire une application Service basée sur Maven (Archetype)
 - 51796  -  UTI_APT_ECS  -  En tant que Utilisateur je peux Exporter les données du tableau partenaire au format CSV
 - 51797  -  UTI_APT_EXL  -  En tant que Utilisateur je peux Exporter les données du tableau partenaire au format EXL

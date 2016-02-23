@@ -1,0 +1,81 @@
+#infos {
+    background-color: #007ba7;
+    height: 2em;
+    top: 0;
+    z-index: 10;
+}
+
+#bandeau_appli{
+    background-color: white;
+    padding: 0.5em 0em .2em 0em;
+}
+
+#bandeau_appli a{
+    text-decoration: none;
+}
+
+#bandeau_appli a img{
+    float: left;
+    height: 5em;
+    margin: 0em 1em 0em 1em;
+}
+
+#bandeau_appli a h1{
+    font-family: exo_2;
+    font-size: 400%;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: #888;
+    padding-top: .2em;
+}
+
+
+#access_liens {
+    font-size: 1.125em;
+    letter-spacing: 1px;
+    padding: 6px;
+
+}
+
+#access_liens {
+    list-style: outside none none;
+    margin: 0;
+    padding: 3px 3px 3px 8px;
+    float:right;
+}
+
+#access_liens li a {
+    color: #fff;
+}
+
+#access_liens a {
+    padding: 0 3px;
+}
+
+#links .first, #access_liens .first {
+    border: 0 none;
+}
+
+#links {
+    display: inline;
+    list-style: none outside none;
+    margin-right: 16px;
+}
+
+#links li, #access_liens li {
+    border-left: 1px solid #fff;
+    display: inline;
+    padding: 0 0 0 4px;
+    color: #888888;
+}
+
+#access_liens li {
+    border-left: medium none;
+    padding-left: 30px;
+}
+
+.logoDiplo{
+    float:left;
+    margin-left:1em;
+    margin-top: 0.3em;
+}

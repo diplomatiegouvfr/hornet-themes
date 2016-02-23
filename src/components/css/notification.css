@@ -1,0 +1,64 @@
+/* Notifications */
+
+.errorBox>div {
+    color: #000;
+    border-color: #ccc #CCCCCc #ccc red;
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
+    margin: .5em 0;
+    background: url("../img/notification/alerte.png") no-repeat right bottom #fff
+}
+
+.infoBox>div {
+    border-color: #ccc #CCCCCc #ccc green;
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
+    margin: .5em 0;
+    background: url("../img/notification/info.png") no-repeat right bottom
+}
+.errorBox .titleError {
+    background: none repeat scroll 0 0 transparent!important;
+    color: red;
+    border-bottom: 0 none;
+    padding: 0 0 4px 10px;
+    margin: .5em 0 0;
+    font-size: 120%;
+}
+
+.infoBox .titleInfo {
+    background: none repeat scroll 0 0 transparent!important;
+    color: green;
+    border-bottom: 0 none;
+    padding: 0 0 4px 10px;
+    margin: .5em 0 0;
+    font-size: 120%;
+}
+
+.errorBox ul,.infoBox ul {
+    padding: 1em 0;
+}
+
+.errorBox .titleError+ul,.infoBox .titleInfo+ul {
+    padding: 0 3em 1em 1em;
+    margin-top: .5em;
+    margin-bottom: 0;
+}
+
+.errorBox li {
+    color: #000;
+}
+
+.infoBox li {
+    color: #000;
+}
+
+.errorBox a {
+    text-decoration: none;
+}
+
+.errorBox a:hover {
+    text-decoration: underline;
+    border: 0
+}
+
+/* Fin Notifications */

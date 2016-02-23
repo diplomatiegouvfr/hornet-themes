@@ -1,9 +1,0 @@
-{
-  "name": "hornet-themes-commun",
-  "version": "5.0.0",
-  "description": "Theme commun",
-  "appDependencies": {
-    "purecss": "0.5.0"
-  },
-  "author": "MAEDI"
-}
