@@ -1,538 +1,140 @@
-/*!
-MAEDI
-*/
-.rc-calendar {
-  width: 250px;
-  padding: 1em;
-}
-.rc-calendar * {
-  box-sizing: border-box;
-}
-.rc-calendar a {
-  cursor: pointer;
-}
-.rc-calendar:before {
-  display: none;
-  content: '';
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 7px solid #ccc;
-  border-top: 0;
-  border-bottom-color: rgba(0, 0, 0, 0.2);
-  position: absolute;
-}
-.rc-calendar:after {
-  display: none;
-  content: '';
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 6px solid #fff;
-  border-top: 0;
-  position: absolute;
-}
-.rc-calendar.rc-calendar-orient-left:before {
-  display: inline-block;
-  left: 6px;
-}
-.rc-calendar.rc-calendar-orient-left:after {
-  display: inline-block;
-  left: 7px;
-}
-.rc-calendar.rc-calendar-orient-right:before {
-  display: inline-block;
-  right: 6px;
-}
-.rc-calendar.rc-calendar-orient-right:after {
-  display: inline-block;
-  right: 7px;
-}
-.rc-calendar.rc-calendar-orient-top:before {
-  display: inline-block;
-  top: -7px;
-}
-.rc-calendar.rc-calendar-orient-top:after {
-  display: inline-block;
-  top: -6px;
-}
-.rc-calendar.rc-calendar-orient-bottom:before {
-  display: inline-block;
-  bottom: -7px;
-  border-bottom: 0;
-  border-top: 7px solid #999;
-}
-.rc-calendar.rc-calendar-orient-bottom:after {
-  display: inline-block;
-  bottom: -6px;
-  border-bottom: 0;
-  border-top: 6px solid #fff;
-}
-.rc-calendar-header {
-  height: 30px;
-  line-height: 30px;
-  position: relative;
-  text-align: center;
-}
-.rc-calendar-header > a {
-  font-weight: 600;
-  box-sizing: border-box;
-  display: inline-block;
-  padding: 4px 5px;
-  text-align: center;
-  width: 30px;
-  height: 30px;
-  line-height: 22px;
-  border-radius: 4px;
-}
-.rc-calendar-header > a:hover {
-  background: #eeeeee;
-}
-.rc-calendar-prev-month-btn,
-.rc-calendar-next-month-btn,
-.rc-calendar-prev-year-btn,
-.rc-calendar-next-year-btn {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  position: absolute;
-  top: 0;
-}
-.rc-calendar-next-year-btn {
-  right: 0;
-}
-.rc-calendar-header .rc-calendar-prev-month-btn {
-  position: absolute;
-  left: 25px;
-}
-.rc-calendar-prev-year-btn {
-  left: 0;
-}
-.rc-calendar-header .rc-calendar-next-month-btn {
-  position: absolute;
-  right: 25px;
-}
-.rc-calendar-header .rc-calendar-month-select {
-  width: 140px;
-}
-.rc-calendar-month-select-arrow {
-  display: none;
-}
-.rc-calendar-week-number-cell {
-  text-align: center;
-  line-height: 22px;
-}
-.rc-calendar-week-number-header {
-  text-indent: -9999px;
-}
-.rc-calendar-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: separate;
-}
-.rc-calendar-table td,
-.rc-calendar-table th {
-  text-align: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  padding: 3px 4px;
-}
-.rc-calendar-cell {
-  text-align: center;
-  cursor: pointer;
-}
-.rc-calendar-cell:hover {
-  background: #eeeeee;
-}
-.rc-calendar-date {
-  width: 20px;
-  height: 22px;
-  line-height: 22px;
-  text-decoration: none;
-  display: block;
-  outline: none;
-}
-.rc-calendar-last-month-cell .rc-calendar-date,
-.rc-calendar-next-month-btn-day .rc-calendar-date,
-.rc-calendar-disabled-cell .rc-calendar-date {
-  color: #bfbfbf;
-}
-.rc-calendar-disabled-cell:hover {
-  background: #ffffff;
-}
-.rc-calendar-disabled-cell .rc-calendar-date {
-  cursor: default;
-}
-.rc-calendar-disabled-cell .rc-calendar-date:hover {
-  border-color: transparent;
-}
-.rc-calendar-table .rc-calendar-today {
-  color: #357c00;
-  border: 1px solid #7dba4e;
-}
-.rc-calendar-table .rc-calendar-selected-day {
-  color: #ffffff;
-  background-color: #3276b1;
-  border-color: #285e8e;
-}
-.rc-calendar-footer {
-  padding: 3px 0;
-  text-align: center;
-}
-.rc-calendar-today-btn {
-  font-weight: 600;
-  box-sizing: border-box;
-  display: inline-block;
-  padding: 4px 5px;
-  text-align: center;
-  height: 30px;
-  line-height: 22px;
-  border-radius: 4px;
-  margin-left: 5px;
-}
-.rc-calendar-today-btn:hover {
-  background: #eeeeee;
-}
-.rc-calendar-time-input {
-  cursor: pointer;
-  display: inline-block;
-  width: 40px;
-  height: 25px;
-  line-height: 20px;
-  padding: 4px 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  vertical-align: middle;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-}
-.rc-calendar-time-input:focus {
-  border-color: #66afe9;
-  outline: 0;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-}
-.rc-calendar-time-panel {
-  left: 4px;
-  top: 4px;
-  bottom: 4px;
-  right: 4px;
-  background: #ffffff;
-  z-index: 10;
-  position: absolute;
-  outline: none;
-}
-.rc-calendar-time-panel-header {
-  height: 30px;
-  line-height: 30px;
-  position: relative;
-  text-align: center;
-}
-.rc-calendar-time-panel-title {
-  width: 180px;
-  font-weight: 600;
-  box-sizing: border-box;
-  display: inline-block;
-  padding: 4px 5px;
-  text-align: center;
-  height: 30px;
-  line-height: 22px;
-  border-radius: 4px;
-}
-.rc-calendar-time-panel-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: separate;
-}
-.rc-calendar-time-panel-cell {
-  text-align: center;
-  height: 42px;
-  vertical-align: middle;
-}
-.rc-calendar-time-panel-time {
-  line-height: 26px;
-  text-decoration: none;
-  display: block;
-  border-radius: 4px;
-  border: 1px solid transparent;
-}
-.rc-calendar-time-panel-time:hover {
-  background: #eeeeee;
-}
-.rc-calendar-time-panel-selected-cell .rc-calendar-time-panel-time {
-  color: #ffffff;
-  background-color: #3276b1;
-  border-color: #285e8e;
-}
-.rc-calendar-decade-panel {
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background: #ffffff;
-  z-index: 10;
-  position: absolute;
-  outline: none;
-}
-.rc-calendar-decade-panel-hidden {
-  display: none;
-}
-.rc-calendar-decade-panel-header {
-  height: 30px;
-  line-height: 30px;
-  position: relative;
-  text-align: center;
-}
-.rc-calendar-decade-panel-header > a {
-  font-weight: 600;
-  box-sizing: border-box;
-  display: inline-block;
-  padding: 4px 5px;
-  text-align: center;
-  width: 30px;
-  height: 30px;
-  line-height: 22px;
-  border-radius: 4px;
-}
-.rc-calendar-decade-panel-header > a:hover {
-  background: #eeeeee;
-}
-.rc-calendar-decade-panel-prev-century-btn,
-.rc-calendar-decade-panel-next-century-btn {
-  position: absolute;
-  top: 0;
-}
-.rc-calendar-decade-panel-prev-century-btn {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  left: 0;
-}
-.rc-calendar-decade-panel .rc-calendar-decade-panel-century {
-  width: 180px;
-  font-weight: 600;
-  box-sizing: border-box;
-  display: inline-block;
-  padding: 4px 5px;
-  text-align: center;
-  height: 30px;
-  line-height: 22px;
-  border-radius: 4px;
-}
-.rc-calendar-decade-panel-next-century-btn {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  right: 0;
-}
-.rc-calendar-decade-panel-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: separate;
-}
-.rc-calendar-decade-panel-cell {
-  text-align: center;
-  height: 42px;
-  vertical-align: middle;
-}
-.rc-calendar-decade-panel-decade {
-  line-height: 26px;
-  text-decoration: none;
-  display: block;
-  border-radius: 4px;
-  border: 1px solid transparent;
-}
-.rc-calendar-decade-panel-decade:hover {
-  background: #eeeeee;
-}
-.rc-calendar-decade-panel-selected-cell .rc-calendar-decade-panel-decade {
-  color: #ffffff;
-  background-color: #3276b1;
-  border-color: #285e8e;
-}
-.rc-calendar-decade-panel-last-century-cell .rc-calendar-decade-panel-decade,
-.rc-calendar-decade-panel-next-century-cell .rc-calendar-decade-panel-decade {
-  color: #bfbfbf;
-}
-.rc-calendar-month-panel {
-  left: 4px;
-  top: 4px;
-  bottom: 4px;
-  right: 4px;
-  background: #ffffff;
-  z-index: 10;
-  position: absolute;
-  outline: none;
-}
-.rc-calendar-month-panel-hidden {
-  display: none;
-}
-.rc-calendar-month-panel-header {
-  height: 30px;
-  line-height: 30px;
-  position: relative;
-  text-align: center;
-}
-.rc-calendar-month-panel-header > a {
-  font-weight: 600;
-  box-sizing: border-box;
-  display: inline-block;
-  padding: 4px 5px;
-  text-align: center;
-  width: 30px;
-  height: 30px;
-  line-height: 22px;
-  border-radius: 4px;
-}
-.rc-calendar-month-panel-header > a:hover {
-  background: #eeeeee;
-}
-.rc-calendar-month-panel-prev-year-btn,
-.rc-calendar-month-panel-next-year-btn {
-  position: absolute;
-  top: 0;
-}
-.rc-calendar-month-panel-prev-year-btn {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  left: 0;
-}
-.rc-calendar-month-panel .rc-calendar-month-panel-year-select {
-  width: 180px;
-}
-.rc-calendar-month-panel-year-select-arrow {
-  display: none;
-}
-.rc-calendar-month-panel-next-year-btn {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  right: 0;
-}
-.rc-calendar-month-panel-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: separate;
-}
-.rc-calendar-month-panel-cell {
-  text-align: center;
-}
-.rc-calendar-month-panel-month {
-  line-height: 78px;
-  text-decoration: none;
-  display: block;
-  border-radius: 4px;
-  border: 1px solid transparent;
-}
-.rc-calendar-month-panel-month:hover {
-  background: #eeeeee;
-}
-.rc-calendar-month-panel-selected-cell .rc-calendar-month-panel-month {
-  color: #ffffff;
-  background-color: #3276b1;
-  border-color: #285e8e;
-}
-.rc-calendar-year-panel {
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background: #ffffff;
-  z-index: 10;
-  position: absolute;
-  outline: none;
-}
-.rc-calendar-year-panel-hidden {
-  display: none;
-}
-.rc-calendar-year-panel-header {
-  height: 30px;
-  line-height: 30px;
-  position: relative;
-  text-align: center;
-}
-.rc-calendar-year-panel-header > a {
-  font-weight: 600;
-  box-sizing: border-box;
-  display: inline-block;
-  padding: 4px 5px;
-  text-align: center;
-  width: 30px;
-  height: 30px;
-  line-height: 22px;
-  border-radius: 4px;
-}
-.rc-calendar-year-panel-header > a:hover {
-  background: #eeeeee;
-}
-.rc-calendar-year-panel-prev-decade-btn,
-.rc-calendar-year-panel-next-decade-btn {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  position: absolute;
-  top: 0px;
-}
-.rc-calendar-year-panel-prev-decade-btn {
-  left: 0;
-}
-.rc-calendar-year-panel .rc-calendar-year-panel-decade-select {
-  width: 180px;
-}
-.rc-calendar-year-panel-decade-select-arrow {
-  display: none;
-}
-.rc-calendar-year-panel-next-decade-btn {
-  right: 0;
-}
-.rc-calendar-year-panel-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: separate;
-}
-.rc-calendar-year-panel-cell {
-  text-align: center;
-}
-.rc-calendar-year-panel-year {
-  line-height: 78px;
-  text-decoration: none;
-  display: block;
-  border-radius: 4px;
-  border: 1px solid transparent;
-}
-.rc-calendar-year-panel-year:hover {
-  background: #eeeeee;
-}
-.rc-calendar-year-panel-selected-cell .rc-calendar-year-panel-year {
-  color: #ffffff;
-  background-color: #3276b1;
-  border-color: #285e8e;
-}
-.rc-calendar-year-panel-last-decade-cell .rc-calendar-year-panel-year,
-.rc-calendar-year-panel-next-decade-cell .rc-calendar-year-panel-year {
-  color: #bfbfbf;
+/**
+ * Copyright ou © ou Copr. Ministère de l'Europe et des Affaires étrangères (2017)
+ * <p/>
+ * pole-architecture.dga-dsi-psi@diplomatie.gouv.fr
+ * <p/>
+ * Ce logiciel est un programme informatique servant à faciliter la création
+ * d'applications Web conforémement aux référentiels généraux français : RGI, RGS et RGAA
+ * <p/>
+ * Ce logiciel est régi par la licence CeCILL soumise au droit français et
+ * respectant les principes de diffusion des logiciels libres. Vous pouvez
+ * utiliser, modifier et/ou redistribuer ce programme sous les conditions
+ * de la licence CeCILL telle que diffusée par le CEA, le CNRS et l'INRIA
+ * sur le site "http://www.cecill.info".
+ * <p/>
+ * En contrepartie de l'accessibilité au code source et des droits de copie,
+ * de modification et de redistribution accordés par cette licence, il n'est
+ * offert aux utilisateurs qu'une garantie limitée.  Pour les mêmes raisons,
+ * seule une responsabilité restreinte pèse sur l'auteur du programme,  le
+ * titulaire des droits patrimoniaux et les concédants successifs.
+ * <p/>
+ * A cet égard  l'attention de l'utilisateur est attirée sur les risques
+ * associés au chargement,  à l'utilisation,  à la modification et/ou au
+ * développement et à la reproduction du logiciel par l'utilisateur étant
+ * donné sa spécificité de logiciel libre, qui peut le rendre complexe à
+ * manipuler et qui le réserve donc à des développeurs et des professionnels
+ * avertis possédant  des  connaissances  informatiques approfondies.  Les
+ * utilisateurs sont donc invités à charger  et  tester  l'adéquation  du
+ * logiciel à leurs besoins dans des conditions permettant d'assurer la
+ * sécurité de leurs systèmes et ou de leurs données et, plus généralement,
+ * à l'utiliser et l'exploiter dans les mêmes conditions de sécurité.
+ * <p/>
+ * Le fait que vous puissiez accéder à cet en-tête signifie que vous avez
+ * pris connaissance de la licence CeCILL, et que vous en avez accepté les
+ * termes.
+ * <p/>
+ * <p/>
+ * Copyright or © or Copr. Ministry for Europe and Foreign Affairs (2017)
+ * <p/>
+ * pole-architecture.dga-dsi-psi@diplomatie.gouv.fr
+ * <p/>
+ * This software is a computer program whose purpose is to facilitate creation of
+ * web application in accordance with french general repositories : RGI, RGS and RGAA.
+ * <p/>
+ * This software is governed by the CeCILL license under French law and
+ * abiding by the rules of distribution of free software.  You can  use,
+ * modify and/ or redistribute the software under the terms of the CeCILL
+ * license as circulated by CEA, CNRS and INRIA at the following URL
+ * "http://www.cecill.info".
+ * <p/>
+ * As a counterpart to the access to the source code and  rights to copy,
+ * modify and redistribute granted by the license, users are provided only
+ * with a limited warranty  and the software's author,  the holder of the
+ * economic rights,  and the successive licensors  have only  limited
+ * liability.
+ * <p/>
+ * In this respect, the user's attention is drawn to the risks associated
+ * with loading,  using,  modifying and/or developing or reproducing the
+ * software by the user in light of its specific status of free software,
+ * that may mean  that it is complicated to manipulate,  and  that  also
+ * therefore means  that it is reserved for developers  and  experienced
+ * professionals having in-depth computer knowledge. Users are therefore
+ * encouraged to load and test the software's suitability as regards their
+ * requirements in conditions enabling the security of their systems and/or
+ * data to be ensured and,  more generally, to use and operate it in the
+ * same conditions as regards security.
+ * <p/>
+ * The fact that you are presently reading this means that you have had
+ * knowledge of the CeCILL license and that you accept its terms.
+ *
+ */
+
+
+/**
+ * hornet-themes - Thème Hornet.js
+ *
+ * @author MEAE - Ministère de l'Europe et des Affaires étrangères
+ * @version v5.1.0
+ * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
+ * @license CECILL-2.1
+ */
+
+.calendar-input {
+    height: 2.563em;
+    padding: 0.5em 3em 0.5em 1em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #AEAEAE;
+    min-width: 12.469em;
+    text-align: center;
+}
+
+.calendar-input.has-error {
+    background-color: #fed8da;
+    border: 1px solid #e6151d;
+    min-width: 12.469em;
+}
+
+@media screen and (max-width: 675px) {
+    .calendar-input {
+        min-width: 9.469em;
+    }
+    .calendar-input.has-error {
+        min-width: 9.469em;
+    }
 }
 
 .agenda {
-    background-color: #fff;
+    border: none;
+    background-color: transparent;
+    height: 2.563em;
+    padding: 0.4em 0.5em 0.5em 1em;
+    outline: medium none !important;
+}
+
+button.hornet-button.hornet-dialogue-croix {
+    min-width: 2em;
+}
+
+table>thead>tr>th,
+table>tbody>tr>td {
+    height: auto !important;
+}
+
+.agenda.icon:hover {
     cursor: pointer;
-    border: 1px solid #b7cbe0;
-    min-height: 21px;
-    min-width: 21px;
-    padding: 0.1em;
 }
 
-.agenda:hover, .agenda:focus {
-    border-color: #044ca0;
+.agenda.icon:focus img {
+    outline: #4D90FE solid 1px;
 }
 
-td.rc-calendar-month-panel-cell {
-  border-width: 0px;
-  padding: 0;
+.agenda img {
+    margin-bottom: 0.25em;
+    width: 32px;
+}
+
+.rc-calendar-panel {
+    min-width: 13.75em;
 }

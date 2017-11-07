@@ -1,81 +1,253 @@
-#infos {
-    background-color: #007ba7;
-    height: 2em;
-    top: 0;
-    z-index: 10;
+/**
+ * Copyright ou © ou Copr. Ministère de l'Europe et des Affaires étrangères (2017)
+ * <p/>
+ * pole-architecture.dga-dsi-psi@diplomatie.gouv.fr
+ * <p/>
+ * Ce logiciel est un programme informatique servant à faciliter la création
+ * d'applications Web conforémement aux référentiels généraux français : RGI, RGS et RGAA
+ * <p/>
+ * Ce logiciel est régi par la licence CeCILL soumise au droit français et
+ * respectant les principes de diffusion des logiciels libres. Vous pouvez
+ * utiliser, modifier et/ou redistribuer ce programme sous les conditions
+ * de la licence CeCILL telle que diffusée par le CEA, le CNRS et l'INRIA
+ * sur le site "http://www.cecill.info".
+ * <p/>
+ * En contrepartie de l'accessibilité au code source et des droits de copie,
+ * de modification et de redistribution accordés par cette licence, il n'est
+ * offert aux utilisateurs qu'une garantie limitée.  Pour les mêmes raisons,
+ * seule une responsabilité restreinte pèse sur l'auteur du programme,  le
+ * titulaire des droits patrimoniaux et les concédants successifs.
+ * <p/>
+ * A cet égard  l'attention de l'utilisateur est attirée sur les risques
+ * associés au chargement,  à l'utilisation,  à la modification et/ou au
+ * développement et à la reproduction du logiciel par l'utilisateur étant
+ * donné sa spécificité de logiciel libre, qui peut le rendre complexe à
+ * manipuler et qui le réserve donc à des développeurs et des professionnels
+ * avertis possédant  des  connaissances  informatiques approfondies.  Les
+ * utilisateurs sont donc invités à charger  et  tester  l'adéquation  du
+ * logiciel à leurs besoins dans des conditions permettant d'assurer la
+ * sécurité de leurs systèmes et ou de leurs données et, plus généralement,
+ * à l'utiliser et l'exploiter dans les mêmes conditions de sécurité.
+ * <p/>
+ * Le fait que vous puissiez accéder à cet en-tête signifie que vous avez
+ * pris connaissance de la licence CeCILL, et que vous en avez accepté les
+ * termes.
+ * <p/>
+ * <p/>
+ * Copyright or © or Copr. Ministry for Europe and Foreign Affairs (2017)
+ * <p/>
+ * pole-architecture.dga-dsi-psi@diplomatie.gouv.fr
+ * <p/>
+ * This software is a computer program whose purpose is to facilitate creation of
+ * web application in accordance with french general repositories : RGI, RGS and RGAA.
+ * <p/>
+ * This software is governed by the CeCILL license under French law and
+ * abiding by the rules of distribution of free software.  You can  use,
+ * modify and/ or redistribute the software under the terms of the CeCILL
+ * license as circulated by CEA, CNRS and INRIA at the following URL
+ * "http://www.cecill.info".
+ * <p/>
+ * As a counterpart to the access to the source code and  rights to copy,
+ * modify and redistribute granted by the license, users are provided only
+ * with a limited warranty  and the software's author,  the holder of the
+ * economic rights,  and the successive licensors  have only  limited
+ * liability.
+ * <p/>
+ * In this respect, the user's attention is drawn to the risks associated
+ * with loading,  using,  modifying and/or developing or reproducing the
+ * software by the user in light of its specific status of free software,
+ * that may mean  that it is complicated to manipulate,  and  that  also
+ * therefore means  that it is reserved for developers  and  experienced
+ * professionals having in-depth computer knowledge. Users are therefore
+ * encouraged to load and test the software's suitability as regards their
+ * requirements in conditions enabling the security of their systems and/or
+ * data to be ensured and,  more generally, to use and operate it in the
+ * same conditions as regards security.
+ * <p/>
+ * The fact that you are presently reading this means that you have had
+ * knowledge of the CeCILL license and that you accept its terms.
+ *
+ */
+
+
+/**
+ * hornet-themes - Thème Hornet.js
+ *
+ * @author MEAE - Ministère de l'Europe et des Affaires étrangères
+ * @version v5.1.0
+ * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
+ * @license CECILL-2.1
+ */
+
+#site {
+    padding-top: 6.188em;
 }
 
-#bandeau_appli{
-    background-color: white;
-    padding: 0.5em 0em .2em 0em;
+a.header-link:hover,
+a.header-link:focus {
+    outline: #4D90FE solid 1px;
+    color: #FFF;
 }
 
-#bandeau_appli a{
-    text-decoration: none;
+#header {
+    background: #03476e none repeat scroll 0 0;
+    height: 2.188em;
+    line-height: 2.188em;
 }
 
-#bandeau_appli a img{
-    float: left;
-    height: 5em;
-    margin: 0em 1em 0em 1em;
+#banner {
+    background: #007ecb none repeat scroll 0 0;
+    height: 4em;
 }
 
-#bandeau_appli a h1{
-    font-family: exo_2;
-    font-size: 400%;
-    font-weight: 200;
-    text-transform: uppercase;
-    color: #888;
-    padding-top: .2em;
-}
-
-
-#access_liens {
-    font-size: 1.125em;
-    letter-spacing: 1px;
-    padding: 6px;
-
-}
-
-#access_liens {
-    list-style: outside none none;
-    margin: 0;
-    padding: 3px 3px 3px 8px;
-    float:right;
-}
-
-#access_liens li a {
+.header-link {
     color: #fff;
+    font-family: NotoSansUI-Regular;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 0.2em;
+    height: 100%;
+    display: inline-block;
 }
 
-#access_liens a {
-    padding: 0 3px;
+#header-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
 }
 
-#links .first, #access_liens .first {
-    border: 0 none;
+#header-container header {
+    position: relative;
 }
 
-#links {
-    display: inline;
-    list-style: none outside none;
-    margin-right: 16px;
+#header-container #banner {
+    position: absolute;
+    top: 2.188em;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.55);
+    transition: top 0.3s ease-in-out;
 }
 
-#links li, #access_liens li {
-    border-left: 1px solid #fff;
-    display: inline;
-    padding: 0 0 0 4px;
-    color: #888888;
+#header-container .menu-content {
+    margin-left: -1.62em;
 }
 
-#access_liens li {
-    border-left: medium none;
-    padding-left: 30px;
+#header-container.sticky .menu-content {
+    top: 3em;
+    /*margin-left: -1.62em;*/
 }
 
-.logoDiplo{
-    float:left;
-    margin-left:1em;
-    margin-top: 0.3em;
+#header-container.sticky .menu-main-conteneur {
+    height: 3em;
+}
+
+#header-container .menu-container .menu-overlay {
+    top: 6.188em;
+}
+
+#header-container.sticky .menu-container .menu-overlay {
+    top: 3em;
+}
+
+
+/* todo add banner */
+
+.header #banner .userlang,
+.header #banner .larger-screen {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#header-container.sticky #banner {
+    top: 0;
+    transition: top 0.4s ease-in-out;
+    height: 3em;
+}
+
+#header-container.sticky #banner .userlang {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s ease-in-out 0.4s;
+    padding-top: auto;
+}
+
+#header-container.sticky #banner .larger-screen {
+    opacity: 1;
+    visibility: visible;
+    top: 0.45em;
+    position: relative;
+}
+
+#header-container.sticky #header-expanded-zone {
+    height: 0;
+    display: none;
+}
+
+#header-container #header-expanded-zone {
+    height: 100%;
+    display: block;
+}
+
+#header-container.sticky #banner .userlang>div {
+    display: inline-flex;
+    line-height: 2.188em;
+}
+
+#header-container.sticky .sub-header-link {
+    line-height: 3em;
+}
+
+.sub-header-link {
+    line-height: 4em;
+    display: block;
+}
+
+.sub-header-link:hover {
+    outline: #4d90fe solid 1px;
+}
+
+@media (max-width: 600px) {
+    #header-container.sticky #banner .larger-screen {
+        visibility: hidden;
+        display: none;
+    }
+    .profil-content .username>span {
+        display: none;
+    }
+    #header-container.sticky .profil-label {
+        /*visibility: hidden;*/
+        display: none;
+    }
+    #header-container.sticky .dropdown-button {
+        padding-left: 0px;
+    }
+    #banner-expanded-zone .mls {
+        margin-left: 0.75em;
+    }
+    #header-container.sticky #banner .userlang>div {
+        /*display: block;*/
+        line-height: 2.188em;
+    }
+    #header-container.sticky #banner .userlang {
+        float: none;
+        display: flex;
+    }
+}
+
+@media (max-width: 405px) {
+    header .mll {
+        margin-left: 0.4em;
+    }
+    header .mlm {
+        margin-left: 0;
+    }
+    header h1 {
+        margin-top: 0 !important;
+    }
 }

@@ -1,0 +1,315 @@
+/**
+ * Copyright ou © ou Copr. Ministère de l'Europe et des Affaires étrangères (2017)
+ * <p/>
+ * pole-architecture.dga-dsi-psi@diplomatie.gouv.fr
+ * <p/>
+ * Ce logiciel est un programme informatique servant à faciliter la création
+ * d'applications Web conforémement aux référentiels généraux français : RGI, RGS et RGAA
+ * <p/>
+ * Ce logiciel est régi par la licence CeCILL soumise au droit français et
+ * respectant les principes de diffusion des logiciels libres. Vous pouvez
+ * utiliser, modifier et/ou redistribuer ce programme sous les conditions
+ * de la licence CeCILL telle que diffusée par le CEA, le CNRS et l'INRIA
+ * sur le site "http://www.cecill.info".
+ * <p/>
+ * En contrepartie de l'accessibilité au code source et des droits de copie,
+ * de modification et de redistribution accordés par cette licence, il n'est
+ * offert aux utilisateurs qu'une garantie limitée.  Pour les mêmes raisons,
+ * seule une responsabilité restreinte pèse sur l'auteur du programme,  le
+ * titulaire des droits patrimoniaux et les concédants successifs.
+ * <p/>
+ * A cet égard  l'attention de l'utilisateur est attirée sur les risques
+ * associés au chargement,  à l'utilisation,  à la modification et/ou au
+ * développement et à la reproduction du logiciel par l'utilisateur étant
+ * donné sa spécificité de logiciel libre, qui peut le rendre complexe à
+ * manipuler et qui le réserve donc à des développeurs et des professionnels
+ * avertis possédant  des  connaissances  informatiques approfondies.  Les
+ * utilisateurs sont donc invités à charger  et  tester  l'adéquation  du
+ * logiciel à leurs besoins dans des conditions permettant d'assurer la
+ * sécurité de leurs systèmes et ou de leurs données et, plus généralement,
+ * à l'utiliser et l'exploiter dans les mêmes conditions de sécurité.
+ * <p/>
+ * Le fait que vous puissiez accéder à cet en-tête signifie que vous avez
+ * pris connaissance de la licence CeCILL, et que vous en avez accepté les
+ * termes.
+ * <p/>
+ * <p/>
+ * Copyright or © or Copr. Ministry for Europe and Foreign Affairs (2017)
+ * <p/>
+ * pole-architecture.dga-dsi-psi@diplomatie.gouv.fr
+ * <p/>
+ * This software is a computer program whose purpose is to facilitate creation of
+ * web application in accordance with french general repositories : RGI, RGS and RGAA.
+ * <p/>
+ * This software is governed by the CeCILL license under French law and
+ * abiding by the rules of distribution of free software.  You can  use,
+ * modify and/ or redistribute the software under the terms of the CeCILL
+ * license as circulated by CEA, CNRS and INRIA at the following URL
+ * "http://www.cecill.info".
+ * <p/>
+ * As a counterpart to the access to the source code and  rights to copy,
+ * modify and redistribute granted by the license, users are provided only
+ * with a limited warranty  and the software's author,  the holder of the
+ * economic rights,  and the successive licensors  have only  limited
+ * liability.
+ * <p/>
+ * In this respect, the user's attention is drawn to the risks associated
+ * with loading,  using,  modifying and/or developing or reproducing the
+ * software by the user in light of its specific status of free software,
+ * that may mean  that it is complicated to manipulate,  and  that  also
+ * therefore means  that it is reserved for developers  and  experienced
+ * professionals having in-depth computer knowledge. Users are therefore
+ * encouraged to load and test the software's suitability as regards their
+ * requirements in conditions enabling the security of their systems and/or
+ * data to be ensured and,  more generally, to use and operate it in the
+ * same conditions as regards security.
+ * <p/>
+ * The fact that you are presently reading this means that you have had
+ * knowledge of the CeCILL license and that you accept its terms.
+ *
+ */
+
+
+/**
+ * hornet-themes - Thème Hornet.js
+ *
+ * @author MEAE - Ministère de l'Europe et des Affaires étrangères
+ * @version v5.1.0
+ * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
+ * @license CECILL-2.1
+ */
+
+.dropdown-container {
+    align-items: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-button {
+    padding: .4em;
+}
+
+.dropdown-button:focus {
+    outline: #4D90FE solid 1px;
+}
+
+.dropdown-content {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 3;
+    visibility: visible;
+    -webkit-transition: max-height 500ms ease;
+    -moz-transition: max-height 500ms ease;
+    -o-transition: max-height 500ms ease;
+    transition: max-height 500ms ease;
+}
+
+.dropdown-content.dropdown-content-hidden {
+    display: none;
+}
+
+
+/* position en bas à gauche du bouton */
+
+.dropdown-content.position-bottom-left {
+    top: 2.8em;
+    left: 0em;
+}
+
+
+/* Arrow pour BL*/
+
+.dropdown-list .arrow.position-bottom-left {
+    content: '';
+    position: absolute;
+    top: -0.43em;
+    left: 1.5em;
+    background: #fff;
+    width: 1em;
+    height: 1em;
+    z-index: 0;
+    transform: rotate(45deg);
+    box-shadow: -1px -1px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Position en bas à droite du bouton */
+
+.dropdown-content.position-bottom-right {
+    top: 2.8em;
+    right: -0.5em;
+}
+
+
+/* Arrow pour BR*/
+
+.dropdown-list .arrow.position-bottom-right {
+    content: '';
+    position: absolute;
+    top: -0.43em;
+    background: #fff;
+    width: 1em;
+    height: 1em;
+    transform: rotate(45deg);
+    box-shadow: -1px -1px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Position en haut à gauche du bouton */
+
+.dropdown-content.position-top-right {
+    bottom: 2.4em;
+    right: -0.5em;
+}
+
+
+/* Arrow pour TR*/
+
+.dropdown-list .arrow.position-top-right {
+    content: '';
+    position: absolute;
+    bottom: -0.43em;
+    background: #fff;
+    width: 1em;
+    height: 1em;
+    z-index: 0;
+    transform: rotate(45deg);
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Position en haut à droite du bouton */
+
+.dropdown-content.position-top-left {
+    bottom: 2.4em;
+    left: 0em;
+}
+
+
+/* Arrow pour TL*/
+
+.dropdown-list .arrow.position-top-left {
+    content: '';
+    position: absolute;
+    bottom: -0.43em;
+    left: 1.5em;
+    background: #fff;
+    width: 1em;
+    height: 1em;
+    z-index: 0;
+    transform: rotate(45deg);
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+.dropdown-list {
+    list-style: none;
+    opacity: 1;
+    min-width: 136px;
+    padding: 0;
+    box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.45);
+    background-color: white;
+}
+
+.dropdown-list li>a {
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    line-height: inherit;
+    position: relative;
+    background: #ffffff;
+    color: #000000;
+    width: 100%;
+    padding: 0px 26px 0px 16px;
+    white-space: nowrap;
+}
+
+.dropdown-list li>a.checked {
+    color: #007eca;
+    background-color: #e2eff7;
+    border-left: 4px solid #007eca;
+    padding: 0px 26px 0px 12px !important;
+}
+
+.dropdown-list li>a.checked:hover {
+    color: #007eca;
+}
+
+.dropdown-list li>a:hover {
+    color: #000;
+    background-color: #e2eff7;
+    border-left: 4px solid #007eca;
+    padding: 0px 26px 0px 12px;
+}
+
+.dropdown-list li a:focus {
+    outline: #4D90FE solid 1px;
+}
+
+.caret-down,
+.caret-up {
+    /* height: 1.5em;
+     width: 1.5em;
+     cursor: pointer;*/
+}
+
+.caret-down {
+    background: transparent url("../img/dropdown/ic_keyboard_arrow_down_black_24px.svg") no-repeat scroll left top;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+}
+
+.more-actions {
+    height: 1.5em;
+    width: 1.5em;
+    background: transparent url("../img/dropdown/more_vert_white.svg");
+    cursor: pointer;
+    display: block;
+}
+
+.ico-table-settings-white {
+    height: 1.5em;
+    width: 1.5em;
+    background: transparent url("../img/picto/white/ico_settings.svg");
+    cursor: pointer;
+    display: block;
+}
+
+.imgItem {
+    padding-right: 10px;
+    width: 26px;
+    height: 26px
+}
+
+.toggle-column-item-content {
+    font-size: 1em;
+    margin-right: 0.5em;
+    width: 100%;
+}
+
+.toggle-column-item-checkbox {
+    width: 25%;
+}
+
+.toggle-column-item-label {
+    font-size: 0.8em;
+    width: 75%;
+    line-height: 2em;
+}
+
+.toggle-column-item-checkbox .checkbox-content .checkbox-material:before {
+    height: 3px;
+}
+
+div#table-settingscontent ul.dropdown-list li a {
+    width: 100%;
+    margin-right: 0.5em;
+}

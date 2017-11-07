@@ -1,238 +1,423 @@
-/*!
-MAEDI
-*/
+/**
+ * Copyright ou © ou Copr. Ministère de l'Europe et des Affaires étrangères (2017)
+ * <p/>
+ * pole-architecture.dga-dsi-psi@diplomatie.gouv.fr
+ * <p/>
+ * Ce logiciel est un programme informatique servant à faciliter la création
+ * d'applications Web conforémement aux référentiels généraux français : RGI, RGS et RGAA
+ * <p/>
+ * Ce logiciel est régi par la licence CeCILL soumise au droit français et
+ * respectant les principes de diffusion des logiciels libres. Vous pouvez
+ * utiliser, modifier et/ou redistribuer ce programme sous les conditions
+ * de la licence CeCILL telle que diffusée par le CEA, le CNRS et l'INRIA
+ * sur le site "http://www.cecill.info".
+ * <p/>
+ * En contrepartie de l'accessibilité au code source et des droits de copie,
+ * de modification et de redistribution accordés par cette licence, il n'est
+ * offert aux utilisateurs qu'une garantie limitée.  Pour les mêmes raisons,
+ * seule une responsabilité restreinte pèse sur l'auteur du programme,  le
+ * titulaire des droits patrimoniaux et les concédants successifs.
+ * <p/>
+ * A cet égard  l'attention de l'utilisateur est attirée sur les risques
+ * associés au chargement,  à l'utilisation,  à la modification et/ou au
+ * développement et à la reproduction du logiciel par l'utilisateur étant
+ * donné sa spécificité de logiciel libre, qui peut le rendre complexe à
+ * manipuler et qui le réserve donc à des développeurs et des professionnels
+ * avertis possédant  des  connaissances  informatiques approfondies.  Les
+ * utilisateurs sont donc invités à charger  et  tester  l'adéquation  du
+ * logiciel à leurs besoins dans des conditions permettant d'assurer la
+ * sécurité de leurs systèmes et ou de leurs données et, plus généralement,
+ * à l'utiliser et l'exploiter dans les mêmes conditions de sécurité.
+ * <p/>
+ * Le fait que vous puissiez accéder à cet en-tête signifie que vous avez
+ * pris connaissance de la licence CeCILL, et que vous en avez accepté les
+ * termes.
+ * <p/>
+ * <p/>
+ * Copyright or © or Copr. Ministry for Europe and Foreign Affairs (2017)
+ * <p/>
+ * pole-architecture.dga-dsi-psi@diplomatie.gouv.fr
+ * <p/>
+ * This software is a computer program whose purpose is to facilitate creation of
+ * web application in accordance with french general repositories : RGI, RGS and RGAA.
+ * <p/>
+ * This software is governed by the CeCILL license under French law and
+ * abiding by the rules of distribution of free software.  You can  use,
+ * modify and/ or redistribute the software under the terms of the CeCILL
+ * license as circulated by CEA, CNRS and INRIA at the following URL
+ * "http://www.cecill.info".
+ * <p/>
+ * As a counterpart to the access to the source code and  rights to copy,
+ * modify and redistribute granted by the license, users are provided only
+ * with a limited warranty  and the software's author,  the holder of the
+ * economic rights,  and the successive licensors  have only  limited
+ * liability.
+ * <p/>
+ * In this respect, the user's attention is drawn to the risks associated
+ * with loading,  using,  modifying and/or developing or reproducing the
+ * software by the user in light of its specific status of free software,
+ * that may mean  that it is complicated to manipulate,  and  that  also
+ * therefore means  that it is reserved for developers  and  experienced
+ * professionals having in-depth computer knowledge. Users are therefore
+ * encouraged to load and test the software's suitability as regards their
+ * requirements in conditions enabling the security of their systems and/or
+ * data to be ensured and,  more generally, to use and operate it in the
+ * same conditions as regards security.
+ * <p/>
+ * The fact that you are presently reading this means that you have had
+ * knowledge of the CeCILL license and that you accept its terms.
+ *
+ */
 
-.hornet-form{
 
+/**
+ * hornet-themes - Thème Hornet.js
+ *
+ * @author MEAE - Ministère de l'Europe et des Affaires étrangères
+ * @version v5.1.0
+ * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
+ * @license CECILL-2.1
+ */
+
+.form-content {
+    background-color: #f4f4f4;
+    border-radius: 0.3em;
+    /* padding-left: 1.875em;
+     padding-top: 1.188em;
+     padding-bottom : 1.875em;*/
+    margin: 0.875em
 }
 
-.formRecherche {
-    border: 1px solid #ced0d1;
+.form-soustitre {
+    color: #007eca;
+    font-size: 17px;
+    padding-top: 0.875em;
 }
 
-.formRecherche h1, h1.recherche {
-    background: url("../img/sprite-global.png") repeat-x scroll 0 -609px #007ba7;
-    border-top: 4px solid #007ba7;
-    color: #044ca0;
-    font-size: 130%;
-    font-weight: normal;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding: 0.2em 0.2em 0.2em 0.33em;
+.form-titles {
+    padding: 0.875em 0.875em 0 0.875em;
 }
 
-/* Sous-titre de formulaire */
-.formRecherche .sousTitreForm {
-    background: url("../img/sprite-global.png") repeat-x scroll 0 -609px #007ba7;
-    border-top: 4px solid #007ba7;
-    color: #044ca0;
-    font-size: 130%;
-    font-weight: normal;
-    line-height: inherit;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding: 0.2em 0.2em 0.2em 0.33em;
+.form {
+    background-color: #f4f4f4;
 }
 
-.form .texte, .formRecherche .texte {
-    margin-bottom: 0;
-    padding: 0.5em;
+.form-table {
+    background: none;
+    margin: -0.875em;
+    /* pour ecraser le magin de la classe form-content */
 }
 
-input[type="text"], input[type="password"], input[type="number"], input[type="email"], textarea, select {
-    height: auto;
-    padding: 2px;
-    vertical-align: middle !important;
+.form-container {
+    font-size: 1em;
+    font-family: NotoSansUI-Regular;
 }
 
-input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover, input[type="checkbox"]:hover, input[type="radio"]:hover, input[type="number"]:hover,
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus, input[type="checkbox"]:focus, input[type="radio"]:focus, input[type="number"]:focus{
-    border-color: #044ca0;
-    color: #044ca0;
+span.label-required {
+    color: #d60000;
+    padding-left: 0.313em;
 }
 
-input[type="file"]{
-    margin: 4px 0;
-    padding: 2px;
-}
-
-input[type="text"], input[type="password"], input[type="email"], input[type="number"],  textarea, select {
-    border: 1px solid #b7cbe0;
-    color: #044ca0;
-    margin: 4px 0;
-    padding: 2px;
-    /*vertical-align: top;*/
-    width: auto;
-    font-size:100%
-}
-
-select[multiple] {
-    width: 100%;
-    height: 100%;
+p.discret {
+    font-style: italic;
+    color: #666666;
 }
 
 
-select, input, button, textarea {
-    font: 99% arial, helvetica, clean, sans-serif;
+/**
+checkbox
+****/
+
+.checkbox-container {
+    padding: 10px 20px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+label.checkbox-content {
+    cursor: pointer;
+}
+
+.checkbox-content input[type=checkbox] {
+    opacity: 0;
+    position: absolute;
+    margin: 0;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    left: 0;
+    pointer-events: none;
+}
+
+.checkbox-content .checkbox-material {
+    vertical-align: middle;
+    position: relative;
+    top: 3px;
+}
+
+.checkbox-content .checkbox-material .check {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    overflow: hidden;
+    z-index: 1;
+    padding: 2px 0 0 2px;
     background-color: white;
 }
 
-/* Conteneur de libellé de champ */
-.blocLabel {
-    /* Alignement en bas, car le bloc champ peut être surmonté d'un message d'erreur */
-    vertical-align: bottom;
+label.checkbox-content input:focus+.checkbox-material .check {
+    outline: #4D90FE solid 1px;
 }
 
-.blocLabel label {
-    padding-bottom: .4em;
+.checkbox-content .checkbox-material:before {
+    position: absolute;
+    left: 8px;
+    top: 2px;
+    content: "";
+    width: 4px;
+    border-radius: 100%;
+    z-index: 1;
+    opacity: 0;
+    margin: 0;
 }
 
-.blocLabelUp {
-    vertical-align: top;
-}
-
-label, .label, input[type="radio"], input[type="email"], input[type="text"], input[type="password"], input[type="number"], textarea, select {
-    /*margin-left: 0.5em;*/
-}
-
-input[type="text"], input[type="password"], input[type="email"], input[type="number"], textarea, select {
-    max-width: 100%;
-}
-
-input[type="text"], input[type="password"], input[type="email"], input[type="number"], select {
-    max-width: 100%;
-}
-
-.readonly input[type="email"], .readonly input[type="checkbox"], .readonly input[type="radio"], .readonly input[type="text"], .readonly input[type="password"], .readonly input[type="number"], .readonly textarea, .readonly select {
-    background-color: #efefef;
-    color: #044ca0;
-}
-
-
-.grid-form-field ul li {
-    list-style: outside none none ;
-}
-
-#bd .grid-form-field ul li:not([role="treeitem"]):not([role="presentation"]):not([role="tab"]):before {
-    /*supprime le style ul et li placés dans hornet.css*/
-    padding-right:0em;
-    list-style: none ;
-    content: none;
-}
-
-.grid-form-field ul li label{
-    text-align: left;
-}
-
-.grid-form-field input[type="checkbox"] {
-    margin-top: 1em;
-}
-
-label {
-    color: inherit;
+.checkbox-content .checkbox-material .check:before {
+    position: absolute;
+    content: "";
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
     display: block;
-    padding: 2px 20px 0 0;
-    text-align: right;
-    background-color: inherit;
-    margin: 5px 0;
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0;
+    height: 0;
+    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
+    /*color:#007ecb;
+    -webkit-animation: checkbox-off 0.3s forwards ease-out;
+            animation: checkbox-off 0.3s forwards ease-out; */
 }
 
-#bd label span {
-    color: inherit;
-    font-family: lato;
-    background-color: inherit;
+.checkbox-content input[type=checkbox]:checked+.checkbox-material .check {
+    color: #007ecb;
 }
 
-input + label {
-    color: #044ca0;
-    font-family: lato;
+.checkbox-content input[type=checkbox]:not(:checked)+.checkbox-material .check {
+    border: 2px solid;
 }
 
-fieldset.groupeChamps > legend, .groupeChamps .titleGroupeChamps {
-    background: none repeat scroll 0 0 #fff;
-    border-bottom: 1px solid #b7cbe0;
-    color: #044ca0;
-    font-family: inherit;
-    font-feature-settings: inherit;
-    font-kerning: inherit;
-    font-language-override: inherit;
-    font-size: 1.125em;
-    font-size-adjust: inherit;
-    font-stretch: inherit;
-    font-style: italic;
-    font-synthesis: inherit;
-    font-variant: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    min-width: 100%;
-    text-indent: 16px;
-}
-label span:not([class="inputLabel"]) {
-    color: inherit;
-    background-color: inherit;
-}
-.grid-form-field ul {
-    margin: 0 0 1em 2em;
+.checkbox-content input[type=checkbox]:disabled:checked+.checkbox-material .check {
+    color: #7a7a7a;
 }
 
-/* border radius for radio*/
-input[type="radio"] {
-    -webkit-border-radius:100%;
-    border-radius:100%;
+.checkbox-material .check.readonly {
+    /*background-color: #7a7a7a;*/
+    color: #7a7a7a;
+    cursor: default;
 }
 
-/* border radius for checkbox */
-input[type="checkbox"] {
-    -webkit-border-radius:2px;
-    border-radius:2px;
+.checkbox-content input[type=checkbox]:focus+.checkbox-material .check:after {
+    opacity: 0.2;
 }
 
-/* hover state */
-input[type="radio"]:not(:disabled):hover,
-input[type="checkbox"]:not(:disabled):hover {
-    border-color:rgba(0,0,0,0.5);
-    box-shadow:inset 1px 1px 0 #fff, 0 0 4px rgba(0,0,0,0.3);
+.checkbox-content input[type=checkbox]:checked+.checkbox-material .check:before {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+    -webkit-animation: checkbox-on 0.3s forwards ease-out;
+    animation: checkbox-on 0.3s forwards ease-out;
 }
 
-/* active state */
-input[type="radio"]:active:not(:disabled),
-input[type="checkbox"]:active:not(:disabled) {
-    background-image: -webkit-linear-gradient(#C2C2C2, #EFEFEF);
-    box-shadow:inset 1px 1px 0 rgba(0,0,0,0.2), inset -1px -1px 0 rgba(255,255,255,0.6);
-    border-color:rgba(0,0,0,0.5);
+.checkbox-content input[type=checkbox]:not(:checked)+.checkbox-material:before {
+    -webkit-animation: rippleOff 700ms forwards ease-out;
+    animation: rippleOff 700ms forwards ease-out;
 }
 
-/* focus state */
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-    outline:none;
-    box-shadow: 0 0 1px 2px rgba(0, 240, 255, 0.4);
+.checkbox-content input[type=checkbox]:checked+.checkbox-material:before {
+    -webkit-animation: rippleOn 700ms forwards ease-out;
+    animation: rippleOn 700ms forwards ease-out;
 }
 
-fieldset.hornet-fieldset legend{
-    color: #5E5E5E;
-    margin: 1em 0;
-    font-weight: 600;
-    font-size: 140% !important;
+.checkbox-content input[type=checkbox]:not(:checked)+.checkbox-material .check:after {
+    -webkit-animation: rippleOff 700ms forwards ease-out;
+    animation: rippleOff 700ms forwards ease-out;
 }
 
-.inputLabel {
-    background-color: inherit;
-    color: inherit;
+.checkbox-content input[type=checkbox]:checked+.checkbox-material .check:after {
+    -webkit-animation: rippleOn 700ms forwards ease-out;
+    animation: rippleOn 700ms forwards ease-out;
 }
 
-/* Préfixe éventuel affiché entre un libellé et son champ de formulaire */
-.field-prefix {
-    margin-right: 0.3em;
-    vertical-align: middle;
+.checkbox-content input[type=checkbox][disabled]:not(:checked)~.checkbox-material .check:before,
+.checkbox-content input[type=checkbox][disabled]+.circle {
+    opacity: 0.5;
 }
 
-/* Suffixe éventuel (par exemple une unité) affiché après un champ de formulaire */
-.field-suffix {
-    margin-left: 0.3em;
-    vertical-align: middle;
+.checkbox-content input[type=checkbox][disabled]+.checkbox-material .check:after {
+    background-color: rgba(0, 0, 0, 0.84);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
-.formmgr-message-text {
-    color: #FF0000;
+@-webkit-keyframes checkbox-on {
+    0% {
+        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+    }
+    50% {
+        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+    }
+    100% {
+        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+    }
+}
+
+@keyframes checkbox-on {
+    0% {
+        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+    }
+    50% {
+        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+    }
+    100% {
+        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+    }
+}
+
+@-webkit-keyframes checkbox-off {
+    0% {
+        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+    }
+    25% {
+        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+    }
+    50% {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-top: -4px;
+        margin-left: 6px;
+        width: 0px;
+        height: 0px;
+        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+    }
+    51% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        margin-top: -2px;
+        margin-left: -2px;
+        width: 20px;
+        height: 20px;
+        box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0px 0px 0 10px inset;
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        margin-top: -2px;
+        margin-left: -2px;
+        width: 20px;
+        height: 20px;
+        box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0px 0px 0 0px inset;
+    }
+}
+
+@keyframes checkbox-off {
+    0% {
+        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+    }
+    25% {
+        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+    }
+    50% {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-top: -4px;
+        margin-left: 6px;
+        width: 0px;
+        height: 0px;
+        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+    }
+    51% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        margin-top: -2px;
+        margin-left: -2px;
+        width: 20px;
+        height: 20px;
+        box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0px 0px 0 10px inset;
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        margin-top: -2px;
+        margin-left: -2px;
+        width: 20px;
+        height: 20px;
+        box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0px 0px 0 0px inset;
+    }
+}
+
+@-webkit-keyframes rippleOn {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(13, 13);
+        transform: scale(13, 13);
+    }
+}
+
+@keyframes rippleOn {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(13, 13);
+        transform: scale(13, 13);
+    }
+}
+
+@-webkit-keyframes rippleOff {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(13, 13);
+        transform: scale(13, 13);
+    }
+}
+
+@keyframes rippleOff {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(13, 13);
+        transform: scale(13, 13);
+    }
+}
+
+@media (max-width: 405px) {
+    .form-titles,
+    .form-content {
+        /* padding-left: 0.7em;*/
+    }
+    .checkbox-container {
+        padding: 0 0 0 0.625em;
+    }
+}
+
+.checkbox-container.inline {
+    padding-top: 0px;
+}
+
+.checkbox-container.inline div.checkbox-container {
+    padding-top: 0px;
+}
+
+.switch-input:focus+.switch-label {
+    box-shadow: 0 0 0 1.5pt #4D90FE;
+    outline: none;
 }

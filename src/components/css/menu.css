@@ -1,110 +1,515 @@
-.menuHaut input, .menuHaut > label{
-    display: none !important;
+/**
+ * Copyright ou © ou Copr. Ministère de l'Europe et des Affaires étrangères (2017)
+ * <p/>
+ * pole-architecture.dga-dsi-psi@diplomatie.gouv.fr
+ * <p/>
+ * Ce logiciel est un programme informatique servant à faciliter la création
+ * d'applications Web conforémement aux référentiels généraux français : RGI, RGS et RGAA
+ * <p/>
+ * Ce logiciel est régi par la licence CeCILL soumise au droit français et
+ * respectant les principes de diffusion des logiciels libres. Vous pouvez
+ * utiliser, modifier et/ou redistribuer ce programme sous les conditions
+ * de la licence CeCILL telle que diffusée par le CEA, le CNRS et l'INRIA
+ * sur le site "http://www.cecill.info".
+ * <p/>
+ * En contrepartie de l'accessibilité au code source et des droits de copie,
+ * de modification et de redistribution accordés par cette licence, il n'est
+ * offert aux utilisateurs qu'une garantie limitée.  Pour les mêmes raisons,
+ * seule une responsabilité restreinte pèse sur l'auteur du programme,  le
+ * titulaire des droits patrimoniaux et les concédants successifs.
+ * <p/>
+ * A cet égard  l'attention de l'utilisateur est attirée sur les risques
+ * associés au chargement,  à l'utilisation,  à la modification et/ou au
+ * développement et à la reproduction du logiciel par l'utilisateur étant
+ * donné sa spécificité de logiciel libre, qui peut le rendre complexe à
+ * manipuler et qui le réserve donc à des développeurs et des professionnels
+ * avertis possédant  des  connaissances  informatiques approfondies.  Les
+ * utilisateurs sont donc invités à charger  et  tester  l'adéquation  du
+ * logiciel à leurs besoins dans des conditions permettant d'assurer la
+ * sécurité de leurs systèmes et ou de leurs données et, plus généralement,
+ * à l'utiliser et l'exploiter dans les mêmes conditions de sécurité.
+ * <p/>
+ * Le fait que vous puissiez accéder à cet en-tête signifie que vous avez
+ * pris connaissance de la licence CeCILL, et que vous en avez accepté les
+ * termes.
+ * <p/>
+ * <p/>
+ * Copyright or © or Copr. Ministry for Europe and Foreign Affairs (2017)
+ * <p/>
+ * pole-architecture.dga-dsi-psi@diplomatie.gouv.fr
+ * <p/>
+ * This software is a computer program whose purpose is to facilitate creation of
+ * web application in accordance with french general repositories : RGI, RGS and RGAA.
+ * <p/>
+ * This software is governed by the CeCILL license under French law and
+ * abiding by the rules of distribution of free software.  You can  use,
+ * modify and/ or redistribute the software under the terms of the CeCILL
+ * license as circulated by CEA, CNRS and INRIA at the following URL
+ * "http://www.cecill.info".
+ * <p/>
+ * As a counterpart to the access to the source code and  rights to copy,
+ * modify and redistribute granted by the license, users are provided only
+ * with a limited warranty  and the software's author,  the holder of the
+ * economic rights,  and the successive licensors  have only  limited
+ * liability.
+ * <p/>
+ * In this respect, the user's attention is drawn to the risks associated
+ * with loading,  using,  modifying and/or developing or reproducing the
+ * software by the user in light of its specific status of free software,
+ * that may mean  that it is complicated to manipulate,  and  that  also
+ * therefore means  that it is reserved for developers  and  experienced
+ * professionals having in-depth computer knowledge. Users are therefore
+ * encouraged to load and test the software's suitability as regards their
+ * requirements in conditions enabling the security of their systems and/or
+ * data to be ensured and,  more generally, to use and operate it in the
+ * same conditions as regards security.
+ * <p/>
+ * The fact that you are presently reading this means that you have had
+ * knowledge of the CeCILL license and that you accept its terms.
+ *
+ */
+
+/**
+ * hornet-themes - Thème Hornet.js
+ *
+ * @author MEAE - Ministère de l'Europe et des Affaires étrangères
+ * @version v5.1.0
+ * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
+ * @license CECILL-2.1
+ */
+
+.noscroll {
+    overflow: hidden;
 }
 
-#nav {
-    background: #007ba7;
-    border-bottom: 1px solid #dedede;
-    height: 2.4em;
+#menu-main {
+    display: inline-block;
+    vertical-align: bottom;
 }
 
-.nav {
-    line-height: 1;
-    list-style: outside none none;
-    margin: 0;
-    padding: 0;
+.menu-main-conteneur {
+    height: 3.7em;
+    display: flex;
+    vertical-align: middle;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.nav a, .nav ul li ul li a{
-    color:white;
+#menu-main button.toggler {
+    height: 4rem;
+    width: 4.5rem;
+    background-color: #007ecb;
+    cursor: pointer;
     display: block;
-    line-height: 30px;
-    padding-left: .5em;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-color: #ced0d1;
-    border-style: solid;
-    border-width: 1px 0;
-    border-right: 1px solid white;
-}
-.nav a:not(.having-sub-nav){
-    padding-right: 0.5em;
-}
-/* Mise en valeur de l'élément de menu sélectionné */
-.nav a:focus {
-    text-decoration: none;
-    background-color: #fff;
-    background-image: linear-gradient(to bottom, #f5f5f5 0px, #e8e8e8 100%);
-    background-repeat: repeat-x;
-    color: #007ba7;
-}
-li.nav-item {
-    float: left;
+    overflow: hidden;
     position: relative;
+    text-indent: -9999px;
+    font-weight: 700;
+    border: medium none;
+    padding: 0.4em 0.4em;
 }
-.sub-nav-1 {
 
+#menu-main button.toggler span {
+    display: block;
+    position: relative;
+    height: .5rem;
+    background: #fff;
+}
+
+#menu-main button.toggler span::before {
+    top: -1rem;
+    -webkit-transition-property: top, -webkit-transform;
+    transition-property: top, transform;
+}
+
+#menu-main button.toggler span::before {
+    top: -1rem;
+    height: 0.5rem;
+    background-color: #fff;
+    content: "";
+    display: block;
     left: 0;
-    margin-top: 0px;
     position: absolute;
-    white-space: nowrap;
-}
-.sub-nav-1 a {
-    background: none repeat scroll 0 0 #3f4648;
-    color: #fff;
-    line-height: 1.5;
-    border: none;
+    transition-duration: 0.3s, 0.3s;
+    width: 100%;
 }
 
-.nav.sub-nav-1 li ul.nav.sub-nav-1 .sub-nav-item a{
-    height: 0px;
+#menu-main button.toggler span::after {
+    top: 1rem;
+    -webkit-transition-property: top, -webkit-transform;
+    transition-property: top, transform;
+}
+
+#menu-main button.toggler span::after {
+    height: 0.5rem;
+    background-color: #fff;
+    content: "";
+    display: block;
+    left: 0;
+    top: 1rem;
     position: absolute;
-    top: auto;
-    width: 0.1px;
+    transition-duration: 0.3s, 0.3s;
+    width: 100%;
 }
 
-.sub-nav-item a, .nav-item a + .sub-nav-1 a, .nav-item .sub-nav-item a{
-    height: auto;
-    left: auto;
-    overflow: visible;
-    position: static;
-    width: auto;
-    top:2em !important;
-    padding-right: 0.5em;
-}
-.sub-nav-item a, .nav-item a + .sub-nav-1,.sub-nav-item a, .nav-item a + .sub-nav-1{
-    border: 1px solid #e9e9e9;
+#menu-main button.toggler.is-active span {
+    background: none;
 }
 
-ul.nav li.nav-item ul.nav.sub-nav-1 li.sub-nav-item a {
-    line-height: 30px !important;
+#menu-main button.toggler.is-active span::before, #menu-main button.toggler.is-active span::after {
+    -webkit-transition-delay: 0s, .3s;
+    transition-delay: 0s, .3s;
 }
 
-.nav li.nav-item a.having-sub-nav img {
-    margin-left: 0.5em;
-    margin-bottom: 0.2em;
+#menu-main button.toggler.is-active span::before {
+    top: 0rem;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
-.nav li.nav-item ul.nav.sub-nav-1 li.sub-nav-item a img {
-
-    margin-left: 0.5em;
+#menu-main button.toggler.is-active span::after {
+    top: 0rem;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
-.nav.sub-nav-2 li.sub-nav-item{
-    top:0;
+.menu-container {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    color: #232425;
+    margin: auto;
+    max-width: 1200px;
 }
 
-li.sub-nav-item {
-    position:relative;
+.menu-content {
+    position: absolute;
+    background: #FFF;
+    top: 6.2em;
+    box-shadow: 3px 2px 10px -3px rgba(0, 0, 0, 0.2), -3px 2px 10px -3px rgba(0, 0, 0, 0.2);
+    /*max-width: 1200px;*/
+    /*margin-left: -31px;*/
+    margin-left: -1.62em;
+    z-index: 3;
+    overflow-y: auto;
+    max-height: 90%;
+    min-width: 1200px;
+    width: 100%;
+    position:fixed;
 }
 
-ul.sub-nav-2 {
-    /* positionnement par rapport à l'élément parent li.sub-nav-item */
-    position:absolute;
-    left: 100%;
-    top: 0;
+.menuEmpty{
+        width:0;
 }
 
-.masked {
+@media screen and (max-width: 1200px) {
+    .menu-content {
+        position: absolute;
+        background: #FFF;
+        top: 6.2em;
+        box-shadow: 3px 2px 10px -3px rgba(0, 0, 0, 0.2), -3px 2px 10px -3px rgba(0, 0, 0, 0.2);
+        /*max-width: 1200px;*/
+        /*margin-left: -31px;*/
+        margin-left: -1.62em;
+        z-index: 3;
+        overflow-y: auto;
+        max-height: 82.5%;
+        min-width: 100%;
+        position: fixed;
+    }
+    .menuEmpty{
+        width: 42px;
+    }
+}
+
+.menu-container .menu-overlay {
+    position: fixed;
+    width: 100%;
+    min-height: 100%;
+    left: 0;
+    background-color: #000;
+    opacity: 0.6;
+    /*-webkit-transition: opacity 0.5s;*/
+    /*transition: opacity 0.5s;*/
+    /*margin-top: 0.9em;*/
+    z-index: 2;
+}
+
+.menu-content ul.nav {
+    width: 100%;
+    list-style: outside none none;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+ul.nav li.nav-item {
+    box-sizing: border-box;
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: top;
+    width: 25%;
+    padding: 2.5em;
+}
+
+li.nav-item.is-active a span.menulink-title {
+    color: white;
+}
+
+li.nav-item a span.menulink-title {
+    display: inline-block;
+}
+
+li.nav-item.is-active li.sub-nav-item:not(.is-active) a span.menulink-title {
+    color: #b9e2fa;
+}
+
+li.sub-nav-item.is-active a span.menulink-title {
+    color: white;
+}
+
+li.nav-item.is-active a:hover span.menulink-title, li.nav-item.is-active a:focus span.menulink-title {
+    color: white;
+}
+
+li.sub-nav-item.is-active a:hover span.menulink-title, li.sub-nav-item.is-active a:focus span.menulink-title {
+    color: white;
+}
+
+li.nav-item.is-active li.sub-nav-item a span.menulink-title:hover, li.nav-item.is-active li.sub-nav-item a span.menulink-title:focus {
+    color: white;
+}
+
+@media (min-width: 720px) {
+    .having-sub-nav {
+        cursor: default;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    ul.nav li.nav-item {
+        box-sizing: border-box;
+        display: inline-block;
+        text-decoration: none;
+        vertical-align: top;
+        width: 33%;
+        padding: 2.5em;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    ul.nav li.nav-item {
+        box-sizing: border-box;
+        text-decoration: none;
+        vertical-align: top;
+        width: 100%;
+        display: block;
+        margin: inherit;
+        padding: 0em 0em 0em 1em;
+    }
+
+    .menulink-title {
+        margin: 0.7em 0;
+    }
+
+    li.nav-item.masked li.sub-nav-item {
+        display: none;
+    }
+
+    li.sub-nav-item.masked li.nav-item {
+        display: none;
+    }
+
+    li.sub-nav-item.masked li.sub-nav-item {
+        display: none;
+    }
+
+    ul.nav li.sub-nav-item a.having-sub-nav span:after {
+        position: relative;
+        left: 1em;
+        content: "";
+        display: inline-block;
+        width: 0.4em;
+        height: 0.4em;
+        border-right: 0.15em solid black;
+        border-top: 0.15em solid black;
+        transform: rotate(-45deg);
+    }
+
+    ul.nav li.sub-nav-item.masked a.having-sub-nav span:after {
+        position: relative;
+        left: 1em;
+        bottom: 0.15em;
+        content: "";
+        display: inline-block;
+        width: 0.4em;
+        height: 0.4em;
+        border-right: 0.15em solid black;
+        border-top: 0.15em solid black;
+        transform: rotate(135deg);
+    }
+
+    ul.nav li.nav-item a.having-sub-nav span:after {
+        position: relative;
+        left: 1em;
+        content: "";
+        display: inline-block;
+        width: 0.4em;
+        height: 0.4em;
+        border-right: 0.15em solid black;
+        border-top: 0.15em solid black;
+        transform: rotate(-45deg);
+    }
+
+    ul.nav li.nav-item.masked a.having-sub-nav span:after {
+        position: relative;
+        left: 1em;
+        bottom: 0.15em;
+        content: "";
+        display: inline-block;
+        width: 0.4em;
+        height: 0.4em;
+        border-right: 0.15em solid black;
+        border-top: 0.15em solid black;
+        transform: rotate(135deg);
+    }
+}
+
+ul.nav li.nav-item ul.sub-nav-1 {
+    padding-left: 1.25em;
+    display: block;
+}
+
+ul.nav li.nav-item ul.sub-nav-1 li ul.sub-nav-2 {
+    padding-left: 1.25em;
+    display: block;
+}
+
+ul.nav li.nav-item a {
+    font-family: NotoSansUI-Bold;
+    font-size: 1.25em;
+    color: #232425;
+    display: block;
+    padding-left: 0.2em;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+
+ul.nav li.sub-nav-item a {
+    font-family: NotoSansUI-Regular;
+    font-size: 1.125em;
+    color: #686868;
+    display: block;
+    padding-left: 0.2em;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+
+ul.nav li.sub-nav-item a:hover, ul.nav li.sub-nav-item a:focus {
+    font-family: NotoSansUI-Regular;
+    font-size: 1.125em;
+    color: #232425;
+}
+
+li.nav-item.is-active {
+    background-color: #007ecb;
+}
+
+.nav-item.is-active a:focus, .nav-item.is-active a:hover {
+    outline: none;
+    border-left: 4px solid white;
+}
+
+.nav-item:not(.is-active) a:focus, .nav-item:not(.is-active) a:hover {
+    outline: none;
+    border-left: 4px solid #007ecb;
+}
+
+li.nav-item.is-active a {
+    border-left: 4px solid #007ecb;
+}
+
+li.nav-item:not(.is-active) a {
+    border-left: 4px solid white;
+}
+
+li.sub-nav-item ul {
+    padding-left: 1.25em !important;
+    display: block;
+}
+
+#menu-main.vertical ul.nav li.nav-item {
+    box-sizing: border-box;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    display: block;
+    margin: inherit;
+    padding: 0em 0em 0em 1em;
+}
+
+#menu-main.vertical .menulink-title {
+    margin: 0.7em 0;
+}
+
+#menu-main.vertical    li.nav-item.masked li.sub-nav-item {
     display: none;
 }
+
+#menu-main.vertical   li.sub-nav-item.masked li.nav-item {
+    display: none;
+}
+
+#menu-main.vertical  li.sub-nav-item.masked li.sub-nav-item {
+    display: none;
+}
+
+#menu-main.vertical   ul.nav li.sub-nav-item a.having-sub-nav span:after {
+    position: relative;
+    left: 1em;
+    content: "";
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    border-right: 0.15em solid black;
+    border-top: 0.15em solid black;
+    transform: rotate(-45deg);
+}
+
+#menu-main.vertical   ul.nav li.sub-nav-item.masked a.having-sub-nav span:after {
+    position: relative;
+    left: 1em;
+    bottom: 0.15em;
+    content: "";
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    border-right: 0.15em solid black;
+    border-top: 0.15em solid black;
+    transform: rotate(135deg);
+}
+
+#menu-main.vertical  ul.nav li.nav-item a.having-sub-nav span:after {
+    position: relative;
+    left: 1em;
+    content: "";
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    border-right: 0.15em solid black;
+    border-top: 0.15em solid black;
+    transform: rotate(-45deg);
+}
+
+#menu-main.vertical   ul.nav li.nav-item.masked a.having-sub-nav span:after {
+    position: relative;
+    left: 1em;
+    bottom: 0.15em;
+    content: "";
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    border-right: 0.15em solid black;
+    border-top: 0.15em solid black;
+    transform: rotate(135deg);
+}
+    

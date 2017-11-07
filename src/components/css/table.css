@@ -1,306 +1,749 @@
+/**
+ * Copyright ou © ou Copr. Ministère de l'Europe et des Affaires étrangères (2017)
+ * <p/>
+ * pole-architecture.dga-dsi-psi@diplomatie.gouv.fr
+ * <p/>
+ * Ce logiciel est un programme informatique servant à faciliter la création
+ * d'applications Web conforémement aux référentiels généraux français : RGI, RGS et RGAA
+ * <p/>
+ * Ce logiciel est régi par la licence CeCILL soumise au droit français et
+ * respectant les principes de diffusion des logiciels libres. Vous pouvez
+ * utiliser, modifier et/ou redistribuer ce programme sous les conditions
+ * de la licence CeCILL telle que diffusée par le CEA, le CNRS et l'INRIA
+ * sur le site "http://www.cecill.info".
+ * <p/>
+ * En contrepartie de l'accessibilité au code source et des droits de copie,
+ * de modification et de redistribution accordés par cette licence, il n'est
+ * offert aux utilisateurs qu'une garantie limitée.  Pour les mêmes raisons,
+ * seule une responsabilité restreinte pèse sur l'auteur du programme,  le
+ * titulaire des droits patrimoniaux et les concédants successifs.
+ * <p/>
+ * A cet égard  l'attention de l'utilisateur est attirée sur les risques
+ * associés au chargement,  à l'utilisation,  à la modification et/ou au
+ * développement et à la reproduction du logiciel par l'utilisateur étant
+ * donné sa spécificité de logiciel libre, qui peut le rendre complexe à
+ * manipuler et qui le réserve donc à des développeurs et des professionnels
+ * avertis possédant  des  connaissances  informatiques approfondies.  Les
+ * utilisateurs sont donc invités à charger  et  tester  l'adéquation  du
+ * logiciel à leurs besoins dans des conditions permettant d'assurer la
+ * sécurité de leurs systèmes et ou de leurs données et, plus généralement,
+ * à l'utiliser et l'exploiter dans les mêmes conditions de sécurité.
+ * <p/>
+ * Le fait que vous puissiez accéder à cet en-tête signifie que vous avez
+ * pris connaissance de la licence CeCILL, et que vous en avez accepté les
+ * termes.
+ * <p/>
+ * <p/>
+ * Copyright or © or Copr. Ministry for Europe and Foreign Affairs (2017)
+ * <p/>
+ * pole-architecture.dga-dsi-psi@diplomatie.gouv.fr
+ * <p/>
+ * This software is a computer program whose purpose is to facilitate creation of
+ * web application in accordance with french general repositories : RGI, RGS and RGAA.
+ * <p/>
+ * This software is governed by the CeCILL license under French law and
+ * abiding by the rules of distribution of free software.  You can  use,
+ * modify and/ or redistribute the software under the terms of the CeCILL
+ * license as circulated by CEA, CNRS and INRIA at the following URL
+ * "http://www.cecill.info".
+ * <p/>
+ * As a counterpart to the access to the source code and  rights to copy,
+ * modify and redistribute granted by the license, users are provided only
+ * with a limited warranty  and the software's author,  the holder of the
+ * economic rights,  and the successive licensors  have only  limited
+ * liability.
+ * <p/>
+ * In this respect, the user's attention is drawn to the risks associated
+ * with loading,  using,  modifying and/or developing or reproducing the
+ * software by the user in light of its specific status of free software,
+ * that may mean  that it is complicated to manipulate,  and  that  also
+ * therefore means  that it is reserved for developers  and  experienced
+ * professionals having in-depth computer knowledge. Users are therefore
+ * encouraged to load and test the software's suitability as regards their
+ * requirements in conditions enabling the security of their systems and/or
+ * data to be ensured and,  more generally, to use and operate it in the
+ * same conditions as regards security.
+ * <p/>
+ * The fact that you are presently reading this means that you have had
+ * knowledge of the CeCILL license and that you accept its terms.
+ *
+ */
 
-.hornet-datatable {
-    position: relative;
+
+/**
+ * hornet-themes - Thème Hornet.js
+ *
+ * @author MEAE - Ministère de l'Europe et des Affaires étrangères
+ * @version v5.1.0
+ * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
+ * @license CECILL-2.1
+ */
+
+.datatable-container {
+    /*margin-top: 1.875em;*/
 }
 
-/*************************************** CAPTION ***************************************/
-.hornet-datatable-caption {
-    display:none;
-}
-
-/*************************************** HEADER ***************************************/
-
-.hornet-datatable-header{
-
-}
-
-.hornet-datatable-header-select > *{
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-}
-
-.hornet-datatable-header-sort-liner {
-    cursor: pointer;
-    outline: 0 none;
-    text-decoration: underline;
-}
-
-.hornet-datatable-header-sorted{
-
-}
-
-.hornet-datatable-header-sorted-desc .hornet-datatable-header-sort-liner {
-    background: url("../img/tableau/hornet_dt-arrow-dn.png") no-repeat scroll right center rgba(0, 0, 0, 0);
-}
-
-.hornet-datatable-header-sorted-asc .hornet-datatable-header-sort-liner {
-    background: url("../img/tableau/hornet_dt-arrow-up.png") no-repeat scroll right center rgba(0, 0, 0, 0);
-}
-
-
-/*************************************** FILTER ***************************************/
-
-.hornet-datatable-filter {
-    border-color: #ced0d1;
-    border-style: solid solid none;
-    border-width: .1em .1em 0;
-    padding-bottom: 0.5em;
-}
-
-/*************************************** CONTENT ***************************************/
-
-.hornet-datatable-content table {
-    border: 1px solid #ced0d1;
-    border-collapse: separate;
-    border-spacing: 0;
-    font-family: lato;
-    font-size: inherit;
-    margin: 0;
-    padding: 0;
+.datatable-content {
+    background-color: #ffffff;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.87);
+    /*font-family: Roboto,sans-serif;*/
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
     width: 100%;
+    overflow-x: auto;
 }
 
-.hornet-datatable-content th {
-    background: url("../img/sprite-global.png") repeat-x scroll 0 -211px #d8d8da;
-    border-color: #adcbe6;
-    border-image: none;
-    border-style: none solid solid none;
-    border-width: 0 1px 1px 0;
-    color: #044ca0;
-    font-weight: 600;
-    margin: 0;
-    text-align: left;
-    text-decoration: none;
-    vertical-align: bottom;
-    white-space: nowrap;
-}
-
-.hornet-datatable-content th a, .hornet-datatable-content th{
-    color: #044ca0 !important;
-    font-weight: 600;
-    text-align: left;
-    white-space: nowrap;
-}
-
-.hornet-datatable-content td {
-    border-color: #adcbe6;
-    border-style: none solid none none;
-    border-width: 0 1px 0 0;
-}
-
-
-
-/*************************************** COLUMN - LINE ***************************************/
-
-.hornet-datatable-selectedItems *{
-    background-color: #D6E1F1 !important;
-}
-
-.hornet-datatable-cell-custom * {
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-}
-
-.hornet-datatable-cell-select > *{
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-}
-
-.hornet-datatable-even {
-    background-color: #fff;
-}
-
-.hornet-datatable-odd {
-    background-color: #edf5ff;
-}
-
-.hornet-datatable-even .hornet-datatable-sorted, .hornet-datatable-even .hornet-datatable-sorted-desc {
-    background-color: #edf5ff;
-}
-
-.hornet-datatable-odd .hornet-datatable-sorted, .hornet-datatable-odd .hornet-datatable-sorted-desc {
-    background-color: #dbeaff;
-}
-
-
-/*************************************** EMPTY CONTENT ***************************************/
-
-.hornet-datatable-message-content{
-
-}
-
-.hornet-datatable-title {
-    background: url("../img/sprite-global.png") repeat-x scroll 0 -218px #044ca0;
-    border-color: #007ba7 #ced0d1 #ced0d1;
-    border-style: solid;
-    border-width: .3em .1em .1em .1em;
-    color: #044ca0;
-    font-size: 130%;
-    font-weight: 600;
-    padding: 0.2em;
-}
-
-.hornet-datatable-title > * {
-    font-size: inherit;
-    margin: 0;
-}
-
-/*************************************** Filters ***************************************/
-
-.hornet-datatable-filter-button{
-
-}
-
-.hornet-datatable-filter-button-show-active {
-    background: none repeat scroll 0 0 #8ed77a !important;
-}
-
-.hornet-datatable-filter-button-show-hidden:after {
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid;
-    bottom: -.10em;
-    content: "";
-    float: right;
+.datatable-header-title {
+    background-color: #007ecb;
+    box-sizing: border-box;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.40);
+    display: flex;
+    padding: 0 10px 0 24px;
+    border-radius: 6px 6px 0 0;
     position: relative;
-    right: -.3em;
-    width: 0;
-    height: 0;
 }
 
-.hornet-datatable-filter-button-show-visible:after {
-    border-bottom: 5px solid;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    bottom: -.2em;
-    content: "";
-    float: right;
+.datatable-title {
+    width: 70%;
+    word-wrap: break-word;
+    overflow: hidden;
+    color: white;
+    flex: 1;
+    word-break: break-word;
+    -ms-word-break: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+.datatable-header-menu {
+    padding-top: .3em;
+    flex-direction: row;
+}
+
+.datatable-title-span {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 2.3em;
+    overflow: hidden;
+    padding-right: 16px;
     position: relative;
-    right: -.3em;
-    width: 0;
-    height: 0;
+    word-break: break-word;
+    -ms-word-break: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+.datatable-caption {
+    display: none;
+}
+
+table {
+    background-color: #ffffff;
+    border-spacing: 0;
+}
+
+.datatable-columns {
+    background-color: #f4f4f4;
+}
+
+.datatable-columns-fixed {
+    display: inline;
+}
+
+.datatable-header {
+    background-color: #f4f4f4;
 }
 
 
-/*************************************** TOP & BOTTOM ***************************************/
+/*Surchage Knacss*/
 
-.hornet-datatable-top,
-.hornet-datatable-bottom {
-    background-color: #EDEDED;
-    border-color: #ced0d1;
-    border-style: solid;
-    border-width: 0 .1em .1em .1em;
-    min-height: 2.55em;
+td,
+th {
+    border: none;
 }
 
-/*************************************** ACTION  BUTTON ***************************************/
+.datatable-data-fixed {
+    display: inline;
+    overflow-y: auto;
+    height: 26em;
+}
 
-.hornet-datatable-action > * {
-    display: inline-flex;
-    border-color: #999;
-    border-style: solid;
-    border-width: .1em;
-    margin: .1em 0 0 .4em;
-    padding: .4em;
-    box-shadow: 2px 2px 1px #aaa;
+.table-header {
+    color: #007ecb;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
     vertical-align: middle;
-}
-
-.hornet-datatable-action img {
-    display: block;
-}
-
-
-/*************************************** EXPORT ***************************************/
-
-.hornet-datatable-export {
-    background: none repeat scroll 0 0 transparent;
-    padding: 0;
-    border-color: #cbcbcb;
     white-space: nowrap;
-    border-color: #cbcbcb;
-    text-align: center;
+    width: 24px;
+    text-overflow: ellipsis;
+    /*padding-left: 24px;*/
+    padding-right: 24px;
+    position: relative;
 }
 
-/*************************************** PAGINATION ***************************************/
-
-.hornet-datatable-pagination {
-    background: none repeat scroll 0 0 transparent;
+.datatable-content table caption {
+    visibility: hidden;
+    height: 0px;
+    margin: 0;
     padding: 0;
-    border-color: #cbcbcb;
-    white-space: nowrap;
-    border-color: #cbcbcb;
-    text-align: center;
 }
 
-.hornet-datatable-pagination label {
+.table-header tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tr:hover td,
+tr.datatable-line-selected td {
+    background: #e2eff7;
+}
+
+table>thead>tr>th,
+table>tbody>tr>td {
+    height: 56px;
+    overflow: hidden;
+    font-size: 13px;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    margin-top: 0px;
+    line-height: 2.2;
+}
+
+table>tbody>tr>td {
+    white-space: nowrap;
+}
+
+table>thead.datatable-columns-disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+table>thead.datatable-columns>tr>th,
+table>tbody.datatable-data>tr>td {
+    display: table-cell;
+}
+
+table>tbody>tr>td.datatable-cell-in-edition {
+    background: #e2eff7;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    filter: none;
+}
+
+table>thead.datatable-columns-fixed>tr>th,
+table>tbody.datatable-data-fixed>tr>td {
     display: inline-block;
 }
 
-.hornet-datatable-pagination-controls {
-    padding: .3em 0;
+table>tbody>tr {
+    border-bottom: 1px solid #e0e0e0;
+    color: #1c1c1c;
 }
 
-.hornet-datatable-pagination-control {
-    zoom: 1;
-    margin: 0 3px;
+table-footer {
+    height: 48px;
+}
+
+
+/**
+    Pagination
+
+**/
+
+.datatable-pagination {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    justify-content: flex-end;
+    height: 3.5em;
+}
+
+.datatable-pagination-content {
+    display: inline-block;
+    margin: 18px 0;
+    padding: 2px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.datatable-pagination-button {
+    -moz-user-select: none;
+    align-items: center;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: currentcolor;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 14px;
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: 500;
+    line-height: 36px;
+    margin: 6px 8px;
+    min-height: 36px;
+    min-width: 88px;
+    outline: 0 none;
+    overflow: hidden;
+    padding: 0 6px;
+    position: relative;
     text-align: center;
     text-decoration: none;
-    line-height: 1.5;
+    text-transform: uppercase;
+    transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 0s, background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+    white-space: nowrap;
+}
+
+.datatable-pagination-button:focus {
+    outline: #4D90FE solid 1px;
+}
+
+.datatable-pagination-button-prev,
+.datatable-pagination-button-next,
+.datatable-pagination-button-prevpage,
+.datatable-pagination-button-nextpage,
+.datatable-pagination-button-firstpage,
+.datatable-pagination-button-lastpage {
+    border-radius: 50%;
+    height: 40px;
+    line-height: 24px;
+    margin: 0 6px;
+    min-width: 0;
+    padding: 0 1em;
+}
+
+.datatable-pagination-button-prev,
+.datatable-pagination-button-prevpage {
+    background-position: 2px;
+    background: transparent url("../img/tableau/ic_keyboard_arrow_left_black_24px.svg") center no-repeat;
+}
+
+.datatable-pagination-button-firstpage {
+    background-position: 2px;
+    background: transparent url("../img/tableau/ic_first_page_black_24px.svg") center no-repeat;
+}
+
+.datatable-pagination-button-next,
+.datatable-pagination-button-nextpage {
+    background-position: 2px;
+    background: transparent url("../img/tableau/ic_keyboard_arrow_right_black_24px.svg") center no-repeat;
+}
+
+.datatable-pagination-button-lastpage {
+    background-position: 2px;
+    background: transparent url("../img/tableau/ic_last_page_black_24px.svg") center no-repeat;
+}
+
+.datatable-pagination-input {
+    width: 3em;
+    height: 1.5em;
     border: 1px solid transparent;
-    border-radius: 3px;
-    background: none repeat scroll 0 0 transparent;
+    text-align: center;
 }
 
-.hornet-datatable-pagination-select-index{
-
+.datatable-pagination-input:hover {
+    border: 1px solid #EEEEEE;
 }
 
-.hornet-datatable-pagination-select-index select {
-    margin-top: .1em;
-}
-
-.hornet-datatable-pagination-per-page {
-
-}
-
-.hornet-datatable-pagination-per-page select {
-    margin-top: .1em;
-}
-
-
-.hornet-datatable-pagination-control-first:hover,
-.hornet-datatable-pagination-control-last:hover,
-.hornet-datatable-pagination-control-prev:hover,
-.hornet-datatable-pagination-control-next:hover {
-    box-shadow: 0 .1em .2em #292442;
-}
-
-.hornet-datatable-pagination-control-disabled,
-.hornet-datatable-pagination-control-disabled:hover {
-    border-color: transparent;
+.datatable-pagination-input:invalid {
     box-shadow: none;
-    color: #bdc7db !important;
 }
 
-.hornet-datatable-pagination-control-disabled,
-.hornet-datatable-pagination-control-disabled:hover {
-    color: #bdc7db !important;
-    text-decoration: none;
+th {
+    padding: 0;
+}
+
+th div {
+    text-overflow: ellipsis;
+    overflow: inherit;
+}
+
+th, td {
+    padding: .3em .1em .3em .8em;
+}
+
+td:focus,
+th div:focus {
+    outline: #4D90FE solid 1px;
+}
+
+.datatable-header-no-text-overflow {
+    text-overflow: inherit;
+}
+
+.datatable-header-sort-liner {
+    cursor: pointer;
+}
+
+.datatable-header-sort-liner .arrow-sort,
+.datatable-header .arrow-sort {
+    padding-bottom: 0.18em;
+    transition: all 0.3s linear 0s;
+    width: 18px;
+    margin-left: 0.2em;
+}
+
+.datatable-header-sort-liner .arrow-sort-container {
+    max-width: 80%;
+    display: inline-block;
+    float: left;
+    word-break: break-word;
+    -ms-word-break: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    margin: .1em;
+}
+
+.datatable-header-sortable-column img {
+    color: rgba(0, 0, 0, 0.26);
+    opacity: 0;
+    transition: transform 0.25s ease 0s, opacity 0.25s ease 0s;
+}
+
+.datatable-header-sortable-column:hover img,
+.datatable-header-sorted-asc img,
+.datatable-header-sorted-desc img {
+    opacity: 1;
+}
+
+td.datatable-cell.default-body-cell {
+    min-width: 18px;
+    padding: .2em 0em .2em .8em;
+}
+
+.label-button-action {
+    padding-left: 0.2em;
+    font-size: 0.9em;
+    color: black;
+}
+
+.datatable-pagination .button-action .label {
+    color: black
+}
+
+.menu-priority-container {
+    float: left;
+}
+
+.menu-contextuel-container {
+    float: right;
+}
+
+.dropdown-container.menu-contextuel .dropdown-content {
+    background-color: #f4f4f4;
+}
+
+.dropdown-container.menu-contextuel .dropdown-content .dropdown-list {
+    padding-left: 0px;
+}
+
+.dropdown-container.menu-contextuel .dropdown-content .dropdown-list li {
+    background-color: #f4f4f4;
+}
+
+.dropdown-container.menu-contextuel .dropdown-content .dropdown-list li:hover,
+.dropdown-container.menu-contextuel .dropdown-content .dropdown-list li:focus {
+    background-color: #e2eff7;
+}
+
+.menu-priority-content>ul {
+    list-style: outside none none;
+    padding-left: 0;
+    display: flex;
+}
+
+.menu-priority-content>ul>li .button-info-accessibilite button.button-info-accessibilite-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    right: auto;
+    position: relative;
+    padding: .4em;
+}
+
+.menu-priority-content-action>a {
+    padding: .4em;
+    display: block;
+}
+
+.datatable-line-loader {
+    margin-bottom: 0px;
+    line-height: 0px;
+}
+
+.datatable-line-loader th {
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.datatable-line-loader th div {
+    height: 4px;
+    padding: 0;
+}
+
+.datatable-loader {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #ddd;
+}
+
+.datatable-loader:before {
+    display: block;
+    position: absolute;
+    content: "";
+    left: -200px;
+    width: 200px;
+    height: 4px;
+    background-color: #007ecb;
+    animation: loading 2s linear infinite;
+}
+
+.datatable-cell .button-action img,
+.datatable-cell .edition-button-action img {
+    width: 24px;
+}
+
+.datatable-cell a.button-action {
+    display: inline-block;
+    width: 90%;
+    height: 100%;
+}
+
+.datatable-cell a.button-action:hover .datatable-cell a.button-action:focus {
+    outline: #4D90FE solid 1px;
+}
+
+.edition-button-action {
+    border: none;
+    background: none;
+    padding: 0 .5em;
+    cursor: pointer;
+}
+
+.edition-button-action:hover,
+.edition-button-action:focus {
+    outline: #4D90FE solid 1px;
+}
+
+button:hover,
+button:focus {
+    outline: #4D90FE solid 1px;
+}
+
+@keyframes loading {
+    from {
+        left: -200px;
+        width: 30%;
+    }
+    50% {
+        width: 30%;
+    }
+    70% {
+        width: 70%;
+    }
+    80% {
+        left: 50%;
+    }
+    95% {
+        left: 120%;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.datatable-content table {
+    margin-bottom: 0;
+    border-right: none;
+}
+
+.datatable-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0.5;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.table-cell-input {
+    padding: 0 0.5em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    min-width: 0;
+    height: 2.2em;
+}
+
+.table-cell-container {
+    min-width: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 720px) {
+    .datatable-title-span {
+        line-height: 1.5;
+    }
+    .datatable-title {
+        overflow: hidden;
+        white-space: inherit;
+    }
+    .datatable-header-title {
+        height: auto;
+        flex-direction: row;
+    }
+    .datatable-cell .button-action img, .datatable-cell .edition-button-action img {
+        width: 24px;
+    }
+
+}
+
+.datatable-masked {
+    display: none;
+}
+
+is_disabled {
+    cursor: none;
+}
+
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -468px 0
+    }
+    100% {
+        background-position: 468px 0
+    }
+}
+
+.table-spinner-background {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #F7F7F7 8%, #EDEDED 18%, #F7F7F7 33%);
+    background-size: 800px 104px;
+    min-height: 310px;
+    position: relative;
+}
+
+.table-spinner-cell {
+    border: 10px solid white;
+    height: 100%;
+    width: 100%;
+    line-height: 1.2;
+    font-color: transparent;
+}
+
+.td-no-padding {
+    padding: 0 !important;
+}
+
+.datatable-expandable-line td:hover {
+    background-color: transparent;
+}
+
+.datatable-expandable-line.datatable-expandable-line-hidden {
+    display: none;
+}
+
+.datatable-expandable-line.datatable-expandable-line-displayed {
+    display: table-row;
+    background-color: #fafafa;
+}
+
+.table-cell-container .input-reset {
+    margin: -.1em -2em;
+}
+
+.table-cell-input {
+    padding: 0.5em 2em 0.5em 1em;
+}
+
+.badge-checkbox-all {
+    position: relative
+}
+
+.badge-selected-items-before::before {
+    align-content: center;
+    align-items: center;
+    background: #ff4081 none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #fff;
+    content: attr(data-badge);
+    display: flex;
+    flex-flow: row wrap;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    height: 22px;
+    justify-content: center;
+    position: absolute;
+    left: -10px;
+    top: -9px;
+    width: 22px;
+}
+
+.datatable-content table {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                     supported by Chrome and Opera */
+}
+
+.card-content-title {
+    color: rgba(0, 0, 0, 0.87);
     cursor: default;
+    font-family: NotoSansUI-Regular;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
 }
 
-.hornet-datatable-pagination-control-enabled,
-.hornet-datatable-pagination-control-enabled:hover {
-    text-decoration: none;
-    cursor: pointer;
+.card-content-list-item {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 18px;
+    padding: 0;
+    font-family: NotoSansUI-Regular;
+    color: #232425;
 }
 
-.hornet-datatable-pagination-control-enabled,
-.hornet-datatable-pagination-control-enabled:hover {
-    text-decoration: none;
-    cursor: pointer;
+tr.datatable-line-selected td[disabled] {
+    opacity: 1;
+    filter: none;
+    -webkit-filter: none;
+    background: #e2eff7;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+tr.datatable-line-selected td.datatable-cell-in-edition a img {
+    opacity: .5;
+    filter: grayscale(1);
 }

@@ -1,6 +1,29 @@
+# hornet-themes-5.1.0
+
+212453	-	correctif checkbox en readonly: ajout class + style
+212428	-	Placement des croix, zone des boutons d'action
+212403	-	correctif checkbox en readonly: ajout class + style
+212340	-	correction padding bouton ie
+212013	-	compatibilité ie
+211850	-	Force css pour ie 9 et plus
+210730	-	autocomplete + modal: ajout d'une propriété withoutOverflow pour la modal afin de pouvoir y intégrer un autocomplete
+210519	-	correction bug d'affichage header tableau
+210050	-	Correction sur la longueur d'écriture dans l'autocomplete
+210009	-	Templating with Carbon.io - picto manquants
+209559	-	correctif dans les colonnes d'action
+209506	-	Tableau editable
+209469	-	positionnement picto sticky
+209425	-	mise en place toggle columns du tableau
+209388	-	Mise en place tableau editable
+209318	-	Modification unité, taille minimum du bouton
+209276	-	correction affichage liste dropdown du tableau
+209189	-	Tableau, libellés header avec saut de ligne
+209136	-	rendre visible le label du pager sur les supports mobiles
+209132	-	Correction pour la tabulation sur le picto du tableau
+209118	-	unselect table elements CSS
+209109	-	uniformisation des picto + optimisation tableau + revue dataSource Err:510 selectedItems
+
 # Hornet-themes 5.0.1
-
-
 
 # Hornet-themes 5.0.0
 

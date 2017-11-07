@@ -1,75 +1,287 @@
-/*!
-MAEDI
-*/
-@font-face {
-    font-family: "lato";
-    font-style: normal;
-    font-weight: 200;
-    src: url("../fonts/lato-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-light-webfont.woff") format("woff"), url("../fonts/lato-light-webfont.ttf") format("truetype"), url("../fonts/lato-light-webfont.svg#latolight") format("svg");
+/**
+ * Copyright ou © ou Copr. Ministère de l'Europe et des Affaires étrangères (2017)
+ * <p/>
+ * pole-architecture.dga-dsi-psi@diplomatie.gouv.fr
+ * <p/>
+ * Ce logiciel est un programme informatique servant à faciliter la création
+ * d'applications Web conforémement aux référentiels généraux français : RGI, RGS et RGAA
+ * <p/>
+ * Ce logiciel est régi par la licence CeCILL soumise au droit français et
+ * respectant les principes de diffusion des logiciels libres. Vous pouvez
+ * utiliser, modifier et/ou redistribuer ce programme sous les conditions
+ * de la licence CeCILL telle que diffusée par le CEA, le CNRS et l'INRIA
+ * sur le site "http://www.cecill.info".
+ * <p/>
+ * En contrepartie de l'accessibilité au code source et des droits de copie,
+ * de modification et de redistribution accordés par cette licence, il n'est
+ * offert aux utilisateurs qu'une garantie limitée.  Pour les mêmes raisons,
+ * seule une responsabilité restreinte pèse sur l'auteur du programme,  le
+ * titulaire des droits patrimoniaux et les concédants successifs.
+ * <p/>
+ * A cet égard  l'attention de l'utilisateur est attirée sur les risques
+ * associés au chargement,  à l'utilisation,  à la modification et/ou au
+ * développement et à la reproduction du logiciel par l'utilisateur étant
+ * donné sa spécificité de logiciel libre, qui peut le rendre complexe à
+ * manipuler et qui le réserve donc à des développeurs et des professionnels
+ * avertis possédant  des  connaissances  informatiques approfondies.  Les
+ * utilisateurs sont donc invités à charger  et  tester  l'adéquation  du
+ * logiciel à leurs besoins dans des conditions permettant d'assurer la
+ * sécurité de leurs systèmes et ou de leurs données et, plus généralement,
+ * à l'utiliser et l'exploiter dans les mêmes conditions de sécurité.
+ * <p/>
+ * Le fait que vous puissiez accéder à cet en-tête signifie que vous avez
+ * pris connaissance de la licence CeCILL, et que vous en avez accepté les
+ * termes.
+ * <p/>
+ * <p/>
+ * Copyright or © or Copr. Ministry for Europe and Foreign Affairs (2017)
+ * <p/>
+ * pole-architecture.dga-dsi-psi@diplomatie.gouv.fr
+ * <p/>
+ * This software is a computer program whose purpose is to facilitate creation of
+ * web application in accordance with french general repositories : RGI, RGS and RGAA.
+ * <p/>
+ * This software is governed by the CeCILL license under French law and
+ * abiding by the rules of distribution of free software.  You can  use,
+ * modify and/ or redistribute the software under the terms of the CeCILL
+ * license as circulated by CEA, CNRS and INRIA at the following URL
+ * "http://www.cecill.info".
+ * <p/>
+ * As a counterpart to the access to the source code and  rights to copy,
+ * modify and redistribute granted by the license, users are provided only
+ * with a limited warranty  and the software's author,  the holder of the
+ * economic rights,  and the successive licensors  have only  limited
+ * liability.
+ * <p/>
+ * In this respect, the user's attention is drawn to the risks associated
+ * with loading,  using,  modifying and/or developing or reproducing the
+ * software by the user in light of its specific status of free software,
+ * that may mean  that it is complicated to manipulate,  and  that  also
+ * therefore means  that it is reserved for developers  and  experienced
+ * professionals having in-depth computer knowledge. Users are therefore
+ * encouraged to load and test the software's suitability as regards their
+ * requirements in conditions enabling the security of their systems and/or
+ * data to be ensured and,  more generally, to use and operate it in the
+ * same conditions as regards security.
+ * <p/>
+ * The fact that you are presently reading this means that you have had
+ * knowledge of the CeCILL license and that you accept its terms.
+ *
+ */
+
+/**
+ * hornet-themes - Thème Hornet.js
+ *
+ * @author MEAE - Ministère de l'Europe et des Affaires étrangères
+ * @version v5.1.0
+ * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
+ * @license CECILL-2.1
+ */
+
+/* Zoning global */
+
+* {
+    margin: 0;
+    padding: 0;
 }
-@font-face {
-    font-family: "lato";
-    font-style: normal;
-    font-weight: 400;
-    src: url("../fonts/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-regular-webfont.woff") format("woff"), url("../fonts/lato-regular-webfont.ttf") format("truetype"), url("../fonts/lato-regular-webfont.svg#latoregular") format("svg");
+
+body {
+    display: flex;
+    flex-direction: column;
 }
-@font-face {
-    font-family: "lato";
-    font-style: normal;
-    font-weight: 600;
-    src: url("../fonts/lato-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-bold.woff") format("woff"), url("../fonts/lato-bold.ttf") format("truetype"), url("../fonts/lato-bold.svg#LatoBold") format("svg");
+
+#global {
+    background: #f3f3f3 none repeat scroll 0 0;
+    flex: 1 0 auto;
+    margin: 0 2rem;
 }
-@font-face {
-    font-family: "lato";
-    font-style: normal;
-    font-weight: 800;
-    src: url("../fonts/lato-black-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-black-webfont.woff") format("woff"), url("../fonts/lato-black-webfont.ttf") format("truetype"), url("../fonts/lato-black-webfont.svg#latoblack") format("svg");
+
+#site {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
-@font-face {
-    font-family: "lato";
-    font-style: italic;
-    font-weight: 200;
-    src: url("../fonts/lato-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-lightitalic-webfont.woff") format("woff"), url("../fonts/lato-lightitalic-webfont.ttf") format("truetype"), url("../fonts/lato-lightitalic-webfont.svg#latolight_italic") format("svg");
+
+#page {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    color: #232425;
+    margin: auto;
+    padding: 0 1.85em 4em 1.85em;
+    width: 100%;
+    flex-grow: 1;
 }
-@font-face {
-    font-family: "lato";
-    font-style: italic;
-    font-weight: 400;
-    src: url("../fonts/lato-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-italic-webfont.woff") format("woff"), url("../fonts/lato-italic-webfont.ttf") format("truetype"), url("../fonts/lato-italic-webfont.svg#latoitalic") format("svg");
+
+.mainLayoutClassName {}
+
+.mainLayoutClassNameExpanded {}
+
+#img-logo img {
+    margin: 0 .5em 0 .5em;
 }
-@font-face {
-    font-family: "lato";
-    font-style: italic;
-    font-weight: 600;
-    src: url("../fonts/lato-bolditalic.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-bolditalic.woff") format("woff"), url("../fonts/lato-bolditalic.ttf") format("truetype"), url("../fonts/lato-bolditalic.svg#LatoBoldItalic") format("svg");
+
+#app-title {
+    margin: 0 .5em 0 .5em;
 }
-@font-face {
-    font-family: "exo_2";
-    font-style: normal;
-    font-weight: 600;
-    src: url("../fonts/exo2-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2-semibold-webfont.woff") format("woff"), url("../fonts/exo2-semibold-webfont.ttf") format("truetype"), url("../fonts/exo2-semibold-webfont.svg#exo_2semi_bold") format("svg");
+
+#pageAccueil {
+    padding-top: 2em;
 }
-@font-face {
-    font-family: "exo_2";
-    font-style: normal;
-    font-weight: 500;
-    src: url("../fonts/exo2-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2-medium-webfont.woff") format("woff"), url("../fonts/exo2-medium-webfont.ttf") format("truetype"), url("../fonts/exo2-medium-webfont.svg#exo_2medium") format("svg");
+
+img {
+    border: 0 none;
+    vertical-align: middle;
 }
-@font-face {
-    font-family: "exo_2";
-    font-style: normal;
-    font-weight: 100;
-    src: url("../fonts/exo2-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2-thin-webfont.woff") format("woff"), url("../fonts/exo2-thin-webfont.ttf") format("truetype"), url("../fonts/exo2-thin-webfont.svg#exo_2thin") format("svg");
+
+.inside {
+    margin: 0 auto;
+    padding: 0 1.65em;
+    height: 100%;
 }
-@font-face {
-    font-family: "exo_2";
-    font-style: normal;
-    font-weight: 200;
-    src: url("../fonts/exo2-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2-light-webfont.woff") format("woff"), url("../fonts/exo2-light-webfont.ttf") format("truetype"), url("../fonts/exo2-light-webfont.svg#exo_2light") format("svg");
+
+.language-arrow-down @media (max-width: 416px) {
+    .inside {
+        padding: 0 1.1em;
+    }
 }
-@font-face {
-    font-family: "exo_2";
-    font-style: normal;
-    font-weight: 400;
-    src: url("../fonts/exo2-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2-regular-webfont.woff") format("woff"), url("../fonts/exo2-regular-webfont.ttf") format("truetype"), url("../fonts/exo2-regular-webfont.svg#exo_2regular") format("svg");
+
+.full-height {
+    height: 100%;
+}
+
+
+/* Titles */
+
+h1 {
+    font-family: NotoSansUI-Bold;
+    font-size: 25px;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: NotoSansUI-Bold;
+    font-size: 30px;
+    color: #024056;
+    padding: 0.438em 0 0 0;
+}
+
+h3 {
+    font-family: NotoSansUI-Regular;
+    font-size: 20px;
+    color: #007eca;
+    text-transform: uppercase;
+    padding: 0.6em 0 0 0em;
+}
+
+h4 {
+    font-family: NotoSansUI-Regular;
+    font-size: 17px;
+    color: #007eca;
+    text-transform: uppercase;
+    padding: 0.6em 0 0 0em;
+}
+
+h5 {
+    padding-top: .6em;
+}
+
+a {
+    color: #007eca;
+    text-decoration: none;
+}
+
+p {
+    margin-top: 0.5em;
+}
+
+.visible {
+    height: auto;
+}
+
+.hidden {
+    overflow: hidden;
+    height: 0;
+}
+
+
+/*margin */
+
+.mls {
+    margin-left: 1.25em;
+}
+
+.mlm {
+    margin-left: 1.45em;
+}
+
+.mll {
+    margin-left: 1.85em;
+}
+
+.mrl {
+    margin-right: 1.85em;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: none;
+    padding-bottom: 0.2px;
+    border-bottom: grey 1px dotted;
+}
+
+.label-required abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+}
+
+.container-input-croix {
+    position: relative;
+}
+
+.field-inline {
+    margin-right: 3em;
+}
+
+
+/* Déclaration points de rupture */
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 960px) {}
+
+@media (max-width: 720px) {
+    #img-logo,
+    .button-info-accessibilite {
+        display: none
+    }
+}
+
+@media (max-width: 405px) {
+    h1 {
+        margin-top: 5px !important;
+        font-size: 15px !important;
+    }
+    .profil-content a.username {
+        font-size: 0.75em;
+    }
+    #page {
+        /*min-height: 20em;*/
+        padding: 0 0.4em 2em 0.4em;
+    }
+}
+
+@media (max-width: 675px) {
+    .has-gutter {
+        margin-left: 0 ! important;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 18px;
+    }
 }

@@ -1,14 +1,10 @@
-
 # Hornet-themes
 
 Hornet-themes est le projet qui permet de construire les thèmes du framework Hornet. 
-Pour cela, il met à disposition un thème par défaut : `default`
-
-Il est basé sur le framework `purecss` qui est référencé dans le sous projet hornet-themes-commun.
 
 ## Pré-requis
 
-- `nodejs` 4.X
+- `nodejs` 6.X
 - `hornet-js-builder` 1.X installé en global
 
 ## Installation
@@ -19,33 +15,6 @@ Il est basé sur le framework `purecss` qui est référencé dans le sous projet
 $ hb install
 ```
 
-## Exécution
-
-```shell
-$ hb start
-```
-
-## Vérification
-
-Accès aux ressources du CDN via un navigateur web :
-
-`[PROTOCOLE]://[URL]:[PORT]/hornet/5.0.X/default/css/theme.css`
-
-Par défaut :
-
-`http://localhost:7777/5.0.X/default/css/theme.css`
-
-Le fichier ainsi affiché doit commencer par ceci :
-
-```css
-/*!
-Pure v0.5.0
-Copyright 2014 Yahoo! Inc. All rights reserved.
-Licensed under the BSD License.
-https://github.com/yui/pure/blob/master/LICENSE.md
-*//*!
-```
-
 ## Packaging
 
 ```shell
@@ -54,11 +23,38 @@ $ hb package
 
 Le livrable est disponible dans le répertoire :
 
-`target\hornet-themes-default-5.0.X.zip`
+`target\hornet-themes-5.1.X.zip`
 
-## Déploiement sur Apache
+## Intégration dans une application Hornet.js
 
-### Pré-requis
+Définir la propriété themeName dans le fichier default.json :
+
+```json
+  "themeName": "hornet-themes"
+```
+
+## Utilisation en mode CDN
+
+### lancement d'un serveur static express
+
+
+```shell
+$ hb start
+```
+
+#### Vérification
+
+Accès aux ressources du CDN via un navigateur web :
+
+`[PROTOCOLE]://[URL]:[PORT]/hornet/5.1.X/css/theme.css`
+
+Par défaut :
+
+`http://localhost:7777/5.1.X/css/theme.css`
+
+### Déploiement sur Apache
+
+#### Pré-requis
 
 Le Frontal Apache doit être configuré avec un `DocumentRoot`, ou un alias permettant d'accéder au répertoire qui contiendra les thèmes.
 
@@ -72,7 +68,7 @@ Pour celà la configuration doit comporter les lignes suivantes :
 	</IfModule>
 ```
 
-### Déploiement
+#### Déploiement
 
 1. Récupérer le zip contenant les thèmes.
 2. Le décompresser dans le répertoire cible.
@@ -82,8 +78,8 @@ L'arborescence obtenue doit ressembler à ceci :
 ```
 [DocumentRoot ou Alias]
 	/hornet
-		/5.0.X
-			/default
+		/5.1.X
+			/theme_name
 ```
 
 ## Licence
