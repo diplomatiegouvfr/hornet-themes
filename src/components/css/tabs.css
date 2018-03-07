@@ -70,7 +70,7 @@
  */
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -97,6 +97,7 @@
     overflow: hidden;
     width: calc(100% - 1.9em);
     float: left;
+    display: inline-flex;
 }
 
 .tabviewContentList.touch {
@@ -128,13 +129,20 @@
     margin: 0 0.05em;
 }
 
+.tab-label:hover, .tab-label:focus, .tabs-add-button:hover, .tabs-add-button:focus {
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: 1px;
+}
+
 
 /*Empeche la selection de l'element qui porte la classe tab-selected */
 .tab-label:hover:not(.tab-selected){
     background: #f8f8ff;
-    boder:1px solid #007ecb;
+    boder: 1px solid #0579be;
     color: #03476e;
     border-radius: 0.4em 0.4em 0 0;
+
 }
 
 .tab-panel:not(.tab-panel-selected) {
@@ -196,4 +204,50 @@
     content: "";
     display: table;
     clear: both;
+}
+
+.tabs-arrow-hidden-label{
+    display:none
+ }
+
+.tabs-button-label {
+    display: none
+}
+
+.tabs-add-button {
+    display: inline-block;
+    height: 2.5em;
+    min-width: 3em;
+    color: #03476e;
+    border-radius: 0.4em 0.4em 0 0;
+    margin: 0 0.05em;
+    border: none;
+    background: url(../img/tabs/ico_add.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f4f4f4;
+    cursor: pointer;
+
+}
+
+.delete-tab-button {
+    background: url(../img/tabs/ico_close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    position: absolute;
+    right: 1.5em;
+    height: 1em;
+    width: 1em;
+    top: 1rem;
+    cursor: pointer;
+    margin-right: -1em;
+}
+
+.delete-tab-button.delete-tab-button-selected {
+    background-image: url(../img/picto/white/ico_close.svg);
+}
+
+li.tab {
+    position: relative;
 }

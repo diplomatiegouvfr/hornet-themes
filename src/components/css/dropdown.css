@@ -71,7 +71,7 @@
 
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -89,12 +89,29 @@
     cursor: pointer;
 }
 
-.dropdown-button {
-    padding: .4em;
+.dropdown-container>button {
+    border: none;
+    cursor: pointer;
+    right: auto;
+    position: relative;
+    background-color: #0579be;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0.2em;
+    min-width: 2.313em;
+    min-height: 2.313em;
 }
 
-.dropdown-button:focus {
-    outline: #4D90FE solid 1px;
+.more-actions {
+    background: transparent url(../img/picto/white/more_vert_white.svg) no-repeat scroll left top;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+}
+
+.dropdown-button {
+    padding: .4em;
 }
 
 .dropdown-content {
@@ -102,7 +119,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     visibility: visible;
     -webkit-transition: max-height 500ms ease;
     -moz-transition: max-height 500ms ease;
@@ -125,7 +142,7 @@
 
 /* Arrow pour BL*/
 
-.dropdown-list .arrow.position-bottom-left {
+.arrow.position-bottom-left {
     content: '';
     position: absolute;
     top: -0.43em;
@@ -149,7 +166,7 @@
 
 /* Arrow pour BR*/
 
-.dropdown-list .arrow.position-bottom-right {
+.arrow.position-bottom-right {
     content: '';
     position: absolute;
     top: -0.43em;
@@ -170,8 +187,7 @@
 
 
 /* Arrow pour TR*/
-
-.dropdown-list .arrow.position-top-right {
+.arrow.position-top-right {
     content: '';
     position: absolute;
     bottom: -0.43em;
@@ -194,7 +210,7 @@
 
 /* Arrow pour TL*/
 
-.dropdown-list .arrow.position-top-left {
+.arrow.position-top-left {
     content: '';
     position: absolute;
     bottom: -0.43em;
@@ -208,6 +224,7 @@
 }
 
 .dropdown-list {
+    margin-top: 0em;
     list-style: none;
     opacity: 1;
     min-width: 136px;
@@ -231,20 +248,21 @@
 }
 
 .dropdown-list li>a.checked {
-    color: #007eca;
+    color: #0579be;
     background-color: #e2eff7;
-    border-left: 4px solid #007eca;
+    border-left: 4px solid #0579be;
     padding: 0px 26px 0px 12px !important;
 }
 
 .dropdown-list li>a.checked:hover {
-    color: #007eca;
+    color: #0579be;
 }
 
-.dropdown-list li>a:hover {
+.dropdown-list li>a:hover,
+.dropdown-list li>div:hover {
     color: #000;
     background-color: #e2eff7;
-    border-left: 4px solid #007eca;
+    border-left: 4px solid #0579be;
     padding: 0px 26px 0px 12px;
 }
 
@@ -267,13 +285,14 @@
     vertical-align: middle;
 }
 
-.more-actions {
-    height: 1.5em;
-    width: 1.5em;
-    background: transparent url("../img/dropdown/more_vert_white.svg");
+
+/*.more-actions {
     cursor: pointer;
     display: block;
-}
+    width: 1.5em;
+    height: 2.5em;
+    color: transparent;
+}*/
 
 .ico-table-settings-white {
     height: 1.5em;
@@ -293,6 +312,16 @@
     font-size: 1em;
     margin-right: 0.5em;
     width: 100%;
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    line-height: inherit;
+    position: relative;
+    background: #ffffff;
+    color: #000000;
+    padding: 0px 26px 0px 16px;
+    white-space: nowrap;
 }
 
 .toggle-column-item-checkbox {
@@ -312,4 +341,18 @@
 div#table-settingscontent ul.dropdown-list li a {
     width: 100%;
     margin-right: 0.5em;
+}
+
+.toggle-column-item-label.fl label {
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+}
+
+.datatable-header-title:focus {
+    outline: none;
+}
+
+span.dropdown-hidden-label {
+    display: none;
 }

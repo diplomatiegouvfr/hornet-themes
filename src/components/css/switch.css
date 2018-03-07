@@ -70,7 +70,7 @@
  */
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -136,7 +136,7 @@
 }
 
 .switch-input:checked ~ .switch-label {
-    background: #007ecb;
+    background: #0579be;
 }
 
 .switch-input:checked ~ .switch-label:before {

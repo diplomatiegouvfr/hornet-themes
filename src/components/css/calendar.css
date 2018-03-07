@@ -71,7 +71,7 @@
 
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -132,7 +132,10 @@ table>tbody>tr>td {
 
 .agenda img {
     margin-bottom: 0.25em;
-    width: 32px;
+    height: 2.563em;
+    width: 2.563em;
+
+
 }
 
 .rc-calendar-panel {

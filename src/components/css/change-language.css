@@ -71,7 +71,7 @@
 
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -168,13 +168,13 @@
 }
 
 .dropdown-language.isOpen .itemLang:focus {
-    outline: #007ecb solid 1px;
+    outline: #0579be solid 1px;
 }
 
 .dropdown-language.isOpen .itemLang:hover {
     color: #ffffff;
     /* font-weight: bold;*/
-    background-color: #007ecb;
+    background-color: #0579be;
 }
 
 .dropdown-language.isOpen .itemLang:hover a {

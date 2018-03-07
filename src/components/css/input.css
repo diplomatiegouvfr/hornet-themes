@@ -71,7 +71,7 @@
 
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -90,7 +90,7 @@
     min-width: 15.469em;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="text"]:hover {
     outline: #4D90FE solid 1px;
 }
 
@@ -131,7 +131,8 @@ input.center {
     position: relative;
 }
 
-.input-reset {
+.input-reset,
+.calendar-container .input-reset {
     position: absolute;
     margin: 7px -40px;
     cursor: pointer;
@@ -147,7 +148,9 @@ input.center {
 
 .input-reset a:hover img {
     background-color: rgba(158, 158, 158, 0.2);
-    border-radius: 50%
+    border-radius: 50%;
+    outline: none;
+    box-shadow: 0 0 1px #4D90FE;
 }
 
 .input-reset.input-reset-hidden {
@@ -160,4 +163,8 @@ input.center {
     transition: opacity 500ms linear, visibility 0s linear 500ms;
     border: none;
     outline: none;
+}
+
+.calendar-container .input-reset {
+    margin: 13px -40px;
 }

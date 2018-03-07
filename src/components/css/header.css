@@ -71,7 +71,7 @@
 
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -96,7 +96,7 @@ a.header-link:focus {
 }
 
 #banner {
-    background: #007ecb none repeat scroll 0 0;
+    background: #0579be none repeat scroll 0 0;
     height: 4em;
 }
 

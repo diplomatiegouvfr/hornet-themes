@@ -71,7 +71,7 @@
 
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -102,4 +102,17 @@ textarea:focus {
 
 .textarea-reset {
     margin: 12px -25px;
+}
+
+.textarea-character-value {
+    position: relative;
+    height: 1em;
+    font-style: italic;
+    color: #666666;
+    min-width: 1em;
+    float: right;
+}
+
+.textarea-too-many-char {
+    color: #d60000;
 }

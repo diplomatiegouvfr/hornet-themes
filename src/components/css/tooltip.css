@@ -71,7 +71,7 @@
 
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -81,6 +81,7 @@
 
 .tooltip {
     margin-left: 1.125em;
+    position: relative;
 }
 
 a:focus,
@@ -102,32 +103,12 @@ tooltip {
 
 /**TODO:mettre a jour ce qu'il ya  en dessous**/
 
-[data-tooltip] {
-    position: relative;
+.tooltip-label {
+    position: absolute;
     z-index: 3;
     cursor: pointer;
-    display: none;
-}
-
-
-/* Hide the tooltip content by default */
-
-[data-tooltip]:before,
-[data-tooltip]:after {
-    visibility: visible;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    pointer-events: none;
-}
-
-
-/* Position tooltip above the element */
-
-[data-tooltip]:before {
-    position: absolute;
     bottom: 150%;
-    left: 50%;
+    left: 174%;
     margin-bottom: 5px;
     margin-left: -92px;
     padding: 7px;
@@ -138,17 +119,30 @@ tooltip {
     background-color: #000;
     background-color: hsla(0, 0%, 20%, 0.9);
     color: #fff;
-    content: attr(data-tooltip);
     text-align: center;
     line-height: 1.2;
 }
 
 
+/* Hide the tooltip content by default */
+
+
+/*.tooltip-label:before,*/
+
+.tooltip-label:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    pointer-events: none;
+}
+
+
 /* Triangle hack to make tooltip look like a speech bubble */
 
-[data-tooltip]:after {
+.tooltip-label:after {
     position: absolute;
-    bottom: 150%;
+    top: 100%;
     left: 50%;
     margin-left: -12px;
     width: 0;

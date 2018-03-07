@@ -71,7 +71,7 @@
 
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -89,7 +89,7 @@
 }
 
 .form-soustitre {
-    color: #007eca;
+    color: #0579be;
     font-size: 17px;
     padding-top: 0.875em;
 }
@@ -129,7 +129,7 @@ checkbox
 ****/
 
 .checkbox-container {
-    padding: 10px 20px;
+    padding: 0px 20px;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
 }
@@ -195,13 +195,13 @@ label.checkbox-content input:focus+.checkbox-material .check {
     width: 0;
     height: 0;
     box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
-    /*color:#007ecb;
+    /*color:#0579be;
     -webkit-animation: checkbox-off 0.3s forwards ease-out;
             animation: checkbox-off 0.3s forwards ease-out; */
 }
 
 .checkbox-content input[type=checkbox]:checked+.checkbox-material .check {
-    color: #007ecb;
+    color: #0579be;
 }
 
 .checkbox-content input[type=checkbox]:not(:checked)+.checkbox-material .check {

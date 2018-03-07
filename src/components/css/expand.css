@@ -70,7 +70,7 @@
  */
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -110,8 +110,14 @@
 
 .accordion-label:focus, .accordion-label:hover {
     background: #d2dde4;
-    outline: none;
     overflow: hidden;
+}
+
+.accordion-label:hover {
+    outline: -webkit-focus-ring-color solid 1px;
+    outline-color: -webkit-focus-ring-color;
+    outline-style: solid;
+    outline-width: 1px;
 }
 
 .accordion-label-open {

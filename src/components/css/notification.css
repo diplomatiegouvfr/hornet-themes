@@ -69,8 +69,9 @@
  *
  */
 
+
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -78,21 +79,20 @@
  * @license CECILL-2.1
  */
 
-.error-message{
+.error-message {
     border: 0.063em solid #e6151d;
     padding: 0.5em 1em 0.5em 1em;
-    margin-top:1em;
-    margin-bottom:1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
-.error-message-title{
+.error-message-title {
     font-style: italic;
     color: #e6151d;
-    font-size:1em;
+    font-size: 1em;
     font-family: NotoSansUI-Regular;
     font-weight: lighter;
     text-transform: none;
-
     background-image: url('../img/notification/ic_warning_red_24px.svg');
     background-repeat: no-repeat;
     padding-left: 1.875em;
@@ -100,41 +100,40 @@
     font-family: NotoSansUI-Bold;
 }
 
-.error-message-list{
+.error-message-list {
     font-style: italic;
     color: #e6151d;
-    font-size:1em;
+    font-size: 1em;
     font-family: NotoSansUI-Regular;
     list-style: outside none none;
+    padding-left: 3em;
 }
 
-.error-message-text{
-    padding-left : 3em;
+.error-message-text {
     font-style: italic;
     color: #e6151d;
-    font-size:1em;
+    font-size: 1em;
     font-family: NotoSansUI-Regular;
 }
-.error-message-text:hover{
+
+.error-message-text:hover {
     color: #e6151d;
-    }
-
-
-.warning-message{
-    border: 0.063em solid darkorange;
-    padding: 0.5em 1em 0.5em 1em;
-    margin-top:1em;
-    margin-bottom:1em;
 }
 
-.warning-message-title{
+.warning-message {
+    border: 0.063em solid darkorange;
+    padding: 0.5em 1em 0.5em 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.warning-message-title {
     font-style: italic;
     color: darkorange;
-    font-size:1em;
+    font-size: 1em;
     font-family: NotoSansUI-Regular;
     font-weight: lighter;
     text-transform: none;
-
     background-image: url('../img/notification/ic_warning_black_24px.svg');
     background-repeat: no-repeat;
     padding-left: 1.875em;
@@ -142,39 +141,36 @@
     font-family: NotoSansUI-Bold;
 }
 
-.warning-message-list{
+.warning-message-list {
     font-style: italic;
     color: darkorange;
-    font-size:1em;
+    font-size: 1em;
     font-family: NotoSansUI-Regular;
     list-style: outside none none;
     padding-left: 3em;
 }
 
-.warning-message-text{
+.warning-message-text {
     font-style: italic;
     color: darkorange;
-    font-size:1em;
+    font-size: 1em;
     font-family: NotoSansUI-Regular;
 }
 
-
-
-.info-message{
+.info-message {
     border: 0.063em solid green;
     padding: 0.5em 1em 0.5em 1em;
-    margin-top:1em;
-    margin-bottom:1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
-.info-message-title{
+.info-message-title {
     font-style: italic;
     color: green;
-    font-size:1em;
+    font-size: 1em;
     font-family: NotoSansUI-Regular;
     font-weight: lighter;
     text-transform: none;
-
     background-image: url('../img/notification/ic_check_circle_black_24px.svg');
     background-repeat: no-repeat;
     padding-left: 1.875em;
@@ -182,63 +178,146 @@
     font-family: NotoSansUI-Bold;
 }
 
-.info-message-list{
+.info-message-list {
     font-style: italic;
     color: green;
-    font-size:1em;
+    font-size: 1em;
     font-family: NotoSansUI-Regular;
     list-style: outside none none;
     padding-left: 3em;
 }
 
-.info-message-text{
+.info-message-text {
     font-style: italic;
     color: green;
-    font-size:1em;
+    font-size: 1em;
     font-family: NotoSansUI-Regular;
 }
 
-.personnal-message{
+.personnal-message {
     padding: 0.5em 1em 0.5em 1em;
-    margin-top:1em;
-    margin-bottom:1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
-.personnal-message-title{
+.personnal-message-title {
     font-style: italic;
-    font-size:1em;
+    font-size: 1em;
     font-family: NotoSansUI-Regular;
     font-weight: lighter;
     text-transform: none;
-
     background-repeat: no-repeat;
     padding-left: 1.875em;
     display: block;
     font-family: NotoSansUI-Bold;
 }
 
-.personnal-message-list{
+.personnal-message-list {
     font-style: italic;
-    font-size:1em;
+    font-size: 1em;
     font-family: NotoSansUI-Regular;
     list-style: outside none none;
     padding-left: 3em;
 }
 
-.personnal-message-text{
+.personnal-message-text {
     font-style: italic;
-    font-size:1em;
+    font-size: 1em;
     font-family: NotoSansUI-Regular;
 }
 
-.stack-dev{
+.stack-dev {
     margin: 1em 0 0 1em;
 }
 
-.stack-dev-title{
-    font-size:1.5em;
+.stack-dev-title {
+    font-size: 1.5em;
 }
 
-.stack-dev-line{
+.stack-dev-line {
     margin-left: 2em;
+}
+
+.error-button-open {
+    border: none;
+    background: url("../img/notification/icon_fleche_expand_open.svg") transparent;
+    background-repeat: no-repeat;
+    height: 26px;
+    width: 26px;
+    float: right;
+    font-size: 0px;
+    cursor: pointer;
+}
+
+.error-button-close {
+    border: none;
+    background: url("../img/notification/icon_fleche_expand_close.svg") transparent;
+    background-repeat: no-repeat;
+    height: 26px;
+    width: 26px;
+    float: right;
+    font-size: 0px;
+    cursor: pointer;
+}
+
+.error-message-list.close,
+.personnal-message-list.close,
+.warning-message-list.close {
+    display: none;
+}
+
+.info-button {
+    border: none;
+    background: url("../img/notification/ico_notification_close.svg") transparent;
+    background-repeat: no-repeat;
+    height: 26px;
+    width: 26px;
+    float: right;
+    font-size: 0px;
+    cursor: pointer;
+}
+
+.notification-timeout {
+    position: fixed;
+    right: 0;
+    bottom: 4.2em;
+    line-height: 2em;
+    background: white;
+    padding: 0.5em;
+    color: #2e586e;
+    font-family: "NotoSansUI-Bold";
+    box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.45);
+}
+
+.notification-expanded {
+    -webkit-transition: width 1s;
+    /* For Safari 3.1 to 6.0 */
+    transition: width 1s;
+    opacity: 1;
+    padding-top: 0.5em;
+}
+
+.notification-reduced {
+    width: 0;
+    opacity: 0;
+    height: 0;
+    font-size: 0;
+}
+
+.notification-timeout .notification-session-message div {
+    line-height: 1.2em
+}
+
+.notification-timeout .notification-session-message div a {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 405px) {
+    .personnal-message-list,
+    .info-message-list,
+    .error-message-list,
+    .warning-message-list {
+        padding-left: 1.45em;
+        list-style: square;
+    }
 }

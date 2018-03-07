@@ -70,7 +70,7 @@
  */
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -124,8 +124,9 @@
 }
 
 .content-modal-body {
-    /*overflow: auto;*/
-    max-height: 700px;
+    overflow: auto;
+    /*max-height: 700px;*/
+    max-height: 28em;
 }
 
 .modal-overflow-y {
@@ -177,6 +178,9 @@
 }
 
 div[role=alertdialog]{
-    position: fixed !important;
     z-index:5;
+}
+
+.dialog-content-alert {
+    position: absolute !important;
 }

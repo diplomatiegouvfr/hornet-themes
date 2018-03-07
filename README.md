@@ -4,7 +4,7 @@ Hornet-themes est le projet qui permet de construire les thèmes du framework Ho
 
 ## Pré-requis
 
-- `nodejs` 6.X
+- `nodejs` 8.X
 - `hornet-js-builder` 1.X installé en global
 
 ## Installation
@@ -27,7 +27,7 @@ Le livrable est disponible dans le répertoire :
 
 ## Intégration dans une application Hornet.js
 
-Définir la propriété themeName dans le fichier default.json :
+Définir la propriété themeName dans le fichier `default.json` :
 
 ```json
   "themeName": "hornet-themes"
@@ -46,11 +46,11 @@ $ hb start
 
 Accès aux ressources du CDN via un navigateur web :
 
-`[PROTOCOLE]://[URL]:[PORT]/hornet/5.1.X/css/theme.css`
+`[PROTOCOLE]://[URL]:[PORT]/hornet/css/theme.css`
 
 Par défaut :
 
-`http://localhost:7777/5.1.X/css/theme.css`
+`http://localhost:7777/css/theme.css`
 
 ### Déploiement sur Apache
 
@@ -65,7 +65,7 @@ Pour celà la configuration doit comporter les lignes suivantes :
 ```xml
 	<IfModule mod_headers.c>
 		Header set Access-Control-Allow-Origin *
-	</IfModule>
+	</IfModule> 
 ```
 
 #### Déploiement

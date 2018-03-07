@@ -71,7 +71,7 @@
 
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -118,7 +118,7 @@
 }
 
 .radio-label input:checked~.outer {
-    border: 0.35em solid #007eca;
+    border: 0.35em solid #0579be;
 }
 
 .radio-label input:focus~.outer {

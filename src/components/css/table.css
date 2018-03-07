@@ -71,7 +71,7 @@
 
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -96,7 +96,7 @@
 }
 
 .datatable-header-title {
-    background-color: #007ecb;
+    background-color: #0579be;
     box-sizing: border-box;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.40);
     display: flex;
@@ -160,6 +160,10 @@ table {
     background-color: #f4f4f4;
 }
 
+.datatale-columns-hidden {
+    display: none;
+}
+
 
 /*Surchage Knacss*/
 
@@ -175,7 +179,7 @@ th {
 }
 
 .table-header {
-    color: #007ecb;
+    color: #0579be;
     font-size: 12px;
     font-weight: normal;
     text-align: left;
@@ -366,7 +370,8 @@ th div {
     overflow: inherit;
 }
 
-th, td {
+th,
+td {
     padding: .3em .1em .3em .8em;
 }
 
@@ -402,6 +407,7 @@ th div:focus {
     -moz-hyphens: auto;
     hyphens: auto;
     margin: .1em;
+    text-decoration: underline;
 }
 
 .datatable-header-sortable-column img {
@@ -433,6 +439,7 @@ td.datatable-cell.default-body-cell {
 
 .menu-priority-container {
     float: left;
+    margin-right: 0.1em;
 }
 
 .menu-contextuel-container {
@@ -505,7 +512,7 @@ td.datatable-cell.default-body-cell {
     left: -200px;
     width: 200px;
     height: 4px;
-    background-color: #007ecb;
+    background-color: #0579be;
     animation: loading 2s linear infinite;
 }
 
@@ -529,6 +536,21 @@ td.datatable-cell.default-body-cell {
     background: none;
     padding: 0 .5em;
     cursor: pointer;
+}
+
+.edition-button-action-before {
+    cursor: pointer;
+    display: inline-block;
+    width: 90%;
+    height: 100%;
+}
+
+.hidden-label {
+    display: none;
+}
+
+a.edition-button-action-before:hover {
+    outline: #4D90FE solid 1px;
 }
 
 .edition-button-action:hover,
@@ -607,10 +629,10 @@ button:focus {
         height: auto;
         flex-direction: row;
     }
-    .datatable-cell .button-action img, .datatable-cell .edition-button-action img {
+    .datatable-cell .button-action img,
+    .datatable-cell .edition-button-action img {
         width: 24px;
     }
-
 }
 
 .datatable-masked {
@@ -700,22 +722,6 @@ is_disabled {
     width: 22px;
 }
 
-.datatable-content table {
-    -webkit-touch-callout: none;
-    /* iOS Safari */
-    -webkit-user-select: none;
-    /* Safari */
-    -khtml-user-select: none;
-    /* Konqueror HTML */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* Internet Explorer/Edge */
-    user-select: none;
-    /* Non-prefixed version, currently
-                                     supported by Chrome and Opera */
-}
-
 .card-content-title {
     color: rgba(0, 0, 0, 0.87);
     cursor: default;
@@ -746,4 +752,8 @@ tr.datatable-line-selected td[disabled] {
 tr.datatable-line-selected td.datatable-cell-in-edition a img {
     opacity: .5;
     filter: grayscale(1);
+}
+
+a.arrow-sort-container:hover {
+    outline: #4D90FE solid 1px;
 }

@@ -71,7 +71,7 @@
 
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -112,7 +112,7 @@ ul.fil-ariane {
 
 .fil-ariane-racine {
     margin-right: 0.2em;
-    color: #007eca;
+    color: #0579be;
 }
 
 .fil-ariane-courant {
@@ -146,5 +146,5 @@ ul.fil-ariane {
 }
 
 .fil-ariane a:hover {
-    outline: #007ecb solid 1px;
+    outline: #0579be solid 1px;
 }

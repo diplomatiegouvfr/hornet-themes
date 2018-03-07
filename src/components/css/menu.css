@@ -70,7 +70,7 @@
  */
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -98,7 +98,7 @@
 #menu-main button.toggler {
     height: 4rem;
     width: 4.5rem;
-    background-color: #007ecb;
+    background-color: #0579be;
     cursor: pointer;
     display: block;
     overflow: hidden;
@@ -248,7 +248,7 @@ ul.nav li.nav-item {
     text-decoration: none;
     vertical-align: top;
     width: 25%;
-    padding: 2.5em;
+    padding: 1em;
 }
 
 li.nav-item.is-active a span.menulink-title {
@@ -292,7 +292,7 @@ li.nav-item.is-active li.sub-nav-item a span.menulink-title:hover, li.nav-item.i
         text-decoration: none;
         vertical-align: top;
         width: 33%;
-        padding: 2.5em;
+        padding: 1em;
     }
 }
 
@@ -411,7 +411,7 @@ ul.nav li.sub-nav-item a:hover, ul.nav li.sub-nav-item a:focus {
 }
 
 li.nav-item.is-active {
-    background-color: #007ecb;
+    background-color: #0579be;
 }
 
 .nav-item.is-active a:focus, .nav-item.is-active a:hover {
@@ -421,11 +421,11 @@ li.nav-item.is-active {
 
 .nav-item:not(.is-active) a:focus, .nav-item:not(.is-active) a:hover {
     outline: none;
-    border-left: 4px solid #007ecb;
+    border-left: 4px solid #0579be;
 }
 
 li.nav-item.is-active a {
-    border-left: 4px solid #007ecb;
+    border-left: 4px solid #0579be;
 }
 
 li.nav-item:not(.is-active) a {

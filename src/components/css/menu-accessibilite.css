@@ -1,0 +1,40 @@
+.top-menu-accessibilite.focused {
+    height: auto;
+    opacity: 1;
+    padding: 1rem;
+    z-index: 900;
+    top:0;
+}
+.top-menu-accessibilite {
+    background: #fff none repeat scroll 0 0;
+    height: 0;
+    list-style: outside none none;
+    margin: 0 auto;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+    position: absolute;
+    top:-50px;
+}
+
+.top-menu-accessibilite a {
+    color:#0579be;
+    font-size: 1em;
+    font-family: NotoSansUI-Bold;
+}
+
+.header.sticky header #header .top-menu-accessibilite.focused {
+    height: auto;
+    opacity: 1;
+    padding: 1rem;
+    z-index: 9999;
+    position:absolute;
+    top:0;
+    background: #0579be none repeat scroll 0 0;
+    transition: all 0.3s ease 0s;
+
+}
+.header.sticky header #header .top-menu-accessibilite.focused a {
+    color:white;
+
+}

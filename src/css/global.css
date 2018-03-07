@@ -70,7 +70,7 @@
  */
 
 /**
- * hornet-themes - Thème Hornet.js
+ * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
  * @version v5.1.0
@@ -171,7 +171,7 @@ h2 {
 h3 {
     font-family: NotoSansUI-Regular;
     font-size: 20px;
-    color: #007eca;
+    color: #0579be;
     text-transform: uppercase;
     padding: 0.6em 0 0 0em;
 }
@@ -179,7 +179,7 @@ h3 {
 h4 {
     font-family: NotoSansUI-Regular;
     font-size: 17px;
-    color: #007eca;
+    color: #0579be;
     text-transform: uppercase;
     padding: 0.6em 0 0 0em;
 }
@@ -189,7 +189,7 @@ h5 {
 }
 
 a {
-    color: #007eca;
+    color: #0579be;
     text-decoration: none;
 }
 
