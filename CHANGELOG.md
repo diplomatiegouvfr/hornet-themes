@@ -69,7 +69,7 @@
 209109	-	[5.1.0-rc3-final] - uniformisation des picto + optimisation tableau + revue dataSource Err:510 selectedItems
 
 
-# hornet-theme-5.1.0-rc2
+# hornet-theme-intranet-5.1.0-rc2
 
 -  0061977  -  hornet-js  -  Framework de validation du formulaire  -  fermé
 -  0062072  -  Hornet.js  -  Navigation: title page absent/incohérent - breadcrumb parfois absent - planAppli incomplet  -  fermé
