@@ -69,11 +69,12 @@
  *
  */
 
+
 /**
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -156,7 +157,8 @@
     background: none;
 }
 
-#menu-main button.toggler.is-active span::before, #menu-main button.toggler.is-active span::after {
+#menu-main button.toggler.is-active span::before,
+#menu-main button.toggler.is-active span::after {
     -webkit-transition-delay: 0s, .3s;
     transition-delay: 0s, .3s;
 }
@@ -183,33 +185,27 @@
 }
 
 .menu-content {
-    position: absolute;
     background: #FFF;
     top: 6.2em;
     box-shadow: 3px 2px 10px -3px rgba(0, 0, 0, 0.2), -3px 2px 10px -3px rgba(0, 0, 0, 0.2);
-    /*max-width: 1200px;*/
-    /*margin-left: -31px;*/
     margin-left: -1.62em;
     z-index: 3;
     overflow-y: auto;
     max-height: 90%;
     min-width: 1200px;
     width: 100%;
-    position:fixed;
+    position: fixed;
 }
 
-.menuEmpty{
-        width:0;
+.menuEmpty {
+    width: 0;
 }
 
 @media screen and (max-width: 1200px) {
     .menu-content {
-        position: absolute;
         background: #FFF;
         top: 6.2em;
         box-shadow: 3px 2px 10px -3px rgba(0, 0, 0, 0.2), -3px 2px 10px -3px rgba(0, 0, 0, 0.2);
-        /*max-width: 1200px;*/
-        /*margin-left: -31px;*/
         margin-left: -1.62em;
         z-index: 3;
         overflow-y: auto;
@@ -217,7 +213,7 @@
         min-width: 100%;
         position: fixed;
     }
-    .menuEmpty{
+    .menuEmpty {
         width: 42px;
     }
 }
@@ -229,9 +225,6 @@
     left: 0;
     background-color: #000;
     opacity: 0.6;
-    /*-webkit-transition: opacity 0.5s;*/
-    /*transition: opacity 0.5s;*/
-    /*margin-top: 0.9em;*/
     z-index: 2;
 }
 
@@ -267,15 +260,18 @@ li.sub-nav-item.is-active a span.menulink-title {
     color: white;
 }
 
-li.nav-item.is-active a:hover span.menulink-title, li.nav-item.is-active a:focus span.menulink-title {
+li.nav-item.is-active a:hover span.menulink-title,
+li.nav-item.is-active a:focus span.menulink-title {
     color: white;
 }
 
-li.sub-nav-item.is-active a:hover span.menulink-title, li.sub-nav-item.is-active a:focus span.menulink-title {
+li.sub-nav-item.is-active a:hover span.menulink-title,
+li.sub-nav-item.is-active a:focus span.menulink-title {
     color: white;
 }
 
-li.nav-item.is-active li.sub-nav-item a span.menulink-title:hover, li.nav-item.is-active li.sub-nav-item a span.menulink-title:focus {
+li.nav-item.is-active li.sub-nav-item a span.menulink-title:hover,
+li.nav-item.is-active li.sub-nav-item a span.menulink-title:focus {
     color: white;
 }
 
@@ -306,23 +302,18 @@ li.nav-item.is-active li.sub-nav-item a span.menulink-title:hover, li.nav-item.i
         margin: inherit;
         padding: 0em 0em 0em 1em;
     }
-
     .menulink-title {
         margin: 0.7em 0;
     }
-
     li.nav-item.masked li.sub-nav-item {
         display: none;
     }
-
     li.sub-nav-item.masked li.nav-item {
         display: none;
     }
-
     li.sub-nav-item.masked li.sub-nav-item {
         display: none;
     }
-
     ul.nav li.sub-nav-item a.having-sub-nav span:after {
         position: relative;
         left: 1em;
@@ -334,7 +325,6 @@ li.nav-item.is-active li.sub-nav-item a span.menulink-title:hover, li.nav-item.i
         border-top: 0.15em solid black;
         transform: rotate(-45deg);
     }
-
     ul.nav li.sub-nav-item.masked a.having-sub-nav span:after {
         position: relative;
         left: 1em;
@@ -347,7 +337,6 @@ li.nav-item.is-active li.sub-nav-item a span.menulink-title:hover, li.nav-item.i
         border-top: 0.15em solid black;
         transform: rotate(135deg);
     }
-
     ul.nav li.nav-item a.having-sub-nav span:after {
         position: relative;
         left: 1em;
@@ -359,7 +348,6 @@ li.nav-item.is-active li.sub-nav-item a span.menulink-title:hover, li.nav-item.i
         border-top: 0.15em solid black;
         transform: rotate(-45deg);
     }
-
     ul.nav li.nav-item.masked a.having-sub-nav span:after {
         position: relative;
         left: 1em;
@@ -404,7 +392,8 @@ ul.nav li.sub-nav-item a {
     margin-bottom: 0.1em;
 }
 
-ul.nav li.sub-nav-item a:hover, ul.nav li.sub-nav-item a:focus {
+ul.nav li.sub-nav-item a:hover,
+ul.nav li.sub-nav-item a:focus {
     font-family: NotoSansUI-Regular;
     font-size: 1.125em;
     color: #232425;
@@ -414,12 +403,14 @@ li.nav-item.is-active {
     background-color: #0579be;
 }
 
-.nav-item.is-active a:focus, .nav-item.is-active a:hover {
+.nav-item.is-active a:focus,
+.nav-item.is-active a:hover {
     outline: none;
     border-left: 4px solid white;
 }
 
-.nav-item:not(.is-active) a:focus, .nav-item:not(.is-active) a:hover {
+.nav-item:not(.is-active) a:focus,
+.nav-item:not(.is-active) a:hover {
     outline: none;
     border-left: 4px solid #0579be;
 }
@@ -451,19 +442,19 @@ li.sub-nav-item ul {
     margin: 0.7em 0;
 }
 
-#menu-main.vertical    li.nav-item.masked li.sub-nav-item {
+#menu-main.vertical li.nav-item.masked li.sub-nav-item {
     display: none;
 }
 
-#menu-main.vertical   li.sub-nav-item.masked li.nav-item {
+#menu-main.vertical li.sub-nav-item.masked li.nav-item {
     display: none;
 }
 
-#menu-main.vertical  li.sub-nav-item.masked li.sub-nav-item {
+#menu-main.vertical li.sub-nav-item.masked li.sub-nav-item {
     display: none;
 }
 
-#menu-main.vertical   ul.nav li.sub-nav-item a.having-sub-nav span:after {
+#menu-main.vertical ul.nav li.sub-nav-item a.having-sub-nav span:after {
     position: relative;
     left: 1em;
     content: "";
@@ -475,7 +466,7 @@ li.sub-nav-item ul {
     transform: rotate(-45deg);
 }
 
-#menu-main.vertical   ul.nav li.sub-nav-item.masked a.having-sub-nav span:after {
+#menu-main.vertical ul.nav li.sub-nav-item.masked a.having-sub-nav span:after {
     position: relative;
     left: 1em;
     bottom: 0.15em;
@@ -488,7 +479,7 @@ li.sub-nav-item ul {
     transform: rotate(135deg);
 }
 
-#menu-main.vertical  ul.nav li.nav-item a.having-sub-nav span:after {
+#menu-main.vertical ul.nav li.nav-item a.having-sub-nav span:after {
     position: relative;
     left: 1em;
     content: "";
@@ -500,7 +491,7 @@ li.sub-nav-item ul {
     transform: rotate(-45deg);
 }
 
-#menu-main.vertical   ul.nav li.nav-item.masked a.having-sub-nav span:after {
+#menu-main.vertical ul.nav li.nav-item.masked a.having-sub-nav span:after {
     position: relative;
     left: 1em;
     bottom: 0.15em;
@@ -512,4 +503,3 @@ li.sub-nav-item ul {
     border-top: 0.15em solid black;
     transform: rotate(135deg);
 }
-    

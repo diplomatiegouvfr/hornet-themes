@@ -69,11 +69,12 @@
  *
  */
 
+
 /**
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -83,44 +84,47 @@
 }
 
 .widget-dialogue-header {
-    padding: 0 10px;
+    padding: 0 0.625em;
     font-size: 120%;
     line-height: 2;
     color: #fff;
     background-color: #03476e;
     box-sizing: border-box;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0 0.3125em 0.625em rgba(0, 0, 0, 0.2);
+    border: 0.0625em solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
 }
 
 .dialogue-border-reset {
     box-shadow: none !important;
     border: none !important;
-
 }
 
-.widget-dialogue-title {
-
+.widget-dialogue-title h1 {
+    font-size:0.9em;
 }
+
 
 .widget-dialogue-close {
     position: absolute;
-    top: 2px;
-    right: 1px;
+    top: 0.125em;
+    right: 0.0625em;
 }
 
 .widget-dialogue-body {
     box-sizing: border-box;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.3125em 0.625em rgba(0, 0, 0, 0.2);
     background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 5px 5px;
+    border: 0.0625em solid rgba(0, 0, 0, 0.2);
+    border-radius: 0em 0em 0.3125em 0.3125em;
     outline: 0;
     position: relative;
     line-height: 1.428571429;
     padding: 0.5em;
     max-height: 30em;
+}
+#dialogue-body-content h1 {
+    color:#024056
 }
 
 .content-modal-body {
@@ -133,9 +137,8 @@
     overflow-y: auto;
 }
 
-
 .widget-dialogue-footer {
-    padding: 3px;
+    padding: 0.1875em;
     text-align: right;
 }
 
@@ -157,7 +160,7 @@
 .widget-spinner-content {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 200%;
-    padding-bottom: 20px;
+    padding-bottom: 1.25em;
 }
 
 .react-draggable-cursor {
@@ -165,20 +168,20 @@
 }
 
 .react-draggable {
-    -webkit-transform:translate(-50%, -50%);
-    transform:translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .hornet-button.hornet-dialogue-croix {
     margin-right: 0em;
 }
 
-.widget-shortcuts-content{
+.widget-shortcuts-content {
     padding-right: 1em;
 }
 
-div[role=alertdialog]{
-    z-index:5;
+div[role=alertdialog] {
+    z-index: 5;
 }
 
 .dialog-content-alert {

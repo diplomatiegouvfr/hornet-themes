@@ -74,7 +74,7 @@
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -92,7 +92,7 @@ textarea {
     width: 100%;
     padding-left: 1em;
     padding-top: 0.5em;
-    padding-right: 1em;
+    padding-right: 1.5em;
     padding-bottom: 0.5em;
 }
 
@@ -101,7 +101,11 @@ textarea:focus {
 }
 
 .textarea-reset {
-    margin: 12px -25px;
+    margin: 0.75em -2.5625em;
+}
+
+.textarea-reset-scrollbar {
+    margin: 0.75em -2.5625em;
 }
 
 .textarea-character-value {
@@ -115,4 +119,16 @@ textarea:focus {
 
 .textarea-too-many-char {
     color: #d60000;
+}
+
+.label-container-textarea {
+    margin-bottom:0em;
+}
+
+.textarea-resizable {
+    
+}
+
+.textarea-unresizable {
+    resize: none;
 }

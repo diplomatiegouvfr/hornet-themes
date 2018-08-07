@@ -69,11 +69,12 @@
  *
  */
 
+
 /**
- * -intranet - Thème Hornet.js
+ * - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -90,8 +91,7 @@
     display: inline;
 }
 
-.tabViewBody {
-}
+.tabViewBody {}
 
 .tabviewContentList {
     overflow: hidden;
@@ -105,7 +105,7 @@
     width: 100%;
 }
 
-.tabview-list{
+.tabview-list {
     font: bold 11px verdana, arial, sans-serif;
     display: inline-flex;
     list-style-type: none;
@@ -116,12 +116,12 @@
 
 .tab-label.tab-selected {
     background: #03476e;
-    color :#fff;
+    color: #fff;
 }
 
 .tab-label {
-    display:inline-block;
-    height: 2.5em;
+    display: inline-block;
+    height: 100%;
     min-width: 12.5em;
     color: #03476e;
     border-radius: 0.4em 0.4em 0 0;
@@ -129,7 +129,10 @@
     margin: 0 0.05em;
 }
 
-.tab-label:hover, .tab-label:focus, .tabs-add-button:hover, .tabs-add-button:focus {
+.tab-label:hover,
+.tab-label:focus,
+.tabs-add-button:hover,
+.tabs-add-button:focus {
     outline-color: -webkit-focus-ring-color;
     outline-style: auto;
     outline-width: 1px;
@@ -137,12 +140,12 @@
 
 
 /*Empeche la selection de l'element qui porte la classe tab-selected */
-.tab-label:hover:not(.tab-selected){
+
+.tab-label:hover:not(.tab-selected) {
     background: #f8f8ff;
     boder: 1px solid #0579be;
     color: #03476e;
     border-radius: 0.4em 0.4em 0 0;
-
 }
 
 .tab-panel:not(.tab-panel-selected) {
@@ -206,9 +209,9 @@
     clear: both;
 }
 
-.tabs-arrow-hidden-label{
-    display:none
- }
+.tabs-arrow-hidden-label {
+    display: none
+}
 
 .tabs-button-label {
     display: none
@@ -216,7 +219,6 @@
 
 .tabs-add-button {
     display: inline-block;
-    height: 2.5em;
     min-width: 3em;
     color: #03476e;
     border-radius: 0.4em 0.4em 0 0;
@@ -227,7 +229,6 @@
     background-position: center;
     background-color: #f4f4f4;
     cursor: pointer;
-
 }
 
 .delete-tab-button {
@@ -237,9 +238,9 @@
     border: none;
     position: absolute;
     right: 1.5em;
-    height: 1em;
-    width: 1em;
-    top: 1rem;
+    height: 1.5em;
+    width: 1.5em;
+    top: 0.5em;
     cursor: pointer;
     margin-right: -1em;
 }
@@ -250,4 +251,10 @@
 
 li.tab {
     position: relative;
+}
+
+.tabview-list li.tab {
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
 }

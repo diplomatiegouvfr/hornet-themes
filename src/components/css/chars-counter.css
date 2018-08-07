@@ -79,32 +79,16 @@
  * @license CECILL-2.1
  */
 
-#nf-img {
-    background-image: url('../img/nfepage/vide.png');
-    background-repeat: no-repeat;
-    max-width: 100%;
-    height: 28.625em;
-    background-position: center;
-    background-size: contain;
+.chars-counter {
+    position: relative;
+    height: 1em;
+    font-style: italic;
+    color: #666666;
+    min-width: 1em;
+    float: right;
+    margin-bottom :0.75em
 }
 
-@media (max-width: 500px) {
-    #nf-img {
-        height: 9em;
-    }
-}
-
-div#nfe-page {
-    text-align: center;
-    padding-top: 5%;
-}
-
-.nfe-title {
-    font-size: 1.25em;
-    font-family: NotoSansUI-Bold;
-    color: black;
-}
-
-a.hornet-button.nfe-button {
-    margin-left: 1.5em;
+.chars-counter-too-many-char {
+    color: #d60000;
 }

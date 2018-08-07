@@ -74,7 +74,7 @@
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -90,7 +90,7 @@
 
 .form-soustitre {
     color: #0579be;
-    font-size: 17px;
+    font-size: 1.0625em;
     padding-top: 0.875em;
 }
 
@@ -129,13 +129,14 @@ checkbox
 ****/
 
 .checkbox-container {
-    padding: 0px 20px;
+    padding: 0em 1.25em;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
 }
 
 label.checkbox-content {
     cursor: pointer;
+    margin-top: .7em;
 }
 
 .checkbox-content input[type=checkbox] {
@@ -153,18 +154,18 @@ label.checkbox-content {
 .checkbox-content .checkbox-material {
     vertical-align: middle;
     position: relative;
-    top: 3px;
+    top: 0.1875em;
 }
 
 .checkbox-content .checkbox-material .check {
     position: relative;
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 2px;
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 0.125em;
     overflow: hidden;
     z-index: 1;
-    padding: 2px 0 0 2px;
+    padding: 0.125em 0 0 0.125em;
     background-color: white;
 }
 
@@ -174,10 +175,10 @@ label.checkbox-content input:focus+.checkbox-material .check {
 
 .checkbox-content .checkbox-material:before {
     position: absolute;
-    left: 8px;
-    top: 2px;
+    left: 0.5em;
+    top: 0.125em;
     content: "";
-    width: 4px;
+    width: 0.25em;
     border-radius: 100%;
     z-index: 1;
     opacity: 0;
@@ -190,8 +191,8 @@ label.checkbox-content input:focus+.checkbox-material .check {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     display: block;
-    margin-top: -4px;
-    margin-left: 6px;
+    margin-top: -0.25em;
+    margin-left: 0.375em;
     width: 0;
     height: 0;
     box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
@@ -205,7 +206,7 @@ label.checkbox-content input:focus+.checkbox-material .check {
 }
 
 .checkbox-content input[type=checkbox]:not(:checked)+.checkbox-material .check {
-    border: 2px solid;
+    border: 1px solid;
 }
 
 .checkbox-content input[type=checkbox]:disabled:checked+.checkbox-material .check {
@@ -213,7 +214,7 @@ label.checkbox-content input:focus+.checkbox-material .check {
 }
 
 .checkbox-material .check.readonly {
-    /*background-color: #7a7a7a;*/
+    background-color: rgb(235, 235, 228);
     color: #7a7a7a;
     cursor: default;
 }
@@ -223,7 +224,7 @@ label.checkbox-content input:focus+.checkbox-material .check {
 }
 
 .checkbox-content input[type=checkbox]:checked+.checkbox-material .check:before {
-    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+    box-shadow: 0 0 0 0.625em, 0.625em -0.625em 0 0.625em, 2em 0em 0 1.25em, 0em 2em 0 1.25em, -0.3125em 0.3125em 0 0.625em, 1.25em -10.125em 0 0.6875em;
     -webkit-animation: checkbox-on 0.3s forwards ease-out;
     animation: checkbox-on 0.3s forwards ease-out;
 }
@@ -259,99 +260,104 @@ label.checkbox-content input:focus+.checkbox-material .check {
     transform: rotate(-45deg);
 }
 
+.checkbox-content input[type=checkbox]:not(:checked)+.checkbox-material .check.has-error {
+    border-color:#e6151d;
+    background-color: #fed8da;
+}
+
 @-webkit-keyframes checkbox-on {
     0% {
-        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+        box-shadow: 0 0 0 0.625em, 0.625em -0.625em 0 0.625em, 2em 0em 0 1.25em, 0em 2em 0 1.25em, -0.3125em 0.3125em 0 0.625em, 0.9375em 0.125em 0 0.6875em;
     }
     50% {
-        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+        box-shadow: 0 0 0 0.625em, 0.625em -0.625em 0 0.625em, 2em 0em 0 1.25em, 0em 2em 0 1.25em, -0.3125em 0.3125em 0 0.625em, 1.25em 0.125em 0 0.6875em;
     }
     100% {
-        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+        box-shadow: 0 0 0 0.625em, 0.625em -0.625em 0 0.625em, 2em 0em 0 1.25em, 0em 2em 0 1.25em, -0.3125em 0.3125em 0 0.625em, 1.25em -10.125em 0 0.6875em;
     }
 }
 
 @keyframes checkbox-on {
     0% {
-        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+        box-shadow: 0 0 0 0.625em, 0.625em -0.625em 0 0.625em, 2em 0em 0 1.25em, 0em 2em 0 1.25em, -0.3125em 0.3125em 0 0.625em, 0.9375em 0.125em 0 0.6875em;
     }
     50% {
-        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+        box-shadow: 0 0 0 0.625em, 0.625em -0.625em 0 0.625em, 2em 0em 0 1.25em, 0em 2em 0 1.25em, -0.3125em 0.3125em 0 0.625em, 1.25em 0.125em 0 0.6875em;
     }
     100% {
-        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+        box-shadow: 0 0 0 0.625em, 0.625em -0.625em 0 0.625em, 2em 0em 0 1.25em, 0em 2em 0 1.25em, -0.3125em 0.3125em 0 0.625em, 1.25em -10.125em 0 0.6875em;
     }
 }
 
 @-webkit-keyframes checkbox-off {
     0% {
-        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+        box-shadow: 0 0 0 0.625em, 0.625em -0.625em 0 0.625em, 2em 0em 0 1.25em, 0em 2em 0 1.25em, -0.3125em 0.3125em 0 0.625em, 1.25em -10.125em 0 0.6875em, 0 0 0 0 inset;
     }
     25% {
-        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+        box-shadow: 0 0 0 0.625em, 0.625em -0.625em 0 0.625em, 2em 0em 0 1.25em, 0em 2em 0 1.25em, -0.3125em 0.3125em 0 0.625em, 1.25em -10.125em 0 0.6875em, 0 0 0 0 inset;
     }
     50% {
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
-        margin-top: -4px;
-        margin-left: 6px;
-        width: 0px;
-        height: 0px;
-        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+        margin-top: -0.25em;
+        margin-left: 0.375em;
+        width: 0em;
+        height: 0em;
+        box-shadow: 0 0 0 0.625em, 0.625em -0.625em 0 0.625em, 2em 0em 0 1.25em, 0em 2em 0 1.25em, -0.3125em 0.3125em 0 0.625em, 0.9375em 0.125em 0 0.6875em, 0 0 0 0 inset;
     }
     51% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
-        margin-top: -2px;
-        margin-left: -2px;
-        width: 20px;
-        height: 20px;
-        box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0px 0px 0 10px inset;
+        margin-top: -0.125em;
+        margin-left: -0.125em;
+        width: 1.25em;
+        height: 1.25em;
+        box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0em 0em 0 0.625em inset;
     }
     100% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
-        margin-top: -2px;
-        margin-left: -2px;
-        width: 20px;
-        height: 20px;
-        box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0px 0px 0 0px inset;
+        margin-top: -0.125em;
+        margin-left: -0.125em;
+        width: 1.25em;
+        height: 1.25em;
+        box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0em 0em 0 0em inset;
     }
 }
 
 @keyframes checkbox-off {
     0% {
-        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+        box-shadow: 0 0 0 0.625em, 0.625em -0.625em 0 0.625em, 2em 0em 0 1.25em, 0em 2em 0 1.25em, -0.3125em 0.3125em 0 0.625em, 1.25em -10.125em 0 0.6875em, 0 0 0 0 inset;
     }
     25% {
-        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+        box-shadow: 0 0 0 0.625em, 0.625em -0.625em 0 0.625em, 2em 0em 0 1.25em, 0em 2em 0 1.25em, -0.3125em 0.3125em 0 0.625em, 1.25em -10.125em 0 0.6875em, 0 0 0 0 inset;
     }
     50% {
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
-        margin-top: -4px;
-        margin-left: 6px;
-        width: 0px;
-        height: 0px;
-        box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+        margin-top: -0.25em;
+        margin-left: 0.375em;
+        width: 0em;
+        height: 0em;
+        box-shadow: 0 0 0 0.625em, 0.625em -0.625em 0 0.625em, 2em 0em 0 1.25em, 0em 2em 0 1.25em, -0.3125em 0.3125em 0 0.625em, 0.9375em 0.125em 0 0.6875em, 0 0 0 0 inset;
     }
     51% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
-        margin-top: -2px;
-        margin-left: -2px;
-        width: 20px;
-        height: 20px;
-        box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0px 0px 0 10px inset;
+        margin-top: -0.125em;
+        margin-left: -0.125em;
+        width: 1.25em;
+        height: 1.25em;
+        box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0em 0em 0 0.625em inset;
     }
     100% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
-        margin-top: -2px;
-        margin-left: -2px;
-        width: 20px;
-        height: 20px;
-        box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0px 0px 0 0px inset;
+        margin-top: -0.125em;
+        margin-left: -0.125em;
+        width: 1.25em;
+        height: 1.25em;
+        box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0em 0em 0 0em inset;
     }
 }
 
@@ -410,14 +416,32 @@ label.checkbox-content input:focus+.checkbox-material .check {
 }
 
 .checkbox-container.inline {
-    padding-top: 0px;
+    padding-top: 0em;
 }
 
 .checkbox-container.inline div.checkbox-container {
-    padding-top: 0px;
+    padding-top: 0em;
 }
 
 .switch-input:focus+.switch-label {
     box-shadow: 0 0 0 1.5pt #4D90FE;
     outline: none;
+}
+
+.grid-2.fraction>.abstractfield-container>.label-row-inline {
+    word-wrap: break-word;
+    white-space: normal;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    max-width: 75%;
+    width: 75%;
+}
+
+.grid-3.fraction>.abstractfield-container>.label-row-inline {
+    word-wrap: break-word;
+    white-space: normal;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    max-width: 63%;
+    width: 63%;
 }

@@ -74,7 +74,7 @@
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -109,6 +109,11 @@
     border: 0.160em solid #AEAEAE;
     border-radius: 50%;
     background-color: #fff;
+}
+
+.radio-label .outer.has-error {
+    border-color:#e6151d;
+    background-color: #fed8da;
 }
 
 .radio-label input:checked~.outer {

@@ -69,11 +69,12 @@
  *
  */
 
+
 /**
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -90,7 +91,8 @@ footer {
     padding-bottom: 1em;
 }
 
-footer, footer a {
+footer,
+footer a {
     color: #FFF
 }
 
@@ -118,25 +120,26 @@ ul.footer-links li:last-child:after {
 }
 
 @media (max-width: 405px) {
-
     #footer-container {
         padding-top: 1em;
         padding-bottom: 1em;
     }
-    ul.footer-links li{
+    ul.footer-links li {
         float: none;
         padding-left: 0em;
     }
     ul.footer-links li:after {
         content: " ";
     }
-    footer .fr.mrl, footer .fl.mll{
+    footer .fr.mrl,
+    footer .fl.mll {
         margin-right: 0;
         margin-left: 0;
         float: left;
         padding-left: 0;
     }
 }
+
 
 /*@media (min-width: 406px) {
     ul.footer-links li:after {
@@ -152,13 +155,13 @@ ul.footer-links li:last-child:after {
 }*/
 
 @media screen and (min-width: 406px) and (max-width: 675px) {
-    ul.footer-links li{
+    ul.footer-links li {
         padding-left: 0.3em;
     }
-    ul.footer-links li:first-child{
+    ul.footer-links li:first-child {
         padding-left: 0;
     }
-    footer .fr.mrl{
+    footer .fr.mrl {
         margin-right: 0;
         margin-left: 3rem;
         float: left;

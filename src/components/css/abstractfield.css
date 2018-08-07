@@ -69,35 +69,44 @@
  *
  */
 
+
 /**
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
 
-.label-container{
+.label-container {
     margin-bottom: 0.5em;
 }
 
-
-.abstractfield-container{
+.abstractfield-container {
     margin-bottom: 1.250em;
     min-width: 15.469em;
 }
 
-.abstractfield-container.inline > * {
+.abstractfield-container.inline>* {
     display: inline-block;
     vertical-align: top;
     margin-right: 1.125em;
 }
 
+
 /*.abstractfield-container.inline > div {*/
-    /*display: inline-block;*/
-    /*vertical-align: top;*/
-    /*margin-right: 1.125em;*/
+
+
+/*display: inline-block;*/
+
+
+/*vertical-align: top;*/
+
+
+/*margin-right: 1.125em;*/
+
+
 /*}*/
 
 .abstractfield-field-content {
@@ -106,15 +115,21 @@
 
 @media (max-width: 600px) {
     .abstractfield-container {
-        width:100%;
+        width: 100%;
     }
 }
 
 label {
     cursor: default;
 }
+
 @media (max-width: 405px) {
-    .abstractfield-field-content{
+    .abstractfield-field-content {
         /*margin-right: 0.8em;*/
     }
+}
+
+.abstractfield-container .label{
+    word-wrap: break-word;
+    word-break: break-all;
 }

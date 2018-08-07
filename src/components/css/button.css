@@ -69,11 +69,12 @@
  *
  */
 
+
 /**
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -95,13 +96,12 @@ button.hornet-button {
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.26);
 }
 
-
 @media (max-width: 543px) {
     button.hornet-button {
-        width:100%;
+        width: 100%;
     }
-
 }
+
 .hornet-button-right {
     position: absolute;
     bottom: 0;
@@ -110,6 +110,7 @@ button.hornet-button {
     min-width: 2.653em !important;
     height: 2.653em;
 }
+
 a.hornet-button {
     padding: 0.3em;
     background: #03476e;
@@ -120,7 +121,8 @@ a.hornet-button {
     color: #FFF;
     font-family: NotoSansUI-Bold;
     /*margin-right: 1.5em;*/
-    min-width: 4vh ;/*15.469em;*/
+    min-width: 4vh;
+    /*15.469em;*/
     margin-bottom: 0.5em;
     padding-right: 1em;
     padding-left: 1em;
@@ -134,24 +136,24 @@ a.hornet-button {
     outline: none !important;
 }
 
-.hornet-button:hover {
+button.toggler:hover, button.toggler:focus, .hornet-button:hover, .hornet-button:focus {
     background: rgba(3, 71, 110, 0.92);
+    outline: #f99a05 solid 2px;
 }
 
 
-.ripple-effect{
+.ripple-effect {
     position: absolute;
     border-radius: 50%;
     width: 34px;
     height: 34px;
     background: #ffffff;
-    overflow:hidden;
+    overflow: hidden;
     animation: ripple-animation 1.5s;
     max-height: 34px;
-    max-width:34px;
-    outline:none;
+    max-width: 34px;
+    outline: none;
 }
-
 
 @keyframes ripple-animation {
     from {
@@ -164,7 +166,7 @@ a.hornet-button {
     }
 }
 
-.hornet-button{
+.hornet-button {
     overflow: hidden;
     position: relative;
 }

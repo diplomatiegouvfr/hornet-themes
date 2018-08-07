@@ -69,31 +69,32 @@
  *
  */
 
+
 /**
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
 
-.autocomplete-content{
-    width:100%;
-    height:2.653em;
-
+.autocomplete-content {
+    width: 100%;
+    height: 2.653em;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     border: 1px solid #AEAEAE;
     min-width: 15.469em;
-    position : relative;
+    position: relative;
 }
 
 .autocomplete-container input {
-    padding: 0.5em 3em 0.5em 1em;
+    padding: 0.5em 5em 0.5em 1em;
 }
-.autocomplete-content.has-error{
+
+.autocomplete-content.has-error {
     background-color: #fed8da;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -101,9 +102,11 @@
     border: 1px solid #e6151d;
 }
 
-.autocomplete-item:focus, .autocomplete-item:hover, .autocomplete-item-active {
+.autocomplete-item:focus,
+.autocomplete-item:hover,
+.autocomplete-item-active {
     background-color: #4D90FE;
-    color:white;
+    color: white;
 }
 
 .autocomplete-selector.widget-positioned {
@@ -114,9 +117,8 @@
     background: url('../img/autocomplete/icon_fleche_liste_close.svg');
     background-position: calc(100% - 6px) 50%;
     background-repeat: no-repeat;
-    background-size: 43px;
+    background-size: 2.6875em;
     background-color: white;
-
 }
 
 .autocomplete-content[disabled] {
@@ -138,15 +140,34 @@
     display: flex;
     flex-flow: row wrap;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-size: 11px;
+    font-size: 0.6875em;
     font-weight: 600;
-    height: 22px;
+    height: 1.375em;
     justify-content: center;
     position: relative;
-    left: -11px;
-    top: 12px;
-    width: 22px;
+    left: -0.6875em;
+    top: 0.75em;
+    width: 1.375em;
     z-index: 1;
     overflow: hidden;
-    margin-top: -22px;
+    margin-top: -1.375em    ;
+}
+
+.autocomplete-reset{
+    margin: 0.75em -1.5em !important;
+    right: 3em;
+    bottom: 0.1em;
+    position: relative !important;
+}
+
+.input-reset a:focus {
+    outline-width: 0;
+    color: #000;
+}
+
+.input-reset a:focus img {
+    background-color: rgba(158, 158, 158, 0.2);
+    border-radius: 50%;
+    outline: none;
+    box-shadow: 0px 0px 0px 1px #0061ff;
 }

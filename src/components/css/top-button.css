@@ -69,20 +69,21 @@
  *
  */
 
+
 /**
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
 
 .top-button {
-/*    background-image: url('../img/button/ic_keyboard_arrow_up_black_24px.svg');*/
+    /*    background-image: url('../img/button/ic_keyboard_arrow_up_black_24px.svg');*/
     background-color: #87cffa;
     border-radius: 50%;
-    position:fixed;
+    position: fixed;
     height: 3.25em;
     width: 3.25em;
     bottom: 1.25em;
@@ -108,15 +109,15 @@
     color: white;
 }
 
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1400px) {
     .top-button {
         background-color: #87cffa;
         border-radius: 50%;
-        position:fixed;
+        position: fixed;
         height: 3.25em;
         width: 3.25em;
         bottom: 1.25em;
-        right:0.313em;
+        right: 0.313em;
         opacity: 0.4;
     }
 }

@@ -74,7 +74,7 @@
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -96,7 +96,7 @@
 }
 
 .profil-content .dropdown-button {
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .profil-content:focus {
@@ -106,13 +106,13 @@
 .picto-user {
     background: transparent url("../img/header/account_circle_white.svg") no-repeat scroll left top;
     display: inline-block;
-    height: 24px;
-    width: 24px;
+    height: 1.5em;
+    width: 1.5em;
     vertical-align: middle;
 }
 
 .profil-content .dropdown-button .label {
-    margin-right: 5px;
+    margin-right: 0.3125em;
 }
 
 .profil-content .user-panel {
@@ -153,16 +153,17 @@
     background: #03476e;
     text-align: center;
     font-weight: bold;
-    font-size: 0.7em;
+    font-size: 0.8em;
     transition: 0.2s;
     line-height: 3em;
+    padding: 0em 1em 0em 1em;
 }
 
 .profil-content .link:hover {
     background: rgba(3, 71, 110, 0.92);
     border-width: 0;
     color: white;
-    padding: 0px 26px 0px 16px;
+    padding: 0em 1em 0em 1em;
 }
 
 @media (max-width: 405px) {

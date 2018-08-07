@@ -74,7 +74,7 @@
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -105,8 +105,8 @@
 .more-actions {
     background: transparent url(../img/picto/white/more_vert_white.svg) no-repeat scroll left top;
     display: inline-block;
-    height: 24px;
-    width: 24px;
+    height: 1.5em;
+    width: 1.5em;
     vertical-align: middle;
 }
 
@@ -152,7 +152,7 @@
     height: 1em;
     z-index: 0;
     transform: rotate(45deg);
-    box-shadow: -1px -1px 1px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: -0.0625em -0.0625em 0.0625em 0em rgba(0, 0, 0, 0.25);
 }
 
 
@@ -174,7 +174,7 @@
     width: 1em;
     height: 1em;
     transform: rotate(45deg);
-    box-shadow: -1px -1px 1px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: -0.0625em -0.0625em 0.0625em 0em rgba(0, 0, 0, 0.25);
 }
 
 
@@ -187,6 +187,7 @@
 
 
 /* Arrow pour TR*/
+
 .arrow.position-top-right {
     content: '';
     position: absolute;
@@ -196,7 +197,7 @@
     height: 1em;
     z-index: 0;
     transform: rotate(45deg);
-    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0.0625em 0.0625em 0.0625em 0em rgba(0, 0, 0, 0.25);
 }
 
 
@@ -220,14 +221,14 @@
     height: 1em;
     z-index: 0;
     transform: rotate(45deg);
-    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0.0625em 0.0625em 0.0625em 0em rgba(0, 0, 0, 0.25);
 }
 
 .dropdown-list {
     margin-top: 0em;
     list-style: none;
     opacity: 1;
-    min-width: 136px;
+    min-width: 8.5em;
     padding: 0;
     box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.45);
     background-color: white;
@@ -237,21 +238,21 @@
     align-items: center;
     cursor: pointer;
     display: inline-flex;
-    height: 48px;
+    height: 3em;
     line-height: inherit;
     position: relative;
     background: #ffffff;
     color: #000000;
     width: 100%;
-    padding: 0px 26px 0px 16px;
+    padding: 0em 2.9em 0em 1em;
     white-space: nowrap;
 }
 
 .dropdown-list li>a.checked {
     color: #0579be;
     background-color: #e2eff7;
-    border-left: 4px solid #0579be;
-    padding: 0px 26px 0px 12px !important;
+    border-left: 0.25em solid #0579be;
+    padding: 0em 2.9em 0em 0.75em !important;
 }
 
 .dropdown-list li>a.checked:hover {
@@ -262,12 +263,17 @@
 .dropdown-list li>div:hover {
     color: #000;
     background-color: #e2eff7;
-    border-left: 4px solid #0579be;
-    padding: 0px 26px 0px 12px;
+    border-left: 0.25em solid #0579be;
+    padding: 0em 2.9em 0em 0.75em;
 }
 
 .dropdown-list li a:focus {
-    outline: #4D90FE solid 1px;
+    outline: #4D90FE solid 0.0625em;
+}
+
+.datatable-pagination-content .dropdown-list li a:focus {
+    margin-bottom:0.1em;
+    margin-top:0.1em
 }
 
 .caret-down,
@@ -278,10 +284,10 @@
 }
 
 .caret-down {
-    background: transparent url("../img/dropdown/ic_keyboard_arrow_down_black_24px.svg") no-repeat scroll left top;
+    background: transparent url("../img/dropdown/ic_keyboard_arrow_down_black_24px.svg") no-repeat scroll center center;
     display: inline-block;
-    height: 24px;
-    width: 24px;
+    height: 1.5em;
+    width: 1.5em;
     vertical-align: middle;
 }
 
@@ -297,15 +303,14 @@
 .ico-table-settings-white {
     height: 1.5em;
     width: 1.5em;
-    background: transparent url("../img/picto/white/ico_settings.svg");
+    background: transparent url("../img/picto/white/ico_settings.svg") no-repeat;
     cursor: pointer;
     display: block;
 }
 
 .imgItem {
-    padding-right: 10px;
-    width: 26px;
-    height: 26px
+    padding-right: 0.625em;
+    height: 1.625em
 }
 
 .toggle-column-item-content {
@@ -315,12 +320,12 @@
     align-items: center;
     cursor: pointer;
     display: inline-flex;
-    height: 48px;
+    height: 3em;
     line-height: inherit;
     position: relative;
     background: #ffffff;
     color: #000000;
-    padding: 0px 26px 0px 16px;
+    padding: 0em 2.9em 0em 1em;
     white-space: nowrap;
 }
 
@@ -335,7 +340,7 @@
 }
 
 .toggle-column-item-checkbox .checkbox-content .checkbox-material:before {
-    height: 3px;
+    height: 0.1875em;
 }
 
 div#table-settingscontent ul.dropdown-list li a {
@@ -347,6 +352,7 @@ div#table-settingscontent ul.dropdown-list li a {
     display: inline-block;
     cursor: pointer;
     width: 100%;
+    margin: 0;
 }
 
 .datatable-header-title:focus {

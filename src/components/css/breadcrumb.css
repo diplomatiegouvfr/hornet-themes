@@ -74,7 +74,7 @@
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -122,7 +122,7 @@ ul.fil-ariane {
 
 .fil-ariane-parent {
     margin-right: 0.2em;
-    color: #7b7b7b;
+    color: #747474;
 }
 
 .fil-ariane-strong {

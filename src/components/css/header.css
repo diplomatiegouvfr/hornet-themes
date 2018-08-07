@@ -74,7 +74,7 @@
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -140,7 +140,6 @@ a.header-link:focus {
 
 #header-container.sticky .menu-content {
     top: 3em;
-    /*margin-left: -1.62em;*/
 }
 
 #header-container.sticky .menu-main-conteneur {
@@ -221,7 +220,6 @@ a.header-link:focus {
         display: none;
     }
     #header-container.sticky .profil-label {
-        /*visibility: hidden;*/
         display: none;
     }
     #header-container.sticky .dropdown-button {
@@ -231,7 +229,6 @@ a.header-link:focus {
         margin-left: 0.75em;
     }
     #header-container.sticky #banner .userlang>div {
-        /*display: block;*/
         line-height: 2.188em;
     }
     #header-container.sticky #banner .userlang {

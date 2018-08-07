@@ -69,11 +69,12 @@
  *
  */
 
+
 /**
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -81,11 +82,11 @@
 .switch {
     position: relative;
     display: block;
-    width: 58px;
-    height: 23px;
-    padding: 3px;
-    margin: 0 10px 10px 0;
-    border-radius: 11px;
+    width: 3.625em;
+    height: 1.4375em;
+    padding: 0.1875em;
+    margin: 0 0.625em 0.625em 0;
+    border-radius: 0.6875em;
     cursor: pointer;
     box-sizing: content-box;
     font-weight: bold;
@@ -103,14 +104,15 @@
     position: relative;
     display: block;
     height: inherit;
-    font-size: 12px;
+    font-size: 0.75em;
     text-transform: uppercase;
     background: #87cffa;
     border-radius: inherit;
     box-sizing: content-box;
 }
 
-.switch-label:before, .switch-label:after {
+.switch-label:before,
+.switch-label:after {
     position: absolute;
     top: 50%;
     margin-top: -.5em;
@@ -124,40 +126,40 @@
 
 .switch-label:before {
     content: attr(data-off);
-    right: 7px;
+    right: 0.4375em;
     color: #454545;
 }
 
 .switch-label:after {
     content: attr(data-on);
-    left: 7px;
+    left: 0.4375em;
     color: #FFFFFF;
     opacity: 0;
 }
 
-.switch-input:checked ~ .switch-label {
+.switch-input:checked~.switch-label {
     background: #0579be;
 }
 
-.switch-input:checked ~ .switch-label:before {
+.switch-input:checked~.switch-label:before {
     opacity: 0;
 }
 
-.switch-input:checked ~ .switch-label:after {
+.switch-input:checked~.switch-label:after {
     opacity: 1;
 }
 
-.switch-input:disabled ~ .switch-label {
+.switch-input:disabled~.switch-label {
     background: #AEAEAE;
     cursor: default;
 }
 
 .switch-handle {
     position: absolute;
-    top: 8px;
-    left: 8px;
-    width: 13px;
-    height: 13px;
+    top: 0.5em;
+    left: 0.5em;
+    width: 0.8125em;
+    height: 0.8125em;
     border-radius: 100%;
     background-color: #ffffff;
 }
@@ -167,18 +169,21 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -6px 0 0 -6px;
-    width: 12px;
-    border-radius: 6px;
+    margin: -0.375em 0 0 -0.375em;
+    width: 0.75em;
+    border-radius: 0.375em;
 }
 
-.switch-input:checked ~ .switch-handle {
-    left: 45px;
+.switch-input:checked~.switch-handle {
+    left: 2.75em;
 }
+
 
 /* Transition
 ========================== */
-.switch-label, .switch-handle {
+
+.switch-label,
+.switch-handle {
     transition: All 0.3s ease;
     -webkit-transition: All 0.3s ease;
     -moz-transition: All 0.3s ease;

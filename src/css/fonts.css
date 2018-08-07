@@ -69,16 +69,19 @@
  *
  */
 
+
 /**
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
 
+
 /* Déclaration Fonts */
+
 @font-face {
     font-family: "NotoSansUI-Regular";
     font-stretch: normal;
@@ -87,11 +90,22 @@
     src: local("DINNext-LT-Custom-Regular"), url("../fonts/NotoSansUI-Regular.ttf") format("truetype");
 }
 
+
 /* Déclaration Fonts */
+
 @font-face {
     font-family: "NotoSansUI-Bold";
     font-stretch: normal;
     font-style: normal;
     font-weight: 400;
     src: local("DINNext-LT-Custom-Regular"), url("../fonts/NotoSansUI-Bold.ttf") format("truetype");
+}
+
+/* Déclaration Fonts */
+
+@font-face {
+    font-family: "Roboto";
+    font-stretch: normal;
+    font-style: normal;
+    src: local("DINNext-LT-Custom-Regular"), url("../fonts/Roboto-Regular.ttf") format("truetype");
 }

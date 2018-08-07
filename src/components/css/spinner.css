@@ -69,30 +69,33 @@
  *
  */
 
+
 /**
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
 
-.loader-page, .spinner-loading {
+.loader-page,
+.spinner-loading {
     width: 100%;
     position: absolute;
     overflow: hidden;
     background-color: #eee;
-    height: 4px;
+    height: 0.25em;
 }
 
-.loader-page:before, .spinner-loading:before {
+.loader-page:before,
+.spinner-loading:before {
     display: block;
     position: absolute;
     content: "";
-    left: -200px;
-    width: 200px;
-    height: 4px;
+    left: -12.5em;
+    width: 12.5em;
+    height: 0.25em;
     background-color: #00d468;
     animation: loadingPage 2s linear infinite;
 }
@@ -105,24 +108,38 @@
     right: 0;
     left: 0;
     opacity: 0.1;
-    z-index: 4;
-    pointer-events: none;
+    z-index: 6000;
+}
+
+@media (pointer: coarse) {
+    .loader-overlay {
+        pointer-events: none;
+    }
 }
 
 @keyframes loadingPage {
     from {
-        left: -200px;
+        left: -12.5em;
         width: 30%;
     }
-    50% { width: 30%; }
-    70% { width: 70%; }
-    80% { left: 50%; }
-    95% { left: 120%; }
-    to { left: 100%; }
+    50% {
+        width: 30%;
+    }
+    70% {
+        width: 70%;
+    }
+    80% {
+        left: 50%;
+    }
+    95% {
+        left: 120%;
+    }
+    to {
+        left: 100%;
+    }
 }
 
-
-.component-spinner{
+.component-spinner {
     position: absolute;
     background-color: black;
     width: 100%;
@@ -130,21 +147,21 @@
     opacity: 0.5;
     text-align: center;
 }
-.component-spinner img{
+
+.component-spinner img {
     position: absolute;
-    top : 50%;
-    left : 50%;
-    margin-top : -20px;
-    margin-left : -20px;
-    display : block;
-    width : 40px;
+    top: 50%;
+    left: 50%;
+    margin-top: -1.25em;
+    margin-left: -1.25em;
+    display: block;
+    width: 2.5em;
 }
+
 .component-spinner div {
     position: relative;
     opacity: 1;
     color: white;
     top: 50%;
-    margin-top: -40px;
+    margin-top: -2.5em;
 }
-
-

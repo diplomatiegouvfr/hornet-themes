@@ -74,7 +74,7 @@
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -242,10 +242,10 @@
     border: none;
     background: url("../img/notification/icon_fleche_expand_open.svg") transparent;
     background-repeat: no-repeat;
-    height: 26px;
-    width: 26px;
+    height: 1.625em;
+    width: 1.625em;
     float: right;
-    font-size: 0px;
+    font-size: 1em;
     cursor: pointer;
 }
 
@@ -253,10 +253,10 @@
     border: none;
     background: url("../img/notification/icon_fleche_expand_close.svg") transparent;
     background-repeat: no-repeat;
-    height: 26px;
-    width: 26px;
+    height: 1.625em;
+    width: 1.625em;
     float: right;
-    font-size: 0px;
+    font-size: 1em;
     cursor: pointer;
 }
 
@@ -270,10 +270,9 @@
     border: none;
     background: url("../img/notification/ico_notification_close.svg") transparent;
     background-repeat: no-repeat;
-    height: 26px;
-    width: 26px;
+    height: 1.625em;
+    width: 1.625em;
     float: right;
-    font-size: 0px;
     cursor: pointer;
 }
 
@@ -301,7 +300,7 @@
     width: 0;
     opacity: 0;
     height: 0;
-    font-size: 0;
+    font-size: 1em;
 }
 
 .notification-timeout .notification-session-message div {
@@ -309,6 +308,56 @@
 }
 
 .notification-timeout .notification-session-message div a {
+    cursor: pointer;
+}
+
+.notification-idp-timeout {
+    position: fixed;
+    right: 41%;
+    top: 7.5em;
+    line-height: 2em;
+    background: white;
+    padding: 0.5em;
+    color: #2e586e;
+    font-family: roboto;
+    box-shadow: 0 0.3em 0.3em rgba(0, 0, 0, 0.45);
+    background-color: #f5f5f5;
+    width: 20em;
+    font-size: 1em;
+}
+
+.notification-idp-expanded {
+    -webkit-transition: width 1s;
+    /* For Safari 3.1 to 6.0 */
+    transition: width 1s;
+    opacity: 1;
+    padding-top: 0.5em;
+}
+
+.notification-idp-reduced {
+    width: 0;
+    opacity: 0;
+    height: 0;
+    font-size: 0;
+}
+
+.notification-idp-timeout .notification-session-idp-button {
+    width: 100%;
+    text-align: end;
+    position: absolute;
+    right: 0.1em;
+    top: 0.1em;
+}
+
+.notification-idp-timeout .notification-session-idp-button img {
+    height: 1.5em;
+}
+
+.notification-timeout-idp .notification-session-message div {
+    line-height: 1.2em
+}
+
+.notification-timeout-idp .notification-session-message div a {
     cursor: pointer;
 }
 

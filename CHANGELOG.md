@@ -1,3 +1,27 @@
+#hornet-themes-5.2.0
+
+- FIX  - Body : Ajout font-family "NotoSanUi-Regular" par defaut sur body
+- EVOL - Tabs: ajout css
+- FIX  - Accessibilité: correctifs suite retour CROCUS
+- FIX  - [M69055] - hornet-themes : prise en compte rows pour TextArea
+- FIX  - [M0069056] - correction du retour a la ligne des label pour les abstractfields
+- FIX  - Table : adaptation style entêtes de colonne
+- FIX  - [s247] - Accessibilité: BreadCrumb - probleme contraste
+- EVOL - SessionIDP : dev composant session idp
+- FIX  - erreur css
+- EVOL - css pour le label des inputs dans un Row
+- FIX  - [s244] - hornet-js-react-components: Radio/CheckBox: CSS en erreur
+- FIX  - [s240] - Accessibilité : px to em
+- EVOL - Accessibilité sur le Pager
+- FIX  - Accessibilité - FontSize max
+- FIX  - Correction du style des colonnes dans la tableau [pour mobile]
+- FIX  - [S223] - Table : fix du style suite a un problème sur mobile [pour les cellule autocomplete]
+- FIX  - CharsCounter : ajout css composant 
+- FIX  - [S223-565] - composant custom autocomplete : correction du style du tableau pour pouvoir le faire fonctionner
+- EVOL - [S202-546] - ajout d'un bouton de suppression sur l'autocomplete - theme
+- FIX  - [s172] - Overlay: Overlay et Autocomplete
+- FIX  - [S94] - Button - Revoir style focus sur bouton
+
 # hornet-themes-5.1.1
 
 -	EVOL[s117] - Composant Aller au contenu
@@ -69,7 +93,7 @@
 209109	-	[5.1.0-rc3-final] - uniformisation des picto + optimisation tableau + revue dataSource Err:510 selectedItems
 
 
-# hornet-theme-intranet-5.1.0-rc2
+# hornet-theme-5.1.0-rc2
 
 -  0061977  -  hornet-js  -  Framework de validation du formulaire  -  fermé
 -  0062072  -  Hornet.js  -  Navigation: title page absent/incohérent - breadcrumb parfois absent - planAppli incomplet  -  fermé

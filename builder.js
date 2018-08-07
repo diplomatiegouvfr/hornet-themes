@@ -73,7 +73,7 @@
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.1.1
+ * @version v5.2.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -93,8 +93,7 @@ module.exports = {
             targetFilename: "theme"
         };
 
-        conf.packageSources = [
-            {
+        conf.packageSources = [{
                 src: "src/components/img/**/*.*",
                 targetDir: "img"
             },
