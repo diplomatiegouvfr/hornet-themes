@@ -74,7 +74,7 @@
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.2.0
+ * @version v5.2.2
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -212,7 +212,16 @@ tr.datatable-line-selected td {
     background: #e2eff7;
 }
 
-table>thead>tr>th,
+table>thead>tr>th {
+    height: 3.5em;
+    font-size: 0.8125em;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    margin-top: 0em;
+    line-height: 2.2;
+    font-family: "Roboto";
+}
+
 table>tbody>tr>td {
     height: 3.5em;
     overflow: hidden;
@@ -372,10 +381,15 @@ th {
 
 th div {
     text-overflow: ellipsis;
-    overflow: inherit;
+    overflow: hidden;
+    padding-right: 0.1em;
+    padding-left: 0.3em;
 }
 
-th,
+th {
+    padding: .3em .0em .3em .0em;
+}
+
 td {
     padding: .3em .1em .3em .8em;
 }

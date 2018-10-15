@@ -74,7 +74,7 @@
  * hornet-themes - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.2.0
+ * @version v5.2.2
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes.git
  * @license CECILL-2.1
  */
@@ -127,6 +127,10 @@ p.discret {
 /**
 checkbox
 ****/
+
+.checkbox-container.readonly span.checkbox-material{
+    cursor: auto;
+}
 
 .checkbox-container {
     padding: 0em 1.25em;
@@ -213,10 +217,14 @@ label.checkbox-content input:focus+.checkbox-material .check {
     color: #7a7a7a;
 }
 
-.checkbox-material .check.readonly {
+.checkbox-material .check.readonly, .checkbox-material .check.disabled {
     background-color: rgb(235, 235, 228);
     color: #7a7a7a;
     cursor: default;
+}
+
+.abstractfield-container.readonly .label-container .label-content .label-required, .form.clear.readonly .form-titles .discret {
+    display:none;
 }
 
 .checkbox-content input[type=checkbox]:focus+.checkbox-material .check:after {
@@ -263,6 +271,10 @@ label.checkbox-content input:focus+.checkbox-material .check {
 .checkbox-content input[type=checkbox]:not(:checked)+.checkbox-material .check.has-error {
     border-color:#e6151d;
     background-color: #fed8da;
+}
+
+.label-container.label-row-inline.label-margin-right {
+    margin-right: 2.125em;
 }
 
 @-webkit-keyframes checkbox-on {
