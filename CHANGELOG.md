@@ -1,9 +1,26 @@
-#hornet-themes-5.2.0
+# hornet-themes-intranet 5.2.2
+
+- 51962ef FIX - correction style reset button textarea
+- 57499d8 FIX - [m69800] - Tooltip: Affichage d'une modale, focus automatique sur le 1er champ
+- df17bd5 FIX - evol css field readonly
+- 59ffab6 FIX - [m69800] - Tooltip: Affichage d'une modale, focus automatique sur le 1er champ
+- d179a3f FIX - [m0069798] - Form : Affichage des required sur un formulaire en lecture seule
+- f62c584 FIX - [m69844] - TextareaField : bouton reset broken au scroll dans Modal
+- c3447a7 FIX - [m69866] - TextareaField CSS: en disabled la scrollbar n'est pas accessible
+
+# hornet-themes-inranet-5.2.1
+
+- e328391 - FIX [m69567]: Form : Dimensionnement des popins : problème d'affichage de certains composants.
+- 9ca03bf - FIX - Table : css header column des tableaux
+- 257416d - FIX - CheckboxField :  style checkbox disabled
+
+
+#hornet-themes-inranet-5.2.0
 
 - FIX  - Body : Ajout font-family "NotoSanUi-Regular" par defaut sur body
 - EVOL - Tabs: ajout css
 - FIX  - Accessibilité: correctifs suite retour CROCUS
-- FIX  - [M69055] - hornet-themes : prise en compte rows pour TextArea
+- FIX  - [M69055] - hornet-themes-intranet : prise en compte rows pour TextArea
 - FIX  - [M0069056] - correction du retour a la ligne des label pour les abstractfields
 - FIX  - Table : adaptation style entêtes de colonne
 - FIX  - [s247] - Accessibilité: BreadCrumb - probleme contraste
@@ -22,7 +39,7 @@
 - FIX  - [s172] - Overlay: Overlay et Autocomplete
 - FIX  - [S94] - Button - Revoir style focus sur bouton
 
-# hornet-themes-5.1.1
+# hornet-themes-intranet-5.1.1
 
 -	EVOL[s117] - Composant Aller au contenu
 -	FIX: Correction positionnement de la croix dans le calendarField
@@ -67,7 +84,7 @@
 -	FIX[S22-97]: checkbox/switch: suppression padding-bottom
 
 
-# hornet-themes-5.1.0
+# hornet-themes-intranet-5.1.0
 
 212453	-	correctif checkbox en readonly: ajout class + style
 212428	-	Placement des croix, zone des boutons d'action
@@ -93,7 +110,7 @@
 209109	-	[5.1.0-rc3-final] - uniformisation des picto + optimisation tableau + revue dataSource Err:510 selectedItems
 
 
-# hornet-theme-5.1.0-rc2
+# hornet-theme-intranet-5.1.0-rc2
 
 -  0061977  -  hornet-js  -  Framework de validation du formulaire  -  fermé
 -  0062072  -  Hornet.js  -  Navigation: title page absent/incohérent - breadcrumb parfois absent - planAppli incomplet  -  fermé
