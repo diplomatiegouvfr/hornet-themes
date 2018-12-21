@@ -74,7 +74,7 @@
  * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.2.3
+ * @version v5.2.4
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes-intranet.git
  * @license CECILL-2.1
  */
@@ -127,6 +127,7 @@
     border-radius: 0.4em 0.4em 0 0;
     background: #f4f4f4;
     margin: 0 0.05em;
+    padding-right: 1.5em;
 }
 
 .tab-label:hover,
@@ -143,7 +144,6 @@
 
 .tab-label:hover:not(.tab-selected) {
     background: #f8f8ff;
-    border: 1px solid #0579be;
     color: #03476e;
     border-radius: 0.4em 0.4em 0 0;
 }

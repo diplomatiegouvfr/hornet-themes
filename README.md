@@ -1,7 +1,6 @@
-# Hornet-themes-intranet
+# Hornet-themes
 
-Hornet-themes renommé en Hornet-themes-intranet.
-Hornet-themes-intranet est le projet qui permet de construire les thèmes du framework Hornet. 
+Hornet-themes est le projet qui permet de construire les thèmes du framework Hornet. 
 
 ## Pré-requis
 
@@ -24,7 +23,7 @@ $ hb package
 
 Le livrable est disponible dans le répertoire :
 
-`target\hornet-themes-5.2.X.zip`
+`target\hornet-themes-5.X.X.zip`
 
 ## Intégration dans une application Hornet.js
 
@@ -79,7 +78,7 @@ L'arborescence obtenue doit ressembler à ceci :
 ```
 [DocumentRoot ou Alias]
 	/hornet
-		/5.1.X
+		/5.X.X
 			/theme_name
 ```
 
