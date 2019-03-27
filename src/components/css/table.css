@@ -74,7 +74,7 @@
  * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.2.4
+ * @version v5.3.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes-intranet.git
  * @license CECILL-2.1
  */
@@ -197,10 +197,14 @@ th {
 }
 
 .datatable-content table caption {
-    visibility: hidden;
     height: 0em;
     margin: 0;
     padding: 0;
+}
+
+.table-caption{
+    position: absolute;
+    left: -100em;
 }
 
 .table-header tr {
@@ -364,7 +368,12 @@ table-footer {
     width: 3em;
     height: 1.5em;
     border: 0.0625em solid transparent;
-    text-align: center;
+    text-align: right;
+}
+
+.datatable-pagination-total-page{
+    color: #666666;
+    font-size: 0.9em;
 }
 
 .datatable-pagination-input:hover {

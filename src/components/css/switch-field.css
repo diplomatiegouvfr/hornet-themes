@@ -1,0 +1,68 @@
+.switch-toggle{
+    border : .063em #0579BE solid;
+    width: 100%;
+    color: rgb(35, 36, 37);
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: .125em;
+    box-sizing: border-box;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+
+.switch-toggle input{
+    position: absolute;
+    left: -62.5em;
+    opacity: 0;
+}
+
+.switch-label-before,
+.switch-label-after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    pointer-events: none;
+    transition: .3s all cubic-bezier(1,0,0,1);
+}
+
+.switch-label-after{
+    color: #FFF;
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    padding-top: .3em;
+}
+
+.switch-label-before {
+    content: '';
+    color: #0579be;
+    background: currentColor;
+    opacity: 1;
+}
+
+.switch-label-after,
+.switch-option-label {
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.switch-option-label {
+    display: inline-block;
+    padding: 0 .71em;
+    cursor: pointer;
+    margin: 0;
+}
+
+.switch-container.has-error .switch-toggle {
+    border: 0.063em #E6151D solid;
+}

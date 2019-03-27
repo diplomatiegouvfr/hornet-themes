@@ -74,7 +74,7 @@
  * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.2.4
+ * @version v5.3.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes-intranet.git
  * @license CECILL-2.1
  */
@@ -88,7 +88,7 @@
 
 .error-message-title {
     font-style: italic;
-    color: #e6151d;
+    color: #e6151d !important;
     font-size: 1em;
     font-family: NotoSansUI-Regular;
     font-weight: lighter;
@@ -129,7 +129,7 @@
 
 .warning-message-title {
     font-style: italic;
-    color: darkorange;
+    color: darkorange !important; 
     font-size: 1em;
     font-family: NotoSansUI-Regular;
     font-weight: lighter;
@@ -166,7 +166,7 @@
 
 .info-message-title {
     font-style: italic;
-    color: green;
+    color: green !important;
     font-size: 1em;
     font-family: NotoSansUI-Regular;
     font-weight: lighter;

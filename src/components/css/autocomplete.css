@@ -74,7 +74,7 @@
  * hornet-themes-intranet - Thème Hornet.js
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.2.4
+ * @version v5.3.0
  * @link git+https://github.com/diplomatiegouvfr/hornet-themes-intranet.git
  * @license CECILL-2.1
  */
@@ -90,8 +90,47 @@
     position: relative;
 }
 
+.autocomplete-container {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    background: #fff;
+    border: 1px solid #aaa;
+    min-width: 100%;
+}
+
+.autocomplete-container:hover,
+.autocomplete-container:focus,
+.autocomplete-container:focus-within {
+    border: #4D90FE solid 1px;
+}
+
+.autocomplete-container.required {
+    background-color: #fed8da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #e6151d;
+}
+
+.autocomplete-container.required .has-error {
+    border: none !important;
+}
+
+.autocomplete-container input[aria-autocomplete~="list"] {
+    outline: none !important;
+}
+.autocomplete-container input[aria-autocomplete~="list"]:invalid,
+.autocomplete-container input[aria-autocomplete~="list"]:required {
+    box-shadow: none !important;
+}
+
 .autocomplete-container input {
     padding: 0.5em 5em 0.5em 1em;
+    border: none;
+    flex-basis: 0;
+    flex-grow: 1;
 }
 
 .autocomplete-content.has-error {
@@ -150,11 +189,11 @@
     width: 1.375em;
     z-index: 1;
     overflow: hidden;
-    margin-top: -1.375em    ;
+    margin-top: -1.375em;
 }
 
 .autocomplete-reset{
-    margin: 0.75em -1.5em !important;
+    margin: 0.55em -1.5em 0 -1.5em !important;
     right: 3em;
     bottom: 0.1em;
     position: relative !important;
@@ -173,5 +212,9 @@
 }
 
 .abstractfield-container.readonly .autocomplete-content {
+    cursor: pointer;
+}
+
+.autocomplete-content:read-only {
     cursor: pointer;
 }
